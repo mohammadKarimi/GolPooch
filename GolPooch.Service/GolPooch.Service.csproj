@@ -1,7 +1,16 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>netstandard2.1</TargetFramework>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Elk.Cache" Version="1.1.0" />
+    <PackageReference Include="Elk.Http" Version="1.1.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GolPooch.DataAccess.Ef\GolPooch.DataAccess.Ef.csproj" />
+  </ItemGroup>
 
 </Project>

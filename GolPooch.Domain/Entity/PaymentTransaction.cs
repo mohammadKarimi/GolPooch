@@ -24,7 +24,7 @@ namespace GolPooch.Domain.Entity
         public int? PurchaseId { get; set; }
 
         public int Price { get; set; }
-        -
+        
         public bool IsSuccess { get; set; }
 
         public DateTime InsertDateMi { get; set; }

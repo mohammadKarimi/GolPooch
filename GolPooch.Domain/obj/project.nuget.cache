@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "Xw7zhttwqaNvmJJjS94xFGO8hDZxbIeHYPc3e6QvOAuUaShf0On9YBGOTOXPJvV/6mfzptHYB1l1d3BZbzfevA==",
+  "dgSpecHash": "M2duppjEo5OOPrNO5CA7ueCB6evJPm5SZaWLiEqu/VjFcH0AFSUk4z6oiUlDPTS9lrUXJPplE8pFGw1SUEmZnw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\m.karimi\\source\\OwnRepos\\GolPooch\\GolPooch.Domain\\GolPooch.Domain.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.Domain\\GolPooch.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Mehran\\.nuget\\packages\\elk.core\\1.1.6\\elk.core.1.1.6.nupkg.sha512",
+    "C:\\Users\\Mehran\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\Mehran\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512",
+    "C:\\Users\\Mehran\\.nuget\\packages\\system.drawing.common\\4.7.0\\system.drawing.common.4.7.0.nupkg.sha512"
+  ],
   "logs": []
 }
