@@ -3,13 +3,13 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace GolPooch.Domain.Entity
 {
-    public class Region
+    public class ChangeLog
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int RegionId { get; set; }
+        public int ChangeLogId { get; set; }
 
-        public string Title { get; set; }
-        public bool IsActive { get; set; }
+        public string Version { get; set; }
+        public string Change { get; set; }
     }
 }

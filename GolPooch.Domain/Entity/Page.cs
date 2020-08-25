@@ -10,5 +10,8 @@ namespace GolPooch.Domain.Entity
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int PageId { get; set; }
 
+        public string Name { get; set; }
+
+        public bool IsActive { get; set; }
     }
 }

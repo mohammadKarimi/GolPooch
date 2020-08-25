@@ -23,7 +23,7 @@ namespace GolPooch.Domain.Entity
         public Location Location { get; set; }
         public ModalMessageType Type { get; set; }
 
-        public ModalMessageDisplayCount MyProperty { get; set; }
+        public ModalMessageDisplayCount DisplayCount { get; set; }
         public string Title { get; set; }
         public string Content { get; set; }
         public string Url { get; set; }

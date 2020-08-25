@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace GolPooch.Domain.Entity
 {
+    [Table(nameof(Sheet))]
     public class Sheet
     {
         [Key]

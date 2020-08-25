@@ -23,5 +23,11 @@ namespace GolPooch.Domain.Entity
         public Purchase Purchase { get; set; }
         public int PurchaseId { get; set; }
 
+        [ForeignKey(nameof(SheetId))]
+        public Sheet Sheet { get; set; }
+        public int SheetId { get; set; }
+
+        public int MyProperty { get; set; }
+
     }
 }

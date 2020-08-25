@@ -31,5 +31,6 @@ namespace GolPooch.Domain.Entity
         public ICollection<ModalMessage> ModalMessages { get; set; }
         public ICollection<UserChance> UserChances { get; set; }
         public ICollection<Sheet> Sheets { get; set; }
+        public ICollection<UserModalMessage> UserModalMessage { get; set; }
     }
 }
