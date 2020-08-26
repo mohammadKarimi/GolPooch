@@ -1,17 +1,24 @@
-﻿using GolPooch.Domain.Enum;
+﻿using Elk.Core;
+using GolPooch.Domain.Enum;
+using GolPooch.Domain.Resources;
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace GolPooch.Domain.Entity
 {
-    public class PaymentTransaction
+    [Table(nameof(PaymentTransaction))]
+    public class PaymentTransaction : IEntity , IInsertDateProperties
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int PaymentTransactionId { get; set; }
 
         public TransactionType Type { get; set; }
+
+        [ForeignKey(nameof(UserId))]
+        public User User { get; set; }
+        public int UserId { get; set; }
 
         [ForeignKey(nameof(PaymentGatewayId))]
         public PaymentGateway PaymentGateway { get; set; }
@@ -27,20 +34,19 @@ namespace GolPooch.Domain.Entity
         
         public bool IsSuccess { get; set; }
 
-        public DateTime InsertDateMi { get; set; }
-
-        [Column(TypeName = "char")]
-        public string InsertDateSh { get; set; }
-
-        [Column(TypeName = "varchar")]
         public string Status { get; set; }
 
-        [Column(TypeName = "varchar")]
         public string Authority { get; set; }
 
-        [Column(TypeName = "varchar")]
         public string TrackingId { get; set; }
 
         public string Description { get; set; }
+
+        [Required(ErrorMessageResourceName = nameof(DisplayNames.Required), ErrorMessageResourceType = typeof(DisplayNames))]
+        [MaxLength(10, ErrorMessageResourceName = nameof(DisplayNames.MaxLength), ErrorMessageResourceType = typeof(DisplayNames))]
+        [Column(TypeName = "char(10)")]
+        public string InsertDateSh { get; set; }
+
+        public DateTime InsertDateMi { get; set; }
     }
 }

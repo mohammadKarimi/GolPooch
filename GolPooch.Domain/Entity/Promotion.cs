@@ -1,4 +1,5 @@
-﻿using GolPooch.Domain.Resources;
+﻿using Elk.Core;
+using GolPooch.Domain.Resources;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -6,7 +7,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace GolPooch.Domain.Entity
 {
-    public class Promotion
+    [Table(nameof(Promotion))]
+    public class Promotion : IEntity,IInsertDateProperties
     {
         [Key]
         public int PromotionId { get; set; }

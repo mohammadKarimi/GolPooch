@@ -1,11 +1,12 @@
-﻿using System;
+﻿using Elk.Core;
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace GolPooch.Domain.Entity
 {
     [Table(nameof(Sheet))]
-    public class Sheet
+    public class Sheet : IEntity
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -18,7 +19,7 @@ namespace GolPooch.Domain.Entity
         public DateTime DateStartMi { get; set; }
         public string DateStartSh { get; set; }
 
-        public DateTime? DateEndMi { get; set; }
+        public DateTime DateEndMi { get; set; }
         public string DateEndSh { get; set; }
 
         public bool IsActive { get; set; }

@@ -1,9 +1,12 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Elk.Core;
+using System;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace GolPooch.Domain.Entity
 {
-    public class ChangeLog
+    [Table(nameof(ChangeLog))]
+    public class ChangeLog : IEntity, IInsertDateProperties
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -11,5 +14,8 @@ namespace GolPooch.Domain.Entity
 
         public string Version { get; set; }
         public string Change { get; set; }
+
+        public string InsertDateSh { get; set; }
+        public DateTime InsertDateMi { get; set; }
     }
 }

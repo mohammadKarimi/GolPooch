@@ -1,51 +1,74 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Diagnostics;
+using System.Text;
+using Newtonsoft.Json;
+using GolPooch.DependencyResolver.Ioc;
 
 namespace GolPooch.Api
 {
     public class Startup
     {
+        private readonly string AllowedOrigins = "_Origins";
+        private IConfiguration _config { get; }
+
         public Startup(IConfiguration configuration)
         {
-            Configuration = configuration;
+            _config = configuration;
         }
 
-        public IConfiguration Configuration { get; }
-
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllersWithViews();
+            services.AddCors(options =>
+            {
+                options.AddPolicy(AllowedOrigins, builder =>
+                {
+                    builder
+                        .WithOrigins(_config.GetSection("AllowOrigin").Value.Split(";"))
+                        .SetIsOriginAllowedToAllowWildcardSubdomains()
+                        .AllowAnyHeader()
+                        .AllowAnyMethod()
+                        .AllowCredentials();
+                });
+            });
+            services.AddMvc();
+
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(opt =>
+            {
+                opt.Cookie.SameSite = SameSiteMode.Lax;
+            });
+            services.AddHttpContextAccessor();
+
+            services.AddScoped<AuthorizeFilter>();
+            services.AddTransient(_config);
+            services.AddScoped(_config);
+            services.AddSingleton(_config);
+
+            services.AddSwaggerGen();
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            if (env.IsDevelopment())
+            app.AddSwagger();
+            app.UseExceptionHandler(errorApp =>
             {
-                app.UseDeveloperExceptionPage();
-            }
-            else
-            {
-                app.UseExceptionHandler("/Home/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-                app.UseHsts();
-            }
-            app.UseHttpsRedirection();
-            app.UseStaticFiles();
-
+                errorApp.Run(async context =>
+                {
+                    var errorhandler = context.Features.Get<IExceptionHandlerPathFeature>();
+                    context.Response.StatusCode = 500;
+                    context.Response.ContentType = "application/Json";
+                    var bytes = Encoding.ASCII.GetBytes(new { IsSuccessful = false, errorhandler.Error?.Message }.ToString());
+                    await context.Response.Body.WriteAsync(bytes, 0, bytes.Length);
+                });
+            });
             app.UseRouting();
 
-            app.UseAuthorization();
-
+            app.UseAuthentication();
+            app.UseCors(AllowedOrigins);
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(

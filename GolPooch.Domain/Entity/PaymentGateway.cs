@@ -1,31 +1,32 @@
-﻿using GolPooch.Domain.Enum;
+﻿using Elk.Core;
+using GolPooch.Domain.Enum;
+using GolPooch.Domain.Resources;
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace GolPooch.Domain.Entity
 {
-    public class PaymentGateway
+    [Table(nameof(PaymentGateway))]
+    public class PaymentGateway : IEntity
     {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int PaymentGatewayId { get; set; }
+
         [Required]
         public bool IsActive { get; set; }
 
         [Required]
         public BankNames BankName { get; set; }
 
-        public DateTime InsertDateMi { get; set; }
-
-        [Column(TypeName = "char")]
-        public string InsertDateSh { get; set; }
-
         public string Name { get; set; }
 
         public string Username { get; set; }
 
-        [Column(TypeName = "nvarchar")]
+
         public string Password { get; set; }
 
-        [Column(TypeName = "char")]
         public string MerchantId { get; set; }
     }
 }
