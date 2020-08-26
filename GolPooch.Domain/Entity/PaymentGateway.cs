@@ -1,7 +1,5 @@
 ﻿using Elk.Core;
 using GolPooch.Domain.Enum;
-using GolPooch.Domain.Resources;
-using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
