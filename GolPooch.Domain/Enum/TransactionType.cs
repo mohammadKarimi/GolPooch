@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace GolPooch.Domain.Enum
+﻿namespace GolPooch.Domain.Enum
 {
-    public enum TransactionType
+    public enum TransactionType : byte
     {
-        Purchase,
-        Payback,
-        Refound
+        Purchase = 1,
+        Payback = 2,
+        Refound = 3
     }
 }

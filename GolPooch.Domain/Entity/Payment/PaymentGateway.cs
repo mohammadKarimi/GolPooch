@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace GolPooch.Domain.Entity
 {
-    [Table(nameof(PaymentGateway))]
+    [Table("Gateway", Schema = "Payment")]
     public class PaymentGateway : IEntity
     {
         [Key]
@@ -21,7 +21,6 @@ namespace GolPooch.Domain.Entity
         public string Name { get; set; }
 
         public string Username { get; set; }
-
 
         public string Password { get; set; }
 

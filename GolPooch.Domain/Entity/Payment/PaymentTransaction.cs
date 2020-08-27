@@ -7,24 +7,37 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace GolPooch.Domain.Entity
 {
-    [Table(nameof(Notification), Schema = "eocn")]
-    public class Notification : IEntity, IInsertDateProperties
+    [Table("Transaction", Schema = "Payment")]
+    public class PaymentTransaction : IEntity , IInsertDateProperties
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int NotificationId { get; set; }
+        public int PaymentTransactionId { get; set; }
+
+        public TransactionType Type { get; set; }
 
         [ForeignKey(nameof(UserId))]
         public User User { get; set; }
         public int UserId { get; set; }
 
-        public string To { get; set; }
-        public string Content { get; set; }
-        public NotificationTarget Target { get; set; }
-        public NotificationAction Action { get; set; }
-        public bool IsSend { get; set; }
+        [ForeignKey(nameof(PaymentGatewayId))]
+        public PaymentGateway PaymentGateway { get; set; }
+        public int PaymentGatewayId { get; set; }
+
+        [ForeignKey(nameof(ProductOfferId))]
+        public ProductOffer ProductOffer { get; set; }
+        public int ProductOfferId { get; set; }
+
+        public int Price { get; set; }
+        
         public bool IsSuccess { get; set; }
-        public bool IsDelivered { get; set; }
+
+        public string Status { get; set; }
+
+        public string TrackingId { get; set; }
+
+        public string UserSheba { get; set; }
+        public string Description { get; set; }
 
         [Required(ErrorMessageResourceName = nameof(DisplayNames.Required), ErrorMessageResourceType = typeof(DisplayNames))]
         [MaxLength(10, ErrorMessageResourceName = nameof(DisplayNames.MaxLength), ErrorMessageResourceType = typeof(DisplayNames))]

@@ -1,29 +1,28 @@
-﻿using Elk.Core;
+﻿using System;
+using Elk.Core;
 using GolPooch.Domain.Resources;
-using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace GolPooch.Domain.Entity
 {
-    [Table(nameof(UserModalMessage))]
-    public class UserModalMessage : IEntity, IInsertDateProperties
+    [Table(nameof(Chest))]
+    public class Chest : IEntity, IInsertDateProperties, IIsActiveProperty
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int UserModalMessageId { get; set; }
+        public int ChestId { get; set; }
 
-        [ForeignKey(nameof(UserId))]
-        public User User { get; set; }
-        public int UserId { get; set; }
+        public bool IsActive { get; set; }
+        public string Title { get; set; }
+        public string BannerUrl { get; set; }
+        public int ParticipantCount { get; set; }
+        public int WinnerCount { get; set; }
+        public int RoundCount { get; set; }
 
-        [ForeignKey(nameof(ModalMessageId))]
-        public ModalMessage ModalMessage { get; set; }
-        public int ModalMessageId { get; set; }
-
+        [Column(TypeName = "char(10)")]
         [Required(ErrorMessageResourceName = nameof(DisplayNames.Required), ErrorMessageResourceType = typeof(DisplayNames))]
         [MaxLength(10, ErrorMessageResourceName = nameof(DisplayNames.MaxLength), ErrorMessageResourceType = typeof(DisplayNames))]
-        [Column(TypeName = "char(10)")]
         public string InsertDateSh { get; set; }
 
         public DateTime InsertDateMi { get; set; }

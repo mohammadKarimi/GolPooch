@@ -8,4 +8,8 @@
     <PackageReference Include="Elk.Core" Version="1.1.6" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Entity\Auth\" />
+  </ItemGroup>
+
 </Project>

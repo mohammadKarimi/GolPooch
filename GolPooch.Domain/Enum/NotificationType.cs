@@ -1,9 +1,9 @@
 ﻿namespace GolPooch.Domain.Enum
 {
-    public enum NotificationTarget : byte
+    public enum NotificationType : byte
     {
         Sms = 1,
         TelegramBot = 2,
-        PushNotidication
+        PushNotification = 3
     }
 }

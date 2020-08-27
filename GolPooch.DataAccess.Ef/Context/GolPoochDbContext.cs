@@ -14,6 +14,8 @@ namespace GolPooch.DataAccess.Ef
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
+            builder.Entity<User>().HasIndex(x => x.MobileNumber).IsUnique();
+            builder.Entity<Page>().HasIndex(x => x.Address).IsUnique();
 
             builder.OverrideDeleteBehavior();
             builder.RegisterAllEntities<IEntity>(typeof(User).Assembly);

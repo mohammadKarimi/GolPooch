@@ -1,27 +1,31 @@
-﻿using Elk.Core;
+﻿using System;
+using Elk.Core;
 using GolPooch.Domain.Resources;
-using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace GolPooch.Domain.Entity
 {
-    [Table(nameof(Promotion))]
-    public class Promotion : IEntity,IInsertDateProperties
+    [Table(nameof(ProductOffer))]
+    public class ProductOffer : IEntity, IInsertDateProperties, IIsActiveProperty
     {
         [Key]
-        public int PromotionId { get; set; }
+        public int ProductOfferId { get; set; }
 
         [ForeignKey(nameof(ProductId))]
         public Product Product { get; set; }
         public int ProductId { get; set; }
 
         public byte Chance { get; set; }
-        public int TotalPrice { get; set; }
-        public int Discount { get; set; }
+
         public int Price { get; set; }
+        public int Discount { get; set; }
+        public int TotalPrice { get; set; }
+
         public int Profit { get; set; }
+
+        public int UnUseDay { get; set; }
 
         public bool IsActive { get; set; }
 
@@ -33,5 +37,6 @@ namespace GolPooch.Domain.Entity
         public DateTime InsertDateMi { get; set; }
 
         public ICollection<Purchase> Purchases { get; set; }
+        public ICollection<PaymentTransaction> PaymentTransactions { get; set; }
     }
 }
