@@ -13,4 +13,8 @@
     <ProjectReference Include="..\GolPooch.DataAccess.Ef\GolPooch.DataAccess.Ef.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Implements\" />
+  </ItemGroup>
+
 </Project>

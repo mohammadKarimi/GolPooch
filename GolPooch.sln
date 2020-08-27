@@ -17,7 +17,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.Core", "1.Core", "{7F5F4C
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.EndPoint", "3.EndPoint", "{D7131800-2B7D-455C-BB24-7697B404BFE1}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. ApplicationService", "2. ApplicationService", "{52211785-41E0-4528-A1C4-92ED04F6F14C}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.ApplicationService", "2.ApplicationService", "{52211785-41E0-4528-A1C4-92ED04F6F14C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GolPooch.DataAccess.Ef", "GolPooch.DataAccess.Ef\GolPooch.DataAccess.Ef.csproj", "{11EFA381-0C1A-4953-A028-3C6A967F24D2}"
 EndProject

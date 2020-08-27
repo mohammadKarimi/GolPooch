@@ -1,11 +1,13 @@
-﻿using GolPooch.Domain.Resources;
+﻿using Elk.Core;
+using GolPooch.Domain.Resources;
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace GolPooch.Domain.Entity
 {
-    public class UserModalMessage
+    [Table(nameof(UserModalMessage))]
+    public class UserModalMessage : IEntity, IInsertDateProperties
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
