@@ -13,7 +13,7 @@ namespace GolPooch.Domain.Entity
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int UserId { get; set; }
+        public Guid UserId { get; set; }
         public long MobileNumber { get; set; }
         public string Email { get; set; }
 

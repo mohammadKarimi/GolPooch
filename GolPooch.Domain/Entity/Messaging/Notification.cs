@@ -14,6 +14,9 @@ namespace GolPooch.Domain.Entity
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int NotificationId { get; set; }
 
+        /// <summary>
+        /// if this field set with null, that means this notification is for all users
+        /// </summary>
         [ForeignKey(nameof(UserId))]
         public User User { get; set; }
         public int? UserId { get; set; }
@@ -29,6 +32,7 @@ namespace GolPooch.Domain.Entity
 
         public bool IsSend { get; set; }
         public bool? IsSuccess { get; set; }
+        public bool IsRead { get; set; }
 
         [Column(TypeName = "char(10)")]
         [Required(ErrorMessageResourceName = nameof(DisplayNames.Required), ErrorMessageResourceType = typeof(DisplayNames))]

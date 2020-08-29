@@ -225,19 +225,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Mehran\\.nuget\\packages\\": {}
+    "C:\\Users\\Saina\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.Domain\\GolPooch.Domain.csproj",
+      "projectUniqueName": "G:\\OwnRepo\\GolPooch.Domain\\GolPooch.Domain.csproj",
       "projectName": "GolPooch.Domain",
-      "projectPath": "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.Domain\\GolPooch.Domain.csproj",
-      "packagesPath": "C:\\Users\\Mehran\\.nuget\\packages\\",
-      "outputPath": "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.Domain\\obj\\",
+      "projectPath": "G:\\OwnRepo\\GolPooch.Domain\\GolPooch.Domain.csproj",
+      "packagesPath": "C:\\Users\\Saina\\.nuget\\packages\\",
+      "outputPath": "G:\\OwnRepo\\GolPooch.Domain\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Mehran\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Saina\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
