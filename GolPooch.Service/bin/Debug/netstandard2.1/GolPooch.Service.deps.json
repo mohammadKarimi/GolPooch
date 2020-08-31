@@ -11,7 +11,8 @@
         "dependencies": {
           "Elk.Cache": "1.1.0",
           "Elk.Http": "1.1.3",
-          "GolPooch.DataAccess.Ef": "1.0.0"
+          "GolPooch.DataAccess.Ef": "1.0.0",
+          "GolPooch.Domain": "1.0.0"
         },
         "runtime": {
           "GolPooch.Service.dll": {}

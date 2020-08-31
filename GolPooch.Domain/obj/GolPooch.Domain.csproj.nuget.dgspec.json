@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "G:\\OwnRepo\\GolPooch.Domain\\GolPooch.Domain.csproj": {}
+    "C:\\Users\\m.karimi\\source\\OwnRepos\\GolPooch\\GolPooch.Domain\\GolPooch.Domain.csproj": {}
   },
   "projects": {
-    "G:\\OwnRepo\\GolPooch.Domain\\GolPooch.Domain.csproj": {
+    "C:\\Users\\m.karimi\\source\\OwnRepos\\GolPooch\\GolPooch.Domain\\GolPooch.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\OwnRepo\\GolPooch.Domain\\GolPooch.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\m.karimi\\source\\OwnRepos\\GolPooch\\GolPooch.Domain\\GolPooch.Domain.csproj",
         "projectName": "GolPooch.Domain",
-        "projectPath": "G:\\OwnRepo\\GolPooch.Domain\\GolPooch.Domain.csproj",
-        "packagesPath": "C:\\Users\\Saina\\.nuget\\packages\\",
-        "outputPath": "G:\\OwnRepo\\GolPooch.Domain\\obj\\",
+        "projectPath": "C:\\Users\\m.karimi\\source\\OwnRepos\\GolPooch\\GolPooch.Domain\\GolPooch.Domain.csproj",
+        "packagesPath": "C:\\Users\\m.karimi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\m.karimi\\source\\OwnRepos\\GolPooch\\GolPooch.Domain\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Saina\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\m.karimi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -61,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

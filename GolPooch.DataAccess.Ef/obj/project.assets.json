@@ -8206,23 +8206,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Saina\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\m.karimi\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\OwnRepo\\GolPooch.DataAccess.Ef\\GolPooch.DataAccess.Ef.csproj",
+      "projectUniqueName": "C:\\Users\\m.karimi\\source\\OwnRepos\\GolPooch\\GolPooch.DataAccess.Ef\\GolPooch.DataAccess.Ef.csproj",
       "projectName": "GolPooch.DataAccess.Ef",
-      "projectPath": "G:\\OwnRepo\\GolPooch.DataAccess.Ef\\GolPooch.DataAccess.Ef.csproj",
-      "packagesPath": "C:\\Users\\Saina\\.nuget\\packages\\",
-      "outputPath": "G:\\OwnRepo\\GolPooch.DataAccess.Ef\\obj\\",
+      "projectPath": "C:\\Users\\m.karimi\\source\\OwnRepos\\GolPooch\\GolPooch.DataAccess.Ef\\GolPooch.DataAccess.Ef.csproj",
+      "packagesPath": "C:\\Users\\m.karimi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\m.karimi\\source\\OwnRepos\\GolPooch\\GolPooch.DataAccess.Ef\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Saina\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\m.karimi\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8235,8 +8231,8 @@
       "frameworks": {
         "netstandard2.1": {
           "projectReferences": {
-            "G:\\OwnRepo\\GolPooch.Domain\\GolPooch.Domain.csproj": {
-              "projectPath": "G:\\OwnRepo\\GolPooch.Domain\\GolPooch.Domain.csproj"
+            "C:\\Users\\m.karimi\\source\\OwnRepos\\GolPooch\\GolPooch.Domain\\GolPooch.Domain.csproj": {
+              "projectPath": "C:\\Users\\m.karimi\\source\\OwnRepos\\GolPooch\\GolPooch.Domain\\GolPooch.Domain.csproj"
             }
           }
         }
@@ -8270,7 +8266,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
       }
     }
   }
