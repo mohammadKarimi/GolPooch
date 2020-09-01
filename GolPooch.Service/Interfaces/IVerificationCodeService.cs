@@ -8,7 +8,7 @@ namespace GolPooch.Service.Interfaces
     public interface IVerificationCodeService
     {
         /// <summary>
-        /// Get verification Code
+        /// Get verification Code + resend code again
         /// </summary>
         /// <param name="mobileNumber">MobileNumber was entered by user</param>
         /// <param name="osType">this field is for detecting which message we should send</param>
@@ -16,11 +16,11 @@ namespace GolPooch.Service.Interfaces
         Task<IResponse<int>> GetCode(long mobileNumber,OsType osType);
 
         /// <summary>
-        /// Verification Code and register user with mobilenumber that user entered
+        /// verify last Code and register user with mobilenumber that user entered
         /// </summary>
         /// <param name="verificationCodeId">the verification primaryKey for finding row</param>
         /// <param name="code">the digit code that was entered by </param>
-        /// <returns>User Id</returns>
-        Task<IResponse<Guid>> VerifyCode(int verificationCodeId, int code);
+        /// <returns>User Model</returns>
+        Task<IResponse<User>> VerifyCode(int verificationCodeId, int code);
     }
 }
