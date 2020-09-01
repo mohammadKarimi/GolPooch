@@ -328,6 +328,7 @@ ASALocalRun/
 
 # MFractors (Xamarin productivity tool) working folder 
 .mfractor/
-
+bin
+obj
 /GolPooch.Api/bin/
 /GolPooch.Api/obj/

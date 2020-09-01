@@ -18,7 +18,7 @@ namespace GolPooch.Api
         public Startup(IConfiguration configuration)
         {
             _config = configuration;
-        }
+        } 
 
         public void ConfigureServices(IServiceCollection services)
         {
