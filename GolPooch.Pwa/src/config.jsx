@@ -19,4 +19,4 @@ const config = process.env.REACT_APP_STAGE === 'production'
 export default {
     LOGIN_PAGE: "/login",
     ...config
-};
+}; 
