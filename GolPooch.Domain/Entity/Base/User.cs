@@ -18,14 +18,14 @@ namespace GolPooch.Domain.Entity
         [Display(Name = nameof(DisplayNames.MobileNumber), ResourceType = typeof(DisplayNames))]
         public long MobileNumber { get; set; }
 
+        [Display(Name = nameof(DisplayNames.Gender), ResourceType = typeof(DisplayNames))]
+        public Gender Gender { get; set; }
+
         [Display(Name = nameof(DisplayNames.OsType), ResourceType = typeof(DisplayNames))]
         public OsType OsType { get; set; }
 
         [Display(Name = nameof(DisplayNames.Region), ResourceType = typeof(DisplayNames))]
         public Region Region { get; set; }
-
-        [Display(Name = nameof(DisplayNames.Gender), ResourceType = typeof(DisplayNames))]
-        public Gender Gender { get; set; }
 
         [Display(Name = nameof(DisplayNames.InsertDate), ResourceType = typeof(DisplayNames))]
         public DateTime InsertDateMi { get; set; }
