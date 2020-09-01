@@ -113,6 +113,18 @@
           "lib/netcoreapp2.0/FastMember.dll": {}
         }
       },
+      "Kavenegar/1.2.4": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/Kavenegar.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Kavenegar.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Authentication/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -2300,7 +2312,9 @@
         "dependencies": {
           "Elk.Cache": "1.1.0",
           "Elk.Http": "1.1.3",
-          "GolPooch.DataAccess.Ef": "1.0.0"
+          "GolPooch.DataAccess.Ef": "1.0.0",
+          "GolPooch.Domain": "1.0.0",
+          "Kavenegar": "1.2.4"
         },
         "compile": {
           "bin/placeholder/GolPooch.Service.dll": {}
@@ -2415,6 +2429,19 @@
         "lib/net461/FastMember.dll",
         "lib/netcoreapp2.0/FastMember.dll",
         "lib/netstandard2.0/FastMember.dll"
+      ]
+    },
+    "Kavenegar/1.2.4": {
+      "sha512": "JyT2+5aCpb8+3rCxcZXY7Nc7rABR4OIeryM3TWkHts6HLOL/7IPhJ2iAnxQswyeDsFObGGb0qqg1nChi+40JvQ==",
+      "type": "package",
+      "path": "kavenegar/1.2.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "kavenegar.1.2.4.nupkg.sha512",
+        "kavenegar.nuspec",
+        "lib/net35/Kavenegar.dll",
+        "lib/netstandard2.0/Kavenegar.dll"
       ]
     },
     "Microsoft.AspNetCore.Authentication/2.2.0": {
@@ -7357,19 +7384,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Mehran\\.nuget\\packages\\": {}
+    "C:\\Users\\m.karimi\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.Api\\GolPooch.Api.csproj",
+      "projectUniqueName": "C:\\Users\\m.karimi\\source\\OwnRepos\\GolPooch\\GolPooch.Api\\GolPooch.Api.csproj",
       "projectName": "GolPooch.Api",
-      "projectPath": "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.Api\\GolPooch.Api.csproj",
-      "packagesPath": "C:\\Users\\Mehran\\.nuget\\packages\\",
-      "outputPath": "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.Api\\obj\\",
+      "projectPath": "C:\\Users\\m.karimi\\source\\OwnRepos\\GolPooch\\GolPooch.Api\\GolPooch.Api.csproj",
+      "packagesPath": "C:\\Users\\m.karimi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\m.karimi\\source\\OwnRepos\\GolPooch\\GolPooch.Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Mehran\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\m.karimi\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7382,8 +7409,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.DependencyResolver\\GolPooch.DependencyResolver.csproj": {
-              "projectPath": "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.DependencyResolver\\GolPooch.DependencyResolver.csproj"
+            "C:\\Users\\m.karimi\\source\\OwnRepos\\GolPooch\\GolPooch.DependencyResolver\\GolPooch.DependencyResolver.csproj": {
+              "projectPath": "C:\\Users\\m.karimi\\source\\OwnRepos\\GolPooch\\GolPooch.DependencyResolver\\GolPooch.DependencyResolver.csproj"
             }
           }
         }
@@ -7420,7 +7447,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
       }
     }
   }

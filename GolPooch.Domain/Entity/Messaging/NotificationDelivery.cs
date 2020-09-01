@@ -16,7 +16,11 @@ namespace GolPooch.Domain.Entity.Messaging
 
         [ForeignKey(nameof(NotificationId))]
         public Notification Notification { get; set; }
-        public int? NotificationId { get; set; }
+        public int NotificationId { get; set; }
+
+        [ForeignKey(nameof(UserId))]
+        public User User { get; set; }
+        public int UserId { get; set; }
 
         [Display(Name = nameof(DisplayNames.Type), ResourceType = typeof(DisplayNames))]
         public NotificationDeliveryType Type { get; set; }

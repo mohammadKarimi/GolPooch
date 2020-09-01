@@ -16,6 +16,9 @@ namespace GolPooch.Domain.Entity
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int NotificationId { get; set; }
 
+        /// <summary>
+        /// if this field set with null, that means this notification is for all users
+        /// </summary>
         [ForeignKey(nameof(UserId))]
         public User User { get; set; }
         public int? UserId { get; set; }
@@ -34,6 +37,7 @@ namespace GolPooch.Domain.Entity
 
         [Display(Name = nameof(DisplayNames.IsSuccess), ResourceType = typeof(DisplayNames))]
         public bool? IsSuccess { get; set; }
+        public bool IsRead { get; set; }
 
         [Display(Name = nameof(DisplayNames.InsertDate), ResourceType = typeof(DisplayNames))]
         public DateTime InsertDateMi { get; set; }
