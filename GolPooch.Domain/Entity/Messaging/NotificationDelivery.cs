@@ -1,5 +1,6 @@
 ﻿using System;
 using Elk.Core;
+using GolPooch.Domain.Enum;
 using GolPooch.Domain.Resources;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -21,11 +22,15 @@ namespace GolPooch.Domain.Entity.Messaging
         public User User { get; set; }
         public int UserId { get; set; }
 
-        [Column(TypeName = "char(10)")]
-        [Required(ErrorMessageResourceName = nameof(DisplayNames.Required), ErrorMessageResourceType = typeof(DisplayNames))]
-        [MaxLength(10, ErrorMessageResourceName = nameof(DisplayNames.MaxLength), ErrorMessageResourceType = typeof(DisplayNames))]
-        public string InsertDateSh { get; set; }
+        [Display(Name = nameof(DisplayNames.Type), ResourceType = typeof(DisplayNames))]
+        public NotificationDeliveryType Type { get; set; }
 
+        [Display(Name = nameof(DisplayNames.InsertDate), ResourceType = typeof(DisplayNames))]
         public DateTime InsertDateMi { get; set; }
+
+        [Column(TypeName = "char(10)")]
+        [Display(Name = nameof(DisplayNames.InsertDate), ResourceType = typeof(DisplayNames))]
+        [MaxLength(10, ErrorMessageResourceName = nameof(ErrorMessage.MaxLength), ErrorMessageResourceType = typeof(ErrorMessage))]
+        public string InsertDateSh { get; set; }
     }
 }

@@ -1,20 +1,19 @@
+using System.Text;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using GolPooch.DependencyResolver.Ioc;
+using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Diagnostics;
-using System.Text;
-using Newtonsoft.Json;
-using GolPooch.DependencyResolver.Ioc;
 
 namespace GolPooch.Api
 {
     public class Startup
     {
-        private readonly string AllowedOrigins = "_Origins";
         private IConfiguration _config { get; }
+        private readonly string AllowedOrigins = "_Origins";
 
         public Startup(IConfiguration configuration)
         {
@@ -37,13 +36,16 @@ namespace GolPooch.Api
             });
             services.AddMvc();
 
-            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(opt =>
-            {
-                opt.Cookie.SameSite = SameSiteMode.Lax;
-            });
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                .AddCookie(opt =>
+                    {
+                        opt.Cookie.SameSite = SameSiteMode.Lax;
+                    });
             services.AddHttpContextAccessor();
 
+
             services.AddScoped<AuthorizeFilter>();
+
             services.AddTransient(_config);
             services.AddScoped(_config);
             services.AddSingleton(_config);
@@ -54,6 +56,7 @@ namespace GolPooch.Api
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             app.AddSwagger();
+
             app.UseExceptionHandler(errorApp =>
             {
                 errorApp.Run(async context =>
@@ -66,9 +69,10 @@ namespace GolPooch.Api
                 });
             });
             app.UseRouting();
-
+            
             app.UseAuthentication();
             app.UseCors(AllowedOrigins);
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(

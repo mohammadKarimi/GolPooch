@@ -15,8 +15,8 @@ namespace GolPooch.DependencyResolver.Ioc
 
         public static IServiceCollection AddScoped(this IServiceCollection services, IConfiguration _configuration)
         {
-            services.AddContext<GolPoochDbContext>(_configuration.GetConnectionString("GolPoochDbContext"));
-            services.AddScoped<GolPoochDbContext>();
+            services.AddContext<AppDbContext>(_configuration.GetConnectionString("GolPoochDbContext"));
+            services.AddScoped<AppDbContext>();
 
             #region Repos
             services.AddScoped(typeof(IGenericRepo<>), typeof(GenericRepo<>));

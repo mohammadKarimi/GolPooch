@@ -1,9 +1,9 @@
-﻿using Elk.Core;
+﻿using System;
+using Elk.Core;
+using System.Net;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.Extensions.Configuration;
-using System;
-using System.Net;
 
 namespace GolPooch.Api
 {
