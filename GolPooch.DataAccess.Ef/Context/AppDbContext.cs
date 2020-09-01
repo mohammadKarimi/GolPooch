@@ -1,16 +1,16 @@
 ﻿using Elk.Core;
+using GolPooch.Domain.Entity;
 using Elk.EntityFrameworkCore;
 using Elk.EntityFrameworkCore.Tools;
-using GolPooch.Domain.Entity;
 using Microsoft.EntityFrameworkCore;
 
 namespace GolPooch.DataAccess.Ef
 {
-    public partial class GolPoochDbContext : ElkDbContext
+    public partial class AppDbContext : ElkDbContext
     {
-        public GolPoochDbContext() { }
+        public AppDbContext() { }
 
-        public GolPoochDbContext(DbContextOptions<GolPoochDbContext> options) : base(options) { }
+        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

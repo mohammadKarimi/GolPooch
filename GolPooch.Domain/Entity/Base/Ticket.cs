@@ -18,13 +18,13 @@ namespace GolPooch.Domain.Entity
         public User User { get; set; }
         public int UserId { get; set; }
 
-        [ForeignKey(nameof(AnswerUserId))]
-        public User AnswerUser { get; set; }
-        public int AnswerUserId { get; set; }
+        //[ForeignKey(nameof(AnswerAdminId))]
+        //public Admin AnswerAdmin { get; set; }
+        public Guid? AnswerAdminId { get; set; }
 
         [Display(Name = nameof(DisplayNames.Type), ResourceType = typeof(DisplayNames))]
         public TicketType Type { get; set; }
-        
+
         [Display(Name = nameof(DisplayNames.InsertDate), ResourceType = typeof(DisplayNames))]
         public DateTime InsertDateMi { get; set; }
 

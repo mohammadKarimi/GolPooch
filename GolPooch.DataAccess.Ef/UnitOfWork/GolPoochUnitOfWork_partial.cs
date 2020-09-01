@@ -10,8 +10,8 @@ namespace GolPooch.DataAccess.Ef
 {
     public partial class GolPoochUnitOfWork
     {
-        private readonly GolPoochDbContext _golPoochDbContext; private readonly IServiceProvider _serviceProvider;
-        public GolPoochUnitOfWork(GolPoochDbContext golPoochDbContext, IServiceProvider serviceProvider)
+        private readonly AppDbContext _golPoochDbContext; private readonly IServiceProvider _serviceProvider;
+        public GolPoochUnitOfWork(AppDbContext golPoochDbContext, IServiceProvider serviceProvider)
         {
             _golPoochDbContext = golPoochDbContext;
             _serviceProvider = serviceProvider;
