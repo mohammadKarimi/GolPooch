@@ -85,3 +85,4 @@ C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.Pwa\obj\Debug\netcoreapp3.1\
 C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.Pwa\obj\Debug\netcoreapp3.1\GolPooch.Pwa.pdb
 C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.Pwa\obj\Debug\netcoreapp3.1\GolPooch.Pwa.genruntimeconfig.cache
 D:\Mehran\Git\GolYaPooch\GolPooch.Pwa\obj\Debug\netcoreapp3.1\GolPooch.Pwa.csprojAssemblyReference.cache
+C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.Pwa\obj\Debug\netcoreapp3.1\GolPooch.Pwa.csprojAssemblyReference.cache

@@ -20,3 +20,5 @@ C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.Domain\obj\Debug\netstandard
 C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.Domain\obj\Debug\netstandard2.1\GolPooch.Domain.dll
 C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.Domain\obj\Debug\netstandard2.1\GolPooch.Domain.pdb
 D:\Mehran\Git\GolYaPooch\GolPooch.Domain\obj\Debug\netstandard2.1\GolPooch.Domain.Resources.ErrorMessage.resources
+C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.Domain\obj\Debug\netstandard2.1\GolPooch.Domain.csprojAssemblyReference.cache
+C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.Domain\obj\Debug\netstandard2.1\GolPooch.Domain.Resources.ErrorMessage.resources
