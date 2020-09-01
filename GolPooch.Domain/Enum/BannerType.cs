@@ -5,6 +5,7 @@
         Ctr = 1,
         Modal = 2,
         ImgBanner = 3,
-        VideoBanner = 4
+        VideoBanner = 4,
+        CompleteProfile
     }
 }

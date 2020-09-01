@@ -25,9 +25,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="package-lock.json" />
     <None Include="package.json" />
     <None Include="public\manifest.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="src\assets\" />
+    <Folder Include="src\core\utils\" />
+    <Folder Include="src\states\selector\" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

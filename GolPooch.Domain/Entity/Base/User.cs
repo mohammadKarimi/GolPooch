@@ -17,7 +17,6 @@ namespace GolPooch.Domain.Entity
         public long MobileNumber { get; set; }
         public string Email { get; set; }
 
-
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Birthdate { get; set; }
@@ -31,6 +30,7 @@ namespace GolPooch.Domain.Entity
         public Gender Gender { get; set; }
         public string ProfileImgAddr { get; set; }
 
+        public bool IsComplete { get; set; }
         [Column(TypeName = "char(10)")]
         [Required(ErrorMessageResourceName = nameof(DisplayNames.Required), ErrorMessageResourceType = typeof(DisplayNames))]
         [MaxLength(10, ErrorMessageResourceName = nameof(DisplayNames.MaxLength), ErrorMessageResourceType = typeof(DisplayNames))]

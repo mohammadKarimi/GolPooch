@@ -26,6 +26,7 @@ namespace GolPooch.Domain.Entity
         public string Text { get; set; }
         public string Answer { get; set; }
 
+        public bool IsRead { get; set; }
         [Column(TypeName = "char(10)")]
         [Required(ErrorMessageResourceName = nameof(DisplayNames.Required), ErrorMessageResourceType = typeof(DisplayNames))]
         [MaxLength(10, ErrorMessageResourceName = nameof(DisplayNames.MaxLength), ErrorMessageResourceType = typeof(DisplayNames))]

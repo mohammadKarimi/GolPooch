@@ -23,5 +23,13 @@ namespace GolPooch.Service.Interfaces
         /// <param name="notificationId">get this id from push message</param>
         /// <returns>return notification id</returns>
         Task<IResponse<int>> AddDelivery(Guid userId, int notificationId);
+
+        /// <summary>
+        /// When user tapped in a notification, this method called to set isread field with true status.
+        /// </summary>
+        /// <param name="userId">read from jwt</param>
+        /// <param name="notification">notification primary key</param>
+        /// <returns>return notification id</returns>
+        Task<IResponse<int>> Read(Guid userId, int notification);
     }
 }

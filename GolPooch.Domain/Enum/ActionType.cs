@@ -4,6 +4,7 @@
     {
         Close = 1,
         CallApi = 2,
-        OpenLink = 3
+        OpenLink = 3,
+
     }
 }

@@ -29,5 +29,13 @@ namespace GolPooch.Service.Interfaces
         /// <param name="model">model that is filled by user in clientside</param>
         /// <returns>return ticket primary key</returns>
         Task<IResponse<int>> Add(Ticket model);
+
+        /// <summary>
+        /// When user tapped in a ticket, this method called to set isread field with true status.
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <param name="ticketId"></param>
+        /// <returns></returns>
+        Task<IResponse<int>> Read(Guid userId, int ticketId);
     }
 }
