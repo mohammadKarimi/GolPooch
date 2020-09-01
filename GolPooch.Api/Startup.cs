@@ -19,7 +19,7 @@ namespace GolPooch.Api
         {
             _config = configuration;
         } 
-
+         
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddCors(options =>
