@@ -18,13 +18,8 @@ namespace GolPooch.Domain.Entity
         [Display(Name = nameof(DisplayNames.MobileNumber), ResourceType = typeof(DisplayNames))]
         public long MobileNumber { get; set; }
 
-
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
         public string Birthdate { get; set; }
-        public DateTime BirthdateMi { get; set; }
 
-        public string PushId { get; set; }
         public OsType OsType { get; set; }
 
         [Display(Name = nameof(DisplayNames.Region), ResourceType = typeof(DisplayNames))]
