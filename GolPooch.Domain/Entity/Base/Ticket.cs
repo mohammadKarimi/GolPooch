@@ -1,13 +1,13 @@
-﻿using Elk.Core;
+﻿using System;
+using Elk.Core;
 using GolPooch.Domain.Enum;
 using GolPooch.Domain.Resources;
-using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace GolPooch.Domain.Entity
 {
-    [Table(nameof(Ticket))]
+    [Table(nameof(Ticket), Schema = "Base")]
     public class Ticket : IEntity, IInsertDateProperties
     {
         [Key]
@@ -22,20 +22,35 @@ namespace GolPooch.Domain.Entity
         public User AnswerUser { get; set; }
         public int AnswerUserId { get; set; }
 
+        [Display(Name = nameof(DisplayNames.Type), ResourceType = typeof(DisplayNames))]
         public TicketType Type { get; set; }
-        public string Text { get; set; }
-        public string Answer { get; set; }
+        
+        [Display(Name = nameof(DisplayNames.InsertDate), ResourceType = typeof(DisplayNames))]
+        public DateTime InsertDateMi { get; set; }
 
         [Column(TypeName = "char(10)")]
-        [Required(ErrorMessageResourceName = nameof(DisplayNames.Required), ErrorMessageResourceType = typeof(DisplayNames))]
-        [MaxLength(10, ErrorMessageResourceName = nameof(DisplayNames.MaxLength), ErrorMessageResourceType = typeof(DisplayNames))]
-        public string AnswerDateSh { get; set; }
+        [Display(Name = nameof(DisplayNames.InsertDate), ResourceType = typeof(DisplayNames))]
+        [MaxLength(10, ErrorMessageResourceName = nameof(ErrorMessage.MaxLength), ErrorMessageResourceType = typeof(ErrorMessage))]
+        public string InsertDateSh { get; set; }
+
+        [Display(Name = nameof(DisplayNames.AnswerDate), ResourceType = typeof(DisplayNames))]
         public DateTime AnswerDateMi { get; set; }
 
         [Column(TypeName = "char(10)")]
-        [Required(ErrorMessageResourceName = nameof(DisplayNames.Required), ErrorMessageResourceType = typeof(DisplayNames))]
-        [MaxLength(10, ErrorMessageResourceName = nameof(DisplayNames.MaxLength), ErrorMessageResourceType = typeof(DisplayNames))]
-        public string InsertDateSh { get; set; }
-        public DateTime InsertDateMi { get; set; }
+        [Display(Name = nameof(DisplayNames.AnswerDate), ResourceType = typeof(DisplayNames))]
+        [MaxLength(10, ErrorMessageResourceName = nameof(ErrorMessage.MaxLength), ErrorMessageResourceType = typeof(ErrorMessage))]
+        public string AnswerDateSh { get; set; }
+
+        [Display(Name = nameof(DisplayNames.Text), ResourceType = typeof(DisplayNames))]
+        [Required(ErrorMessageResourceName = nameof(ErrorMessage.Required), ErrorMessageResourceType = typeof(ErrorMessage))]
+        [MaxLength(1000, ErrorMessageResourceName = nameof(ErrorMessage.MaxLength), ErrorMessageResourceType = typeof(ErrorMessage))]
+        [StringLength(1000, ErrorMessageResourceName = nameof(ErrorMessage.MaxLength), ErrorMessageResourceType = typeof(ErrorMessage))]
+        public string Text { get; set; }
+
+        [Display(Name = nameof(DisplayNames.Answer), ResourceType = typeof(DisplayNames))]
+        [Required(ErrorMessageResourceName = nameof(ErrorMessage.Required), ErrorMessageResourceType = typeof(ErrorMessage))]
+        [MaxLength(1000, ErrorMessageResourceName = nameof(ErrorMessage.MaxLength), ErrorMessageResourceType = typeof(ErrorMessage))]
+        [StringLength(1000, ErrorMessageResourceName = nameof(ErrorMessage.MaxLength), ErrorMessageResourceType = typeof(ErrorMessage))]
+        public string Answer { get; set; }
     }
 }
