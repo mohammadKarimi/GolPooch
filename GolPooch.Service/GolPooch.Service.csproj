@@ -12,7 +12,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\GolPooch.DataAccess.Ef\GolPooch.DataAccess.Ef.csproj" />
-    <ProjectReference Include="..\GolPooch.Domain\GolPooch.Domain.csproj" />
   </ItemGroup>
 
   <ItemGroup>

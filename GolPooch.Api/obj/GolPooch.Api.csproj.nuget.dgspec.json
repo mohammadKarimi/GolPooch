@@ -270,9 +270,6 @@
             "projectReferences": {
               "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.DataAccess.Ef\\GolPooch.DataAccess.Ef.csproj": {
                 "projectPath": "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.DataAccess.Ef\\GolPooch.DataAccess.Ef.csproj"
-              },
-              "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.Domain\\GolPooch.Domain.csproj": {
-                "projectPath": "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.Domain\\GolPooch.Domain.csproj"
               }
             }
           }
