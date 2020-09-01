@@ -3,7 +3,7 @@
 const EmptyLayout = () => {
     return (
         <div>
-            Hello Authorization !
+            Hello GolPoosh !
         </div>
     );
 }

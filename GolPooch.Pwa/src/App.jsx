@@ -1,7 +1,7 @@
 ﻿import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Authorization from './routes/auth';
-import EmptyLayout from './routes/emptyLayout';
+import EmptyLayout from './routes/layouts/emptyLayout';
+ 
 
 export default class App extends Component {
     render() {
