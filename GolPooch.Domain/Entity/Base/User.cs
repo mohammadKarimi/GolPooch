@@ -79,7 +79,6 @@ namespace GolPooch.Domain.Entity
         public string ProfileImgUrl { get; set; }
 
 
-
         public ICollection<Ticket> Tickets { get; set; }
         public ICollection<VerificationCode> VerificationCodes { get; set; }
         public ICollection<DrawChance> DrawChances { get; set; }
