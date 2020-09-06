@@ -212,5 +212,15 @@ namespace GolPooch.Service.Resourses {
                 return ResourceManager.GetString("UsedPinCode", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to برای ورود به اپ کد زیر را وارد نمایید
+        ///Code= {code}.
+        /// </summary>
+        public static string VerificationCode_GetCode {
+            get {
+                return ResourceManager.GetString("VerificationCode_GetCode", resourceCulture);
+            }
+        }
     }
 }

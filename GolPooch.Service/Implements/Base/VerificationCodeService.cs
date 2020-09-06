@@ -26,8 +26,6 @@ namespace GolPooch.Service.Implements
             try
             {
                 var randomPinCode = Randomizer.GetRandomInteger(5);
-                var text = "برای ورود به اپ کد زیر را وارد نمایید." + Environment.NewLine +
-                    $"code = {randomPinCode}";
 
                 var verificationCode = new VerificationCode
                 {
@@ -41,7 +39,7 @@ namespace GolPooch.Service.Implements
                 var saveResult = await _appUow.ElkSaveChangesAsync();
                 if (saveResult.IsSuccessful)
                 {
-                    var sendResult = await _smsGatway.SendAsync(mobileNumber.ToNormalNumber(), text);
+                    var sendResult = await _smsGatway.SendAsync(mobileNumber.ToNormalNumber(), ServiceMessage.VerificationCode_GetCode.Replace("{code}", randomPinCode.ToString()));
                     if (sendResult.IsSuccessful && sendResult.Result) response.Result = verificationCode.VerificationCodeId;
                     else
                     {
