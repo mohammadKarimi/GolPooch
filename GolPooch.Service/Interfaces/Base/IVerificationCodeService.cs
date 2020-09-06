@@ -1,6 +1,5 @@
 ﻿using Elk.Core;
 using GolPooch.Domain.Entity;
-using System;
 using System.Threading.Tasks;
 
 namespace GolPooch.Service.Interfaces
@@ -13,7 +12,7 @@ namespace GolPooch.Service.Interfaces
         /// <param name="mobileNumber">MobileNumber was entered by user</param>
         /// <param name="osType">this field is for detecting which message we should send</param>
         /// <returns>return VerificationId for Verify</returns>
-        Task<IResponse<int>> GetCode(long mobileNumber,OsType osType);
+        Task<IResponse<int>> GetCodeAsync(long mobileNumber, OsType osType);
 
         /// <summary>
         /// verify last Code and register user with mobilenumber that user entered
@@ -21,6 +20,6 @@ namespace GolPooch.Service.Interfaces
         /// <param name="verificationCodeId">the verification primaryKey for finding row</param>
         /// <param name="code">the digit code that was entered by </param>
         /// <returns>User Model</returns>
-        Task<IResponse<User>> VerifyCode(int verificationCodeId, int code);
+        Task<IResponse<User>> VerifyCodeAsync(int verificationCodeId, int pinCode);
     }
 }

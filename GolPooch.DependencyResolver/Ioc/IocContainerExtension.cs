@@ -1,4 +1,6 @@
 ﻿using Elk.Core;
+using Elk.Cache;
+using GolPooch.SmsGateway;
 using GolPooch.DataAccess.Ef;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -15,8 +17,10 @@ namespace GolPooch.DependencyResolver.Ioc
 
         public static IServiceCollection AddScoped(this IServiceCollection services, IConfiguration _configuration)
         {
-            services.AddContext<AppDbContext>(_configuration.GetConnectionString("GolPoochDbContext"));
+            services.AddContext<AppDbContext>(_configuration.GetConnectionString("AppDbContext"));
             services.AddScoped<AppDbContext>();
+            
+            services.AddScoped<ISmsGatway, SmsGatway>();
 
             #region Repos
             services.AddScoped(typeof(IGenericRepo<>), typeof(GenericRepo<>));
@@ -27,6 +31,8 @@ namespace GolPooch.DependencyResolver.Ioc
 
         public static IServiceCollection AddSingleton(this IServiceCollection services, IConfiguration _configuration)
         {
+            services.AddSingleton<IMemoryCacheProvider, MemoryCacheProvider>();
+
             return services;
         }
 

@@ -1,7 +1,7 @@
 ﻿using Elk.Core;
 using GolPooch.Domain.Entity;
-using System;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 
 namespace GolPooch.Service.Interfaces
 {
@@ -15,7 +15,7 @@ namespace GolPooch.Service.Interfaces
         /// </summary>
         /// <param name="user">user information ( userid + mobilenumber are sent by jwt )</param>
         /// <returns>user id</returns>
-        Task<IResponse<int>> UpdateProfile(User user);
+        Task<IResponse<int>> UpdateProfileAsync(User user);
 
         /// <summary>
         /// Upload awatar and save in host, and update user with awatar address
@@ -23,6 +23,6 @@ namespace GolPooch.Service.Interfaces
         /// <param name="userId">userid</param>
         /// <param name="photo">binary of photo</param>
         /// <returns>address of photo hosted</returns>
-        Task<IResponse<string>> UploadAwatar(Guid userId, byte[] photo);
+        Task<IResponse<string>> UploadAwatarAsync(int userId, string fileExtension, byte[] fileBytes);
     }
 }

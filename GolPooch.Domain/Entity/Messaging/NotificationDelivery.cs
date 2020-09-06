@@ -5,7 +5,7 @@ using GolPooch.Domain.Resources;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace GolPooch.Domain.Entity.Messaging
+namespace GolPooch.Domain.Entity
 {
     [Table(nameof(NotificationDelivery), Schema = "Messaging")]
     public class NotificationDelivery : IEntity, IInsertDateProperties

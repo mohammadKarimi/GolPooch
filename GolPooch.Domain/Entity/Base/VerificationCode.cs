@@ -18,6 +18,9 @@ namespace GolPooch.Domain.Entity
         public int UserId { get; set; }
 
         [Display(Name = nameof(DisplayNames.PinCode), ResourceType = typeof(DisplayNames))]
+        public long MobileNumber { get; set; }
+
+        [Display(Name = nameof(DisplayNames.PinCode), ResourceType = typeof(DisplayNames))]
         public int PinCode { get; set; }
 
         [Display(Name = nameof(DisplayNames.IsUsed), ResourceType = typeof(DisplayNames))]

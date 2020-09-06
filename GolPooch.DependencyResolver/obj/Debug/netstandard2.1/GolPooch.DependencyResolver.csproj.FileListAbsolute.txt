@@ -14,3 +14,7 @@ D:\Mehran\Git\GolYaPooch\GolPooch.DependencyResolver\obj\Debug\netstandard2.1\Go
 D:\Mehran\Git\GolYaPooch\GolPooch.DependencyResolver\obj\Debug\netstandard2.1\GolPooch.DependencyResolver.csproj.CopyComplete
 D:\Mehran\Git\GolYaPooch\GolPooch.DependencyResolver\obj\Debug\netstandard2.1\GolPooch.DependencyResolver.dll
 D:\Mehran\Git\GolYaPooch\GolPooch.DependencyResolver\obj\Debug\netstandard2.1\GolPooch.DependencyResolver.pdb
+D:\Mehran\Git\GolYaPooch\GolPooch.DependencyResolver\bin\Debug\netstandard2.1\GolPooch.CrossCutting.dll
+D:\Mehran\Git\GolYaPooch\GolPooch.DependencyResolver\bin\Debug\netstandard2.1\GolPooch.SmsGateway.dll
+D:\Mehran\Git\GolYaPooch\GolPooch.DependencyResolver\bin\Debug\netstandard2.1\GolPooch.CrossCutting.pdb
+D:\Mehran\Git\GolYaPooch\GolPooch.DependencyResolver\bin\Debug\netstandard2.1\GolPooch.SmsGateway.pdb
