@@ -12,3 +12,9 @@ D:\Mehran\Git\GolYaPooch\GolPooch.Service\obj\Debug\netstandard2.1\GolPooch.Serv
 D:\Mehran\Git\GolYaPooch\GolPooch.Service\obj\Debug\netstandard2.1\GolPooch.Service.csproj.CopyComplete
 D:\Mehran\Git\GolYaPooch\GolPooch.Service\obj\Debug\netstandard2.1\GolPooch.Service.dll
 D:\Mehran\Git\GolYaPooch\GolPooch.Service\obj\Debug\netstandard2.1\GolPooch.Service.pdb
+D:\Mehran\Git\GolYaPooch\GolPooch.Service\obj\Debug\netstandard2.1\GolPooch.Service.Resourses.ServiceMessage.resources
+D:\Mehran\Git\GolYaPooch\GolPooch.Service\obj\Debug\netstandard2.1\GolPooch.Service.csproj.GenerateResource.cache
+D:\Mehran\Git\GolYaPooch\GolPooch.Service\bin\Debug\netstandard2.1\GolPooch.CrossCutting.dll
+D:\Mehran\Git\GolYaPooch\GolPooch.Service\bin\Debug\netstandard2.1\GolPooch.SmsGateway.dll
+D:\Mehran\Git\GolYaPooch\GolPooch.Service\bin\Debug\netstandard2.1\GolPooch.CrossCutting.pdb
+D:\Mehran\Git\GolYaPooch\GolPooch.Service\bin\Debug\netstandard2.1\GolPooch.SmsGateway.pdb

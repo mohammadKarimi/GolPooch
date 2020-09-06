@@ -112,3 +112,10 @@ D:\Mehran\Git\GolYaPooch\GolPooch.Api\obj\Debug\netcoreapp3.1\GolPooch.Api.dll
 D:\Mehran\Git\GolYaPooch\GolPooch.Api\obj\Debug\netcoreapp3.1\GolPooch.Api.pdb
 D:\Mehran\Git\GolYaPooch\GolPooch.Api\obj\Debug\netcoreapp3.1\GolPooch.Api.genruntimeconfig.cache
 D:\Mehran\Git\GolYaPooch\GolPooch.Api\bin\Debug\netcoreapp3.1\Kavenegar.dll
+D:\Mehran\Git\GolYaPooch\GolPooch.Api\bin\Debug\netcoreapp3.1\Kavenegar.Core.dll
+D:\Mehran\Git\GolYaPooch\GolPooch.Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Http.Features.dll
+D:\Mehran\Git\GolYaPooch\GolPooch.Api\bin\Debug\netcoreapp3.1\System.IO.Pipelines.dll
+D:\Mehran\Git\GolYaPooch\GolPooch.Api\bin\Debug\netcoreapp3.1\GolPooch.CrossCutting.dll
+D:\Mehran\Git\GolYaPooch\GolPooch.Api\bin\Debug\netcoreapp3.1\GolPooch.SmsGateway.dll
+D:\Mehran\Git\GolYaPooch\GolPooch.Api\bin\Debug\netcoreapp3.1\GolPooch.CrossCutting.pdb
+D:\Mehran\Git\GolYaPooch\GolPooch.Api\bin\Debug\netcoreapp3.1\GolPooch.SmsGateway.pdb

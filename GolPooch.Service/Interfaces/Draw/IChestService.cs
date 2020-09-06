@@ -1,7 +1,6 @@
 ﻿using Elk.Core;
 using GolPooch.Domain.Entity;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace GolPooch.Service.Interfaces
 {
@@ -12,6 +11,6 @@ namespace GolPooch.Service.Interfaces
         /// this method must be cached
         /// </summary>
         /// <returns>list of available chest</returns>
-        Task<IResponse<List<Chest>>> GetAllAvailable();
+        IResponse<List<Chest>> GetAllAvailable();
     }
 }
