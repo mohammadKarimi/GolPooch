@@ -44,6 +44,6 @@ namespace GolPooch.Domain.Entity
 
 
 
-        public ICollection<ProductOffer> ProductOffer { get; set; }
+        public ICollection<ProductOffer> ProductOffers { get; set; }
     }
 }

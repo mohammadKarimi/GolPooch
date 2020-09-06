@@ -3,7 +3,6 @@ using Elk.Core;
 using GolPooch.Domain.Enum;
 using GolPooch.Domain.Resources;
 using System.Collections.Generic;
-using GolPooch.Domain.Entity.Messaging;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
