@@ -1,7 +1,7 @@
 ﻿import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import EmptyLayout from './routes/layouts/emptyLayout';
- 
+import NavigationLayout from './routes/layouts/navigationLayout';
 
 export default class App extends Component {
     render() {
@@ -9,6 +9,7 @@ export default class App extends Component {
             <Router className="layout">
                 <Switch>
                     <Route path="/login" component={EmptyLayout} />
+                    <Route path="/" component={NavigationLayout} />
                 </Switch>
             </Router>
         );

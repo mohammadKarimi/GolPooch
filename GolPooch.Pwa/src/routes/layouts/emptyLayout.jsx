@@ -1,10 +1,12 @@
 ﻿import React from 'react';
+import Authorization from '../auth';
+import { Route, Switch } from 'react-router-dom';
 
 const EmptyLayout = () => {
     return (
-        <div>
-            Hello GolPoosh !
-        </div>
+        <Switch>
+            <Route path="/" component={Authorization} />
+        </Switch>
     );
 }
 export default EmptyLayout;
