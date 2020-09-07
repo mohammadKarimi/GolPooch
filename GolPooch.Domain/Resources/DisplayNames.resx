@@ -189,11 +189,17 @@
   <data name="InsertDate" xml:space="preserve">
     <value>تاریخ ثبت</value>
   </data>
+  <data name="IP" xml:space="preserve">
+    <value>IP</value>
+  </data>
   <data name="IsActive" xml:space="preserve">
     <value>فعال است؟</value>
   </data>
   <data name="IsFinished" xml:space="preserve">
     <value>پایان یافته است؟</value>
+  </data>
+  <data name="IsMobile" xml:space="preserve">
+    <value>موبایل است؟</value>
   </data>
   <data name="IsReFoundable" xml:space="preserve">
     <value>قابل بازگشت است؟</value>
