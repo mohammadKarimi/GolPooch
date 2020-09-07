@@ -22,18 +22,18 @@ namespace GolPooch.Api
          
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddCors(options =>
-            {
-                options.AddPolicy(AllowedOrigins, builder =>
-                {
-                    builder
-                        .WithOrigins(_config.GetSection("AllowOrigin").Value.Split(";"))
-                        .SetIsOriginAllowedToAllowWildcardSubdomains()
-                        .AllowAnyHeader()
-                        .AllowAnyMethod()
-                        .AllowCredentials();
-                });
-            });
+            //services.AddCors(options =>
+            //{
+            //    options.AddPolicy(AllowedOrigins, builder =>
+            //    {
+            //        builder
+            //            .WithOrigins(_config.GetSection("AllowOrigin").Value.Split(";"))
+            //            .SetIsOriginAllowedToAllowWildcardSubdomains()
+            //            .AllowAnyHeader()
+            //            .AllowAnyMethod()
+            //            .AllowCredentials();
+            //    });
+            //});
             services.AddMvc();
 
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)

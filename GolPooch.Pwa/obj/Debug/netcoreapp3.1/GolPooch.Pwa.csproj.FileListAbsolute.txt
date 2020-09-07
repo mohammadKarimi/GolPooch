@@ -29,6 +29,7 @@ D:\Mehran\Git\GolYaPooch\GolPooch.Pwa\bin\Debug\netcoreapp3.1\Microsoft.Extensio
 D:\Mehran\Git\GolYaPooch\GolPooch.Pwa\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.ConfigurationExtensions.dll
 D:\Mehran\Git\GolYaPooch\GolPooch.Pwa\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
 D:\Mehran\Git\GolYaPooch\GolPooch.Pwa\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\Mehran\Git\GolYaPooch\GolPooch.Pwa\obj\Debug\netcoreapp3.1\GolPooch.Pwa.csprojAssemblyReference.cache
 D:\Mehran\Git\GolYaPooch\GolPooch.Pwa\obj\Debug\netcoreapp3.1\GolPooch.Pwa.AssemblyInfoInputs.cache
 D:\Mehran\Git\GolYaPooch\GolPooch.Pwa\obj\Debug\netcoreapp3.1\GolPooch.Pwa.AssemblyInfo.cs
 D:\Mehran\Git\GolYaPooch\GolPooch.Pwa\obj\Debug\netcoreapp3.1\GolPooch.Pwa.csproj.CoreCompileInputs.cache
@@ -41,4 +42,3 @@ D:\Mehran\Git\GolYaPooch\GolPooch.Pwa\obj\Debug\netcoreapp3.1\staticwebassets\Go
 D:\Mehran\Git\GolYaPooch\GolPooch.Pwa\obj\Debug\netcoreapp3.1\GolPooch.Pwa.dll
 D:\Mehran\Git\GolYaPooch\GolPooch.Pwa\obj\Debug\netcoreapp3.1\GolPooch.Pwa.pdb
 D:\Mehran\Git\GolYaPooch\GolPooch.Pwa\obj\Debug\netcoreapp3.1\GolPooch.Pwa.genruntimeconfig.cache
-D:\Mehran\Git\GolYaPooch\GolPooch.Pwa\obj\Debug\netcoreapp3.1\GolPooch.Pwa.csprojAssemblyReference.cache

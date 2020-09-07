@@ -11,6 +11,7 @@ namespace GolPooch.Api
     public class AuthorizeFilter : ActionFilterAttribute
     {
         private readonly IConfiguration _configuration;
+
         public AuthorizeFilter(IConfiguration configuration)
         {
             _configuration = configuration;

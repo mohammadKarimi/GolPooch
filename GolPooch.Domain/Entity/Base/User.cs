@@ -25,7 +25,7 @@ namespace GolPooch.Domain.Entity
         public OsType OsType { get; set; }
 
         [Display(Name = nameof(DisplayNames.Region), ResourceType = typeof(DisplayNames))]
-        public Region Region { get; set; }
+        public RegionNames Region { get; set; }
 
         [Display(Name = nameof(DisplayNames.InsertDate), ResourceType = typeof(DisplayNames))]
         public DateTime InsertDateMi { get; set; }
