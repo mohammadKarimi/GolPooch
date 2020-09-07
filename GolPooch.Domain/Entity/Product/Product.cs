@@ -1,5 +1,6 @@
 ﻿using System;
 using Elk.Core;
+using GolPooch.Domain.Enum;
 using GolPooch.Domain.Resources;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -16,6 +17,9 @@ namespace GolPooch.Domain.Entity
 
         [Display(Name = nameof(DisplayNames.IsShow), ResourceType = typeof(DisplayNames))]
         public bool IsShow { get; set; }
+
+        [Display(Name = nameof(DisplayNames.IsShow), ResourceType = typeof(DisplayNames))]
+        public ProductType Type { get; set; }
 
         [Display(Name = nameof(DisplayNames.InsertDate), ResourceType = typeof(DisplayNames))]
         public DateTime InsertDateMi { get; set; }

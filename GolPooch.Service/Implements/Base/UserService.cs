@@ -41,7 +41,7 @@ namespace GolPooch.Service.Implements
                 var productOffer = await _appUow.ProductOfferRepo.FirstOrDefaultAsync(
                     new QueryFilter<ProductOffer>
                     {
-                        Conditions = x => x.IsActive && !x.Product.IsShow && x.Product.ExpirationDate > DateTime.Now,
+                        Conditions = x => x.IsActive && x.Product.Type == ProductType.Profile && !x.Product.IsShow && x.Product.ExpirationDate > DateTime.Now,
                         IncludeProperties = new List<Expression<Func<ProductOffer, object>>> { x => x.Product }
                     });
 
