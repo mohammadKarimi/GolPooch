@@ -23,7 +23,9 @@ namespace GolPooch.Api
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "v1.0");
+                c.DefaultModelExpandDepth(2);
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "GolPooch API - v1.0");
+                c.RoutePrefix = "help";
             });
         }
         private static OpenApiInfo GetOpenApiInfo(string version) => new OpenApiInfo

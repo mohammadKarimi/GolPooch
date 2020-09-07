@@ -3,6 +3,7 @@ using GolPooch.Service.Interfaces;
 
 namespace GolPooch.Api.Controllers
 {
+    [Route("[controller]/[action]")]
     public class ChestController : Controller
     {
         private IChestService _chestService { get; set; }
@@ -12,8 +13,12 @@ namespace GolPooch.Api.Controllers
             _chestService = chestService;
         }
 
+        /// <summary>
+        /// Get All Availible Chest
+        /// </summary>
+        /// <returns>List of availible chest</returns>
         [HttpGet]
-        public JsonResult All()
-            => Json(_chestService.GetAllAvailable());
+        public IActionResult All()
+            => Ok(_chestService.GetAllAvailable());
     }
 }

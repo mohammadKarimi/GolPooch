@@ -6,6 +6,7 @@ using GolPooch.Service.Interfaces;
 
 namespace GolPooch.Api.Controllers
 {
+    [Route("[controller]/[action]")]
     public class TicketController : Controller
     {
         private ITicketService _ticketService { get; set; }
@@ -24,11 +25,11 @@ namespace GolPooch.Api.Controllers
             => Json(_ticketService.Get(userId, pagingParameter));
 
         [HttpGet]
-        public async Task<JsonResult> Get([FromBody] int ticketId)
+        public async Task<JsonResult> Get(int ticketId)
             => Json(await _ticketService.Get(ticketId));
 
         [HttpPost]
-        public async Task<JsonResult> Read([FromBody] int ticketId)
+        public async Task<JsonResult> Read(int ticketId)
             => Json(await _ticketService.Read(ticketId));
     }
 }

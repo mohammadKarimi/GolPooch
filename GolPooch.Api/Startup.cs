@@ -2,6 +2,7 @@ using System.Text;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using System.Text.Json.Serialization;
 using GolPooch.DependencyResolver.Ioc;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.Extensions.Configuration;
@@ -18,8 +19,8 @@ namespace GolPooch.Api
         public Startup(IConfiguration configuration)
         {
             _config = configuration;
-        } 
-         
+        }
+
         public void ConfigureServices(IServiceCollection services)
         {
             //services.AddCors(options =>
@@ -34,7 +35,19 @@ namespace GolPooch.Api
             //            .AllowCredentials();
             //    });
             //});
-            services.AddMvc();
+
+            services.AddMvc(option =>
+            {
+                option.EnableEndpointRouting = false;
+                option.ReturnHttpNotAcceptable = true;
+                // option.Filters.Add(typeof(ModelValidationFilter));
+            })
+            .AddXmlSerializerFormatters()
+            .AddJsonOptions(opts =>
+            {
+                opts.JsonSerializerOptions.PropertyNamingPolicy = null;
+                opts.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+            });
 
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
                 .AddCookie(opt =>
@@ -69,16 +82,11 @@ namespace GolPooch.Api
                 });
             });
             app.UseRouting();
-            
+
             app.UseAuthentication();
             app.UseCors(AllowedOrigins);
 
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
-            });
+            app.UseMvcWithDefaultRoute();
         }
     }
 }

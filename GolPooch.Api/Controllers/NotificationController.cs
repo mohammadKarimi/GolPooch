@@ -5,6 +5,7 @@ using GolPooch.Service.Interfaces;
 
 namespace GolPooch.Api.Controllers
 {
+    [Route("[controller]/[action]")]
     public class NotificationController : Controller
     {
         private INotificationService _notificationService { get; set; }
@@ -15,7 +16,7 @@ namespace GolPooch.Api.Controllers
         }
 
         [HttpPost]
-        public async Task<JsonResult> AddDeliveryAsync(int userId, [FromBody] int notificationId)
+        public async Task<JsonResult> AddDeliveryAsync(int userId, int notificationId)
             => Json(await _notificationService.AddDeliveryAsync(userId, notificationId));
 
         [HttpGet]

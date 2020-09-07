@@ -9,6 +9,7 @@ using System.Collections.Generic;
 
 namespace GolPooch.Api.Controllers
 {
+    [Route("[controller]/[action]")]
     public class BaseController : Controller
     {
         private readonly IMemoryCacheProvider _cacheProvider;
@@ -53,7 +54,8 @@ namespace GolPooch.Api.Controllers
         /// </summary>
         /// <returns>List of Key,Value Object</returns>
         [HttpGet]
-        public IActionResult Regions() => Ok(GetRegions());
+        public IActionResult Regions() 
+            => Ok(GetRegions());
 
     }
 }

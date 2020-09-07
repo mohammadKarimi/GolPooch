@@ -6,6 +6,7 @@ using GolPooch.Service.Interfaces;
 
 namespace GolPooch.Api.Controllers
 {
+    [Route("[controller]/[action]")]
     public class PurchaseController : Controller
     {
         private IPurchaseService _purchaseService { get; set; }
