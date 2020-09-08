@@ -119,3 +119,4 @@ D:\Mehran\Git\GolYaPooch\GolPooch.Api\obj\Debug\netcoreapp3.1\staticwebassets\Go
 D:\Mehran\Git\GolYaPooch\GolPooch.Api\obj\Debug\netcoreapp3.1\GolPooch.Api.dll
 D:\Mehran\Git\GolYaPooch\GolPooch.Api\obj\Debug\netcoreapp3.1\GolPooch.Api.pdb
 D:\Mehran\Git\GolYaPooch\GolPooch.Api\obj\Debug\netcoreapp3.1\GolPooch.Api.genruntimeconfig.cache
+D:\Mehran\Git\GolYaPooch\GolPooch.Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll

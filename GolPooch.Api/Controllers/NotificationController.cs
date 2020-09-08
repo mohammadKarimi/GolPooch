@@ -1,11 +1,12 @@
 ﻿using Elk.Core;
 using System.Threading.Tasks;
+using GolPooch.Domain.Entity;
 using Microsoft.AspNetCore.Mvc;
 using GolPooch.Service.Interfaces;
 
 namespace GolPooch.Api.Controllers
 {
-    [Route("[controller]/[action]")]
+    [AuthorizeFilter, Route("[controller]/[action]")]
     public class NotificationController : Controller
     {
         private INotificationService _notificationService { get; set; }
@@ -16,12 +17,12 @@ namespace GolPooch.Api.Controllers
         }
 
         [HttpPost]
-        public async Task<JsonResult> AddDeliveryAsync(int userId, int notificationId)
-            => Json(await _notificationService.AddDeliveryAsync(userId, notificationId));
+        public async Task<JsonResult> AddDeliveryAsync(User user, int notificationId)
+            => Json(await _notificationService.AddDeliveryAsync(user.UserId, notificationId));
 
         [HttpGet]
-        public JsonResult Top(int userId, [FromBody] PagingParameter pagingParameter)
-            => Json(_notificationService.GetTopNotifications(userId, pagingParameter));
+        public JsonResult Top(User user, [FromBody] PagingParameter pagingParameter)
+            => Json(_notificationService.GetTopNotifications(user.UserId, pagingParameter));
 
         [HttpPost]
         public JsonResult Read(int notificationId)

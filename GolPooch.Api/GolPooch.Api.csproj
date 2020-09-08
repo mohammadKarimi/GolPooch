@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Elk.AspNetCore" Version="1.1.5" />
+    <PackageReference Include="Elk.AspNetCore" Version="1.1.6" />
   </ItemGroup>
 
   <ItemGroup>
