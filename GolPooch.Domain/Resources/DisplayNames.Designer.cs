@@ -277,6 +277,15 @@ namespace GolPooch.Domain.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to IP.
+        /// </summary>
+        internal static string IP {
+            get {
+                return ResourceManager.GetString("IP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to فعال است؟.
         /// </summary>
         internal static string IsActive {
@@ -291,6 +300,15 @@ namespace GolPooch.Domain.Resources {
         internal static string IsFinished {
             get {
                 return ResourceManager.GetString("IsFinished", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to موبایل است؟.
+        /// </summary>
+        internal static string IsMobile {
+            get {
+                return ResourceManager.GetString("IsMobile", resourceCulture);
             }
         }
         

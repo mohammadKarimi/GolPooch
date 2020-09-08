@@ -1,13 +1,9 @@
 ﻿using System;
 using Elk.Core;
-using System.Linq;
-using GolPooch.Domain.Enum;
 using GolPooch.DataAccess.Ef;
 using System.Threading.Tasks;
 using GolPooch.Domain.Entity;
-using System.Linq.Expressions;
 using GolPooch.Service.Resourses;
-using System.Collections.Generic;
 using GolPooch.Service.Interfaces;
 
 namespace GolPooch.Service.Implements
