@@ -1,6 +1,6 @@
 ﻿import React from 'react';
-import Authorization from '../auth';
 import { Route, Switch } from 'react-router-dom';
+import Authorization from '../pages/auth';
 
 const EmptyLayout = () => {
     return (
