@@ -17,6 +17,7 @@ D:\Mehran\Git\GolYaPooch\GolPooch.Api\bin\Debug\netcoreapp3.1\Elk.Http.dll
 D:\Mehran\Git\GolYaPooch\GolPooch.Api\bin\Debug\netcoreapp3.1\FastMember.dll
 D:\Mehran\Git\GolYaPooch\GolPooch.Api\bin\Debug\netcoreapp3.1\Kavenegar.dll
 D:\Mehran\Git\GolYaPooch\GolPooch.Api\bin\Debug\netcoreapp3.1\Kavenegar.Core.dll
+D:\Mehran\Git\GolYaPooch\GolPooch.Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\Mehran\Git\GolYaPooch\GolPooch.Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Http.Features.dll
 D:\Mehran\Git\GolYaPooch\GolPooch.Api\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
 D:\Mehran\Git\GolYaPooch\GolPooch.Api\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
@@ -101,10 +102,10 @@ D:\Mehran\Git\GolYaPooch\GolPooch.Api\bin\Debug\netcoreapp3.1\GolPooch.Domain.dl
 D:\Mehran\Git\GolYaPooch\GolPooch.Api\bin\Debug\netcoreapp3.1\GolPooch.Service.dll
 D:\Mehran\Git\GolYaPooch\GolPooch.Api\bin\Debug\netcoreapp3.1\GolPooch.SmsGateway.dll
 D:\Mehran\Git\GolYaPooch\GolPooch.Api\bin\Debug\netcoreapp3.1\GolPooch.DependencyResolver.pdb
+D:\Mehran\Git\GolYaPooch\GolPooch.Api\bin\Debug\netcoreapp3.1\GolPooch.Service.pdb
 D:\Mehran\Git\GolYaPooch\GolPooch.Api\bin\Debug\netcoreapp3.1\GolPooch.CrossCutting.pdb
 D:\Mehran\Git\GolYaPooch\GolPooch.Api\bin\Debug\netcoreapp3.1\GolPooch.DataAccess.Ef.pdb
 D:\Mehran\Git\GolYaPooch\GolPooch.Api\bin\Debug\netcoreapp3.1\GolPooch.Domain.pdb
-D:\Mehran\Git\GolYaPooch\GolPooch.Api\bin\Debug\netcoreapp3.1\GolPooch.Service.pdb
 D:\Mehran\Git\GolYaPooch\GolPooch.Api\bin\Debug\netcoreapp3.1\GolPooch.SmsGateway.pdb
 D:\Mehran\Git\GolYaPooch\GolPooch.Api\obj\Debug\netcoreapp3.1\GolPooch.Api.csprojAssemblyReference.cache
 D:\Mehran\Git\GolYaPooch\GolPooch.Api\obj\Debug\netcoreapp3.1\GolPooch.Api.AssemblyInfoInputs.cache
@@ -119,4 +120,3 @@ D:\Mehran\Git\GolYaPooch\GolPooch.Api\obj\Debug\netcoreapp3.1\staticwebassets\Go
 D:\Mehran\Git\GolYaPooch\GolPooch.Api\obj\Debug\netcoreapp3.1\GolPooch.Api.dll
 D:\Mehran\Git\GolYaPooch\GolPooch.Api\obj\Debug\netcoreapp3.1\GolPooch.Api.pdb
 D:\Mehran\Git\GolYaPooch\GolPooch.Api\obj\Debug\netcoreapp3.1\GolPooch.Api.genruntimeconfig.cache
-D:\Mehran\Git\GolYaPooch\GolPooch.Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll

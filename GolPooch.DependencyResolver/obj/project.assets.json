@@ -2678,7 +2678,6 @@
           "Elk.Http": "1.1.3",
           "GolPooch.CrossCutting": "1.0.0",
           "GolPooch.DataAccess.Ef": "1.0.0",
-          "GolPooch.Domain": "1.0.0",
           "GolPooch.SmsGateway": "1.0.0",
           "Kavenegar": "1.2.4"
         },

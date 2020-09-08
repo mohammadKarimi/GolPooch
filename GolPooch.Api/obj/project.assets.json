@@ -2350,7 +2350,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
         "dependencies": {
-          "Elk.Core": "1.1.6"
+          "elk.core": "1.1.6"
         },
         "compile": {
           "bin/placeholder/GolPooch.Domain.dll": {}
@@ -7519,7 +7519,8 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "Elk.AspNetCore >= 1.1.6",
-      "GolPooch.DependencyResolver >= 1.0.0"
+      "GolPooch.DependencyResolver >= 1.0.0",
+      "GolPooch.Service >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -7550,6 +7551,9 @@
           "projectReferences": {
             "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.DependencyResolver\\GolPooch.DependencyResolver.csproj": {
               "projectPath": "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.DependencyResolver\\GolPooch.DependencyResolver.csproj"
+            },
+            "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.Service\\GolPooch.Service.csproj": {
+              "projectPath": "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.Service\\GolPooch.Service.csproj"
             }
           }
         }
