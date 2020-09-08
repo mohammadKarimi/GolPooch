@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\m.karimi\\source\\OwnRepos\\GolPooch\\GolPooch.Pwa\\GolPooch.Pwa.csproj": {}
+    "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.Pwa\\GolPooch.Pwa.csproj": {}
   },
   "projects": {
-    "C:\\Users\\m.karimi\\source\\OwnRepos\\GolPooch\\GolPooch.Pwa\\GolPooch.Pwa.csproj": {
+    "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.Pwa\\GolPooch.Pwa.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\m.karimi\\source\\OwnRepos\\GolPooch\\GolPooch.Pwa\\GolPooch.Pwa.csproj",
+        "projectUniqueName": "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.Pwa\\GolPooch.Pwa.csproj",
         "projectName": "GolPooch.Pwa",
-        "projectPath": "C:\\Users\\m.karimi\\source\\OwnRepos\\GolPooch\\GolPooch.Pwa\\GolPooch.Pwa.csproj",
-        "packagesPath": "C:\\Users\\m.karimi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\m.karimi\\source\\OwnRepos\\GolPooch\\GolPooch.Pwa\\obj\\",
+        "projectPath": "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.Pwa\\GolPooch.Pwa.csproj",
+        "packagesPath": "C:\\Users\\Mehran\\.nuget\\packages\\",
+        "outputPath": "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.Pwa\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\m.karimi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Mehran\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -55,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
