@@ -1,7 +1,7 @@
 ﻿import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import EmptyLayout from './routes/layouts/emptyLayout';
-import NavigationLayout from './routes/layouts/navigationLayout';
+import EmptyLayout from './layouts/emptyLayout';
+import NavigationLayout from './layouts/navigationLayout';
 
 export default class App extends Component {
     render() {

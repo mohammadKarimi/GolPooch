@@ -19,6 +19,7 @@
   <ItemGroup>
     <ProjectReference Include="..\GolPooch.CrossCutting\GolPooch.CrossCutting.csproj" />
     <ProjectReference Include="..\GolPooch.DataAccess.Ef\GolPooch.DataAccess.Ef.csproj" />
+    <ProjectReference Include="..\GolPooch.Domain\GolPooch.Domain.csproj" />
     <ProjectReference Include="..\GolPooch.SmsGateway\GolPooch.SmsGateway.csproj" />
   </ItemGroup>
 

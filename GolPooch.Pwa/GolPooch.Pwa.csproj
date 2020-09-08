@@ -10,10 +10,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.1.6" />
-  </ItemGroup>
-
-  <ItemGroup>
     <!-- Don't publish the SPA source files, but do show them in the project files list -->
     <Compile Remove="ClientApp\**" />
     <Content Remove="$(SpaRoot)**" />
@@ -31,8 +27,10 @@
 
   <ItemGroup>
     <Folder Include="src\assets\" />
+    <Folder Include="src\atom\comp\" />
     <Folder Include="src\core\utils\" />
-    <Folder Include="src\states\selector\" />
+    <Folder Include="src\services\" />
+    <Folder Include="src\pages\auth\comp\" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

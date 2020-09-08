@@ -10,3 +10,15 @@ D:\Mehran\Git\GolYaPooch\GolPooch.Domain\obj\Debug\netstandard2.1\GolPooch.Domai
 D:\Mehran\Git\GolYaPooch\GolPooch.Domain\obj\Debug\netstandard2.1\GolPooch.Domain.csproj.CoreCompileInputs.cache
 D:\Mehran\Git\GolYaPooch\GolPooch.Domain\obj\Debug\netstandard2.1\GolPooch.Domain.dll
 D:\Mehran\Git\GolYaPooch\GolPooch.Domain\obj\Debug\netstandard2.1\GolPooch.Domain.pdb
+C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.Domain\bin\Debug\netstandard2.1\GolPooch.Domain.deps.json
+C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.Domain\bin\Debug\netstandard2.1\GolPooch.Domain.dll
+C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.Domain\obj\Debug\netstandard2.1\GolPooch.Domain.csprojAssemblyReference.cache
+C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.Domain\obj\Debug\netstandard2.1\GolPooch.Domain.Resources.DisplayNames.resources
+C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.Domain\obj\Debug\netstandard2.1\GolPooch.Domain.Resources.ErrorMessage.resources
+C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.Domain\obj\Debug\netstandard2.1\GolPooch.Domain.csproj.GenerateResource.cache
+C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.Domain\obj\Debug\netstandard2.1\GolPooch.Domain.AssemblyInfoInputs.cache
+C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.Domain\obj\Debug\netstandard2.1\GolPooch.Domain.AssemblyInfo.cs
+C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.Domain\bin\Debug\netstandard2.1\GolPooch.Domain.pdb
+C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.Domain\obj\Debug\netstandard2.1\GolPooch.Domain.csproj.CoreCompileInputs.cache
+C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.Domain\obj\Debug\netstandard2.1\GolPooch.Domain.dll
+C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.Domain\obj\Debug\netstandard2.1\GolPooch.Domain.pdb

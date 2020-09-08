@@ -10,3 +10,15 @@ D:\Mehran\Git\GolYaPooch\GolPooch.DataAccess.Ef\obj\Debug\netstandard2.1\GolPooc
 D:\Mehran\Git\GolYaPooch\GolPooch.DataAccess.Ef\obj\Debug\netstandard2.1\GolPooch.DataAccess.Ef.csproj.CopyComplete
 D:\Mehran\Git\GolYaPooch\GolPooch.DataAccess.Ef\obj\Debug\netstandard2.1\GolPooch.DataAccess.Ef.dll
 D:\Mehran\Git\GolYaPooch\GolPooch.DataAccess.Ef\obj\Debug\netstandard2.1\GolPooch.DataAccess.Ef.pdb
+C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.DataAccess.Ef\bin\Debug\netstandard2.1\GolPooch.Domain.dll
+C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.DataAccess.Ef\obj\Debug\netstandard2.1\GolPooch.DataAccess.Ef.csprojAssemblyReference.cache
+C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.DataAccess.Ef\obj\Debug\netstandard2.1\GolPooch.DataAccess.Ef.AssemblyInfoInputs.cache
+C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.DataAccess.Ef\obj\Debug\netstandard2.1\GolPooch.DataAccess.Ef.AssemblyInfo.cs
+C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.DataAccess.Ef\obj\Debug\netstandard2.1\GolPooch.DataAccess.Ef.csproj.CoreCompileInputs.cache
+C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.DataAccess.Ef\bin\Debug\netstandard2.1\GolPooch.DataAccess.Ef.deps.json
+C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.DataAccess.Ef\bin\Debug\netstandard2.1\GolPooch.DataAccess.Ef.dll
+C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.DataAccess.Ef\bin\Debug\netstandard2.1\GolPooch.DataAccess.Ef.pdb
+C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.DataAccess.Ef\bin\Debug\netstandard2.1\GolPooch.Domain.pdb
+C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.DataAccess.Ef\obj\Debug\netstandard2.1\GolPooch.DataAccess.Ef.csproj.CopyComplete
+C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.DataAccess.Ef\obj\Debug\netstandard2.1\GolPooch.DataAccess.Ef.dll
+C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.DataAccess.Ef\obj\Debug\netstandard2.1\GolPooch.DataAccess.Ef.pdb

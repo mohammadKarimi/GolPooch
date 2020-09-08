@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\GolPooch.DependencyResolver\GolPooch.DependencyResolver.csproj" />
+    <ProjectReference Include="..\GolPooch.Service\GolPooch.Service.csproj" />
   </ItemGroup>
 
 </Project>
