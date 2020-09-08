@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="elk.core" Version="1.1.6" />
     <PackageReference Include="Elk.EntityFrameworkCore.Tools" Version="2.0.1" />
   </ItemGroup>
 

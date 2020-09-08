@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.Domain\\GolPooch.Domain.csproj": {}
+    "C:\\Users\\m.karimi\\source\\OwnRepos\\GolPooch\\GolPooch.Domain\\GolPooch.Domain.csproj": {}
   },
   "projects": {
-    "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.Domain\\GolPooch.Domain.csproj": {
+    "C:\\Users\\m.karimi\\source\\OwnRepos\\GolPooch\\GolPooch.Domain\\GolPooch.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.Domain\\GolPooch.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\m.karimi\\source\\OwnRepos\\GolPooch\\GolPooch.Domain\\GolPooch.Domain.csproj",
         "projectName": "GolPooch.Domain",
-        "projectPath": "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.Domain\\GolPooch.Domain.csproj",
-        "packagesPath": "C:\\Users\\Mehran\\.nuget\\packages\\",
-        "outputPath": "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.Domain\\obj\\",
+        "projectPath": "C:\\Users\\m.karimi\\source\\OwnRepos\\GolPooch\\GolPooch.Domain\\GolPooch.Domain.csproj",
+        "packagesPath": "C:\\Users\\m.karimi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\m.karimi\\source\\OwnRepos\\GolPooch\\GolPooch.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Mehran\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\m.karimi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -38,7 +38,7 @@
       "frameworks": {
         "netstandard2.1": {
           "dependencies": {
-            "Elk.Core": {
+            "elk.core": {
               "target": "Package",
               "version": "[1.1.6, )"
             }
@@ -58,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

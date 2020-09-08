@@ -5,11 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Elk.Core" Version="1.1.6" />
+    <Folder Include="Entity\Auth\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Entity\Auth\" />
+    <PackageReference Include="elk.core" Version="1.1.6" />
   </ItemGroup>
 
   <ItemGroup>

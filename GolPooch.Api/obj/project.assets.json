@@ -2308,7 +2308,8 @@
         "framework": ".NETStandard,Version=v2.1",
         "dependencies": {
           "Elk.EntityFrameworkCore.Tools": "2.0.1",
-          "GolPooch.Domain": "1.0.0"
+          "GolPooch.Domain": "1.0.0",
+          "elk.core": "1.1.6"
         },
         "compile": {
           "bin/placeholder/GolPooch.DataAccess.Ef.dll": {}
@@ -2334,7 +2335,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
         "dependencies": {
-          "Elk.Core": "1.1.6"
+          "elk.core": "1.1.6"
         },
         "compile": {
           "bin/placeholder/GolPooch.Domain.dll": {}
@@ -2351,6 +2352,7 @@
           "Elk.Http": "1.1.3",
           "GolPooch.CrossCutting": "1.0.0",
           "GolPooch.DataAccess.Ef": "1.0.0",
+          "GolPooch.Domain": "1.0.0",
           "GolPooch.SmsGateway": "1.0.0",
           "Kavenegar": "1.2.4"
         },
@@ -7488,23 +7490,24 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "Elk.AspNetCore >= 1.1.5",
-      "GolPooch.DependencyResolver >= 1.0.0"
+      "GolPooch.DependencyResolver >= 1.0.0",
+      "GolPooch.Service >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Mehran\\.nuget\\packages\\": {}
+    "C:\\Users\\m.karimi\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.Api\\GolPooch.Api.csproj",
+      "projectUniqueName": "C:\\Users\\m.karimi\\source\\OwnRepos\\GolPooch\\GolPooch.Api\\GolPooch.Api.csproj",
       "projectName": "GolPooch.Api",
-      "projectPath": "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.Api\\GolPooch.Api.csproj",
-      "packagesPath": "C:\\Users\\Mehran\\.nuget\\packages\\",
-      "outputPath": "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.Api\\obj\\",
+      "projectPath": "C:\\Users\\m.karimi\\source\\OwnRepos\\GolPooch\\GolPooch.Api\\GolPooch.Api.csproj",
+      "packagesPath": "C:\\Users\\m.karimi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\m.karimi\\source\\OwnRepos\\GolPooch\\GolPooch.Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Mehran\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\m.karimi\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7517,8 +7520,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.DependencyResolver\\GolPooch.DependencyResolver.csproj": {
-              "projectPath": "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.DependencyResolver\\GolPooch.DependencyResolver.csproj"
+            "C:\\Users\\m.karimi\\source\\OwnRepos\\GolPooch\\GolPooch.DependencyResolver\\GolPooch.DependencyResolver.csproj": {
+              "projectPath": "C:\\Users\\m.karimi\\source\\OwnRepos\\GolPooch\\GolPooch.DependencyResolver\\GolPooch.DependencyResolver.csproj"
+            },
+            "C:\\Users\\m.karimi\\source\\OwnRepos\\GolPooch\\GolPooch.Service\\GolPooch.Service.csproj": {
+              "projectPath": "C:\\Users\\m.karimi\\source\\OwnRepos\\GolPooch\\GolPooch.Service\\GolPooch.Service.csproj"
             }
           }
         }
@@ -7555,7 +7561,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
       }
     }
   }
