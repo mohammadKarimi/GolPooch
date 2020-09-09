@@ -24,11 +24,13 @@ instance.interceptors.request.use((conf) => {
 instance.interceptors.response.use((response) => {
     return parseBody(response)
 }, error => {
+    if (error.config.hasOwnProperty('errorHandle') && error.config.errorHandle === false)
+        return Promise.reject(error);
     if (error.response == undefined)
         return Promise.reject(error);
 
-        if (error.response.status == 401)
-            window.location.href = config.LOGIN_PAGE;
+    if (error.response.status == 401)
+        window.location.href = config.LOGIN_PAGE;
 
     return Promise.reject(error);
 });
