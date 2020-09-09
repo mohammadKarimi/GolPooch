@@ -3,7 +3,6 @@ C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.Service\obj\Debug\netstandar
 C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.Service\obj\Debug\netstandard2.1\GolPooch.Service.csproj.GenerateResource.cache
 C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.Service\obj\Debug\netstandard2.1\GolPooch.Service.AssemblyInfoInputs.cache
 C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.Service\obj\Debug\netstandard2.1\GolPooch.Service.AssemblyInfo.cs
-C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.Service\obj\Debug\netstandard2.1\GolPooch.Service.csproj.CoreCompileInputs.cache
 C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.Service\bin\Debug\netstandard2.1\GolPooch.Service.deps.json
 C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.Service\bin\Debug\netstandard2.1\GolPooch.Service.dll
 C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.Service\bin\Debug\netstandard2.1\GolPooch.Service.pdb
@@ -38,3 +37,4 @@ D:\Mehran\Git\GolYaPooch\GolPooch.Service\obj\Debug\netstandard2.1\GolPooch.Serv
 D:\Mehran\Git\GolYaPooch\GolPooch.Service\obj\Debug\netstandard2.1\GolPooch.Service.csproj.CopyComplete
 D:\Mehran\Git\GolYaPooch\GolPooch.Service\obj\Debug\netstandard2.1\GolPooch.Service.dll
 D:\Mehran\Git\GolYaPooch\GolPooch.Service\obj\Debug\netstandard2.1\GolPooch.Service.pdb
+C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.Service\obj\Debug\netstandard2.1\GolPooch.Service.csproj.CoreCompileInputs.cache

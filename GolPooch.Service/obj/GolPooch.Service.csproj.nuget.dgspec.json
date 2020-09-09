@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.Service\\GolPooch.Service.csproj": {}
+    "C:\\Users\\m.karimi\\source\\OwnRepos\\GolPooch\\GolPooch.Service\\GolPooch.Service.csproj": {}
   },
   "projects": {
-    "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.CrossCutting\\GolPooch.CrossCutting.csproj": {
+    "C:\\Users\\m.karimi\\source\\OwnRepos\\GolPooch\\GolPooch.CrossCutting\\GolPooch.CrossCutting.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.CrossCutting\\GolPooch.CrossCutting.csproj",
+        "projectUniqueName": "C:\\Users\\m.karimi\\source\\OwnRepos\\GolPooch\\GolPooch.CrossCutting\\GolPooch.CrossCutting.csproj",
         "projectName": "GolPooch.CrossCutting",
-        "projectPath": "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.CrossCutting\\GolPooch.CrossCutting.csproj",
-        "packagesPath": "C:\\Users\\Mehran\\.nuget\\packages\\",
-        "outputPath": "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.CrossCutting\\obj\\",
+        "projectPath": "C:\\Users\\m.karimi\\source\\OwnRepos\\GolPooch\\GolPooch.CrossCutting\\GolPooch.CrossCutting.csproj",
+        "packagesPath": "C:\\Users\\m.karimi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\m.karimi\\source\\OwnRepos\\GolPooch\\GolPooch.CrossCutting\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Mehran\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\m.karimi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -66,21 +66,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.DataAccess.Ef\\GolPooch.DataAccess.Ef.csproj": {
+    "C:\\Users\\m.karimi\\source\\OwnRepos\\GolPooch\\GolPooch.DataAccess.Ef\\GolPooch.DataAccess.Ef.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.DataAccess.Ef\\GolPooch.DataAccess.Ef.csproj",
+        "projectUniqueName": "C:\\Users\\m.karimi\\source\\OwnRepos\\GolPooch\\GolPooch.DataAccess.Ef\\GolPooch.DataAccess.Ef.csproj",
         "projectName": "GolPooch.DataAccess.Ef",
-        "projectPath": "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.DataAccess.Ef\\GolPooch.DataAccess.Ef.csproj",
-        "packagesPath": "C:\\Users\\Mehran\\.nuget\\packages\\",
-        "outputPath": "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.DataAccess.Ef\\obj\\",
+        "projectPath": "C:\\Users\\m.karimi\\source\\OwnRepos\\GolPooch\\GolPooch.DataAccess.Ef\\GolPooch.DataAccess.Ef.csproj",
+        "packagesPath": "C:\\Users\\m.karimi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\m.karimi\\source\\OwnRepos\\GolPooch\\GolPooch.DataAccess.Ef\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Mehran\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\m.karimi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -93,8 +93,8 @@
         "frameworks": {
           "netstandard2.1": {
             "projectReferences": {
-              "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.Domain\\GolPooch.Domain.csproj": {
-                "projectPath": "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.Domain\\GolPooch.Domain.csproj"
+              "C:\\Users\\m.karimi\\source\\OwnRepos\\GolPooch\\GolPooch.Domain\\GolPooch.Domain.csproj": {
+                "projectPath": "C:\\Users\\m.karimi\\source\\OwnRepos\\GolPooch\\GolPooch.Domain\\GolPooch.Domain.csproj"
               }
             }
           }
@@ -128,21 +128,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.Domain\\GolPooch.Domain.csproj": {
+    "C:\\Users\\m.karimi\\source\\OwnRepos\\GolPooch\\GolPooch.Domain\\GolPooch.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.Domain\\GolPooch.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\m.karimi\\source\\OwnRepos\\GolPooch\\GolPooch.Domain\\GolPooch.Domain.csproj",
         "projectName": "GolPooch.Domain",
-        "projectPath": "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.Domain\\GolPooch.Domain.csproj",
-        "packagesPath": "C:\\Users\\Mehran\\.nuget\\packages\\",
-        "outputPath": "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.Domain\\obj\\",
+        "projectPath": "C:\\Users\\m.karimi\\source\\OwnRepos\\GolPooch\\GolPooch.Domain\\GolPooch.Domain.csproj",
+        "packagesPath": "C:\\Users\\m.karimi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\m.karimi\\source\\OwnRepos\\GolPooch\\GolPooch.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Mehran\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\m.karimi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -186,21 +186,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.Service\\GolPooch.Service.csproj": {
+    "C:\\Users\\m.karimi\\source\\OwnRepos\\GolPooch\\GolPooch.Service\\GolPooch.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.Service\\GolPooch.Service.csproj",
+        "projectUniqueName": "C:\\Users\\m.karimi\\source\\OwnRepos\\GolPooch\\GolPooch.Service\\GolPooch.Service.csproj",
         "projectName": "GolPooch.Service",
-        "projectPath": "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.Service\\GolPooch.Service.csproj",
-        "packagesPath": "C:\\Users\\Mehran\\.nuget\\packages\\",
-        "outputPath": "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.Service\\obj\\",
+        "projectPath": "C:\\Users\\m.karimi\\source\\OwnRepos\\GolPooch\\GolPooch.Service\\GolPooch.Service.csproj",
+        "packagesPath": "C:\\Users\\m.karimi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\m.karimi\\source\\OwnRepos\\GolPooch\\GolPooch.Service\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Mehran\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\m.karimi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -213,14 +213,14 @@
         "frameworks": {
           "netstandard2.1": {
             "projectReferences": {
-              "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.CrossCutting\\GolPooch.CrossCutting.csproj": {
-                "projectPath": "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.CrossCutting\\GolPooch.CrossCutting.csproj"
+              "C:\\Users\\m.karimi\\source\\OwnRepos\\GolPooch\\GolPooch.CrossCutting\\GolPooch.CrossCutting.csproj": {
+                "projectPath": "C:\\Users\\m.karimi\\source\\OwnRepos\\GolPooch\\GolPooch.CrossCutting\\GolPooch.CrossCutting.csproj"
               },
-              "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.DataAccess.Ef\\GolPooch.DataAccess.Ef.csproj": {
-                "projectPath": "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.DataAccess.Ef\\GolPooch.DataAccess.Ef.csproj"
+              "C:\\Users\\m.karimi\\source\\OwnRepos\\GolPooch\\GolPooch.DataAccess.Ef\\GolPooch.DataAccess.Ef.csproj": {
+                "projectPath": "C:\\Users\\m.karimi\\source\\OwnRepos\\GolPooch\\GolPooch.DataAccess.Ef\\GolPooch.DataAccess.Ef.csproj"
               },
-              "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.SmsGateway\\GolPooch.SmsGateway.csproj": {
-                "projectPath": "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.SmsGateway\\GolPooch.SmsGateway.csproj"
+              "C:\\Users\\m.karimi\\source\\OwnRepos\\GolPooch\\GolPooch.SmsGateway\\GolPooch.SmsGateway.csproj": {
+                "projectPath": "C:\\Users\\m.karimi\\source\\OwnRepos\\GolPooch\\GolPooch.SmsGateway\\GolPooch.SmsGateway.csproj"
               }
             }
           }
@@ -245,6 +245,10 @@
             "Kavenegar": {
               "target": "Package",
               "version": "[1.2.4, )"
+            },
+            "elk.core": {
+              "target": "Package",
+              "version": "[1.1.6, )"
             }
           },
           "imports": [
@@ -262,21 +266,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.SmsGateway\\GolPooch.SmsGateway.csproj": {
+    "C:\\Users\\m.karimi\\source\\OwnRepos\\GolPooch\\GolPooch.SmsGateway\\GolPooch.SmsGateway.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.SmsGateway\\GolPooch.SmsGateway.csproj",
+        "projectUniqueName": "C:\\Users\\m.karimi\\source\\OwnRepos\\GolPooch\\GolPooch.SmsGateway\\GolPooch.SmsGateway.csproj",
         "projectName": "GolPooch.SmsGateway",
-        "projectPath": "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.SmsGateway\\GolPooch.SmsGateway.csproj",
-        "packagesPath": "C:\\Users\\Mehran\\.nuget\\packages\\",
-        "outputPath": "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.SmsGateway\\obj\\",
+        "projectPath": "C:\\Users\\m.karimi\\source\\OwnRepos\\GolPooch\\GolPooch.SmsGateway\\GolPooch.SmsGateway.csproj",
+        "packagesPath": "C:\\Users\\m.karimi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\m.karimi\\source\\OwnRepos\\GolPooch\\GolPooch.SmsGateway\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Mehran\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\m.karimi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -289,8 +293,8 @@
         "frameworks": {
           "netstandard2.1": {
             "projectReferences": {
-              "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.CrossCutting\\GolPooch.CrossCutting.csproj": {
-                "projectPath": "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.CrossCutting\\GolPooch.CrossCutting.csproj"
+              "C:\\Users\\m.karimi\\source\\OwnRepos\\GolPooch\\GolPooch.CrossCutting\\GolPooch.CrossCutting.csproj": {
+                "projectPath": "C:\\Users\\m.karimi\\source\\OwnRepos\\GolPooch\\GolPooch.CrossCutting\\GolPooch.CrossCutting.csproj"
               }
             }
           }
@@ -328,7 +332,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
         }
       }
     }
