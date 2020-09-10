@@ -1,25 +1,20 @@
 ﻿import React, { useState } from 'react';
-import { TextField } from '@material-ui/core';
+
 import Grid from '@material-ui/core/Grid';
 import strings from './../../core/strings';
 import logoImage from './../../assets/images/logo.png';
+import Login from './comps/login';
+import Verify from './comps/verify';
+import { useRecoilValue } from 'recoil';
+import authActivePanel from './../../atom/state/authActivePanel';
 
 const Authorization = () => {
-    const [mobileNumber, setMobileNumber] = useState({
-        value: '',
-        error: false,
-        errorMessage: ''
-    });
-    const [ruleAgreement, setRuleAgreement] = useState(false);
-    const [verifyCode, setVerifyCode] = useState({
-        value: '',
-        error: false,
-        errorMessage: ''
-    });
+
+    const activeComp = useRecoilValue(authActivePanel);
 
     return (
-        <div id='page-auth'>
-            <Grid container spacing={3}>
+        <div id='page-auth' className='page flex-center'>
+            <Grid container spacing={0}>
                 <Grid item xs={12}>
                     <div className='flex-center'>
                         <img src={logoImage} alt='logo image' />
@@ -28,20 +23,7 @@ const Authorization = () => {
 
                 <Grid item xs={12} sm={3} md={4}></Grid>
                 <Grid item xs={12} sm={6} md={4}>
-                    <div className="form-group">
-                        <TextField
-                            error={mobileNumber.error}
-                            id="mobileNumber"
-                            name="mobileNumber"
-                            placeholder="9xxxxxxxxx"
-                            label={strings.mobileNumber}
-                            value={mobileNumber.value}
-                            onChange={(e) => setMobileNumber({ value: e.target.value, error: false, errorMessage: '' })}
-                            helperText={mobileNumber.errorMessage}
-                            style={{ fontFamily: 'iransans' }}
-                            variant="outlined"
-                        />
-                    </div>
+                    {activeComp === 'login' ? <Login /> : <Verify />}
                 </Grid>
             </Grid>
         </div>

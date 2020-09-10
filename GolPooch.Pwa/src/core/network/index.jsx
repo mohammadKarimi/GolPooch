@@ -35,4 +35,4 @@ instance.interceptors.response.use((response) => {
     return Promise.reject(error);
 });
 
-export const Http = instance
+export default Http = instance
