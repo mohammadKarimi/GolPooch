@@ -77,7 +77,7 @@ namespace GolPooch.Api
             services.AddMemoryCache();
 
             services.Configure<JwtSettings>(_config.GetSection("JwtSetting"));
-            services.AddSingleton<IJwtService, JwtService>();
+            services.AddScoped<IJwtService, JwtService>();
 
             services.AddTransient<AuthFilter>();
             services.AddTransient<AuthorizeFilter>();

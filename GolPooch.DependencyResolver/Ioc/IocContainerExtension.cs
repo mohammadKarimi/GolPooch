@@ -15,7 +15,7 @@ namespace GolPooch.DependencyResolver.Ioc
         public static IServiceCollection AddTransient(this IServiceCollection services, IConfiguration _configuration)
         {
             #region Repos
-            services.AddScoped(typeof(IGenericRepo<>), typeof(GenericRepo<>));
+            services.AddTransient(typeof(IGenericRepo<>), typeof(GenericRepo<>));
             #endregion
 
             return services;
