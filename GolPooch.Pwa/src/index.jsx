@@ -6,7 +6,7 @@ import { RecoilRoot } from 'recoil';
 import { MuiThemeProvider, createMuiTheme, StylesProvider, jssPreset } from '@material-ui/core/styles';
 import './assets/styles/index.css';
 import './assets/styles/material-design-iconic-font.min.css';
-import 'react-toastify/dist/ReactToastify.css';
+import './assets/styles/animate.css';
 
 import { create } from 'jss';
 import rtl from 'jss-rtl';

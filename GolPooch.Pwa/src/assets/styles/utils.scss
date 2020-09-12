@@ -45,12 +45,14 @@ ol {
 .ltr-elm {
   direction: ltr;
   text-align: left;
-}
-.ltr-input {
+
   input {
     direction: ltr;
     text-align: left;
   }
+}
+.va-middle {
+  vertical-align: middle;
 }
 /*-----------------------------------
      remove browser autofill 
@@ -85,34 +87,57 @@ input:-webkit-autofill:active {
 .ph-c:-ms-input-placeholder {
   text-align: center;
 }
-
-.ph-r::-webkit-input-placeholder {
-  text-align: right;
-  font-family: "iransans";
-  direction: rtl;
+.ph-r {
+  &::-webkit-input-placeholder {
+    text-align: right;
+    font-family: "iransans";
+    direction: rtl;
+  }
+  input::-webkit-input-placeholder {
+    text-align: right;
+    font-family: "iransans";
+    direction: rtl;
+  }
 }
 
-.ph-r:-moz-placeholder {
-  /* Firefox 18- */
-  text-align: right;
-  font-family: "iransans";
-  direction: rtl;
+.ph-r {
+  &:-moz-placeholder {
+    /* Firefox 18- */
+    text-align: right;
+    font-family: "iransans";
+    direction: rtl;
+  }
+  input:-moz-placeholder {
+    text-align: right;
+    font-family: "iransans";
+    direction: rtl;
+  }
 }
 
-.ph-r::-moz-placeholder {
-  /* Firefox 19+ */
-  text-align: right;
-  font-family: "iransans";
-  direction: rtl;
+.ph-r {
+  &::-moz-placeholder {
+    /* Firefox 19+ */
+    text-align: right;
+    font-family: "iransans";
+    direction: rtl;
+  }
+  input::-moz-placeholder {
+    text-align: right;
+    font-family: "iransans";
+    direction: rtl;
+  }
 }
-
-.ph-r:-ms-input-placeholder {
-  text-align: right;
-  font-family: "iransans";
-  direction: rtl;
-}
-.toast:not(.show) {
-  display: none;
+.ph-r {
+  &:-ms-input-placeholder {
+    text-align: right;
+    font-family: "iransans";
+    direction: rtl;
+  }
+  input:-ms-input-placeholder {
+    text-align: right;
+    font-family: "iransans";
+    direction: rtl;
+  }
 }
 .form-group {
   margin-bottom: $marginBottom - 5px;
@@ -138,7 +163,10 @@ input:-webkit-autofill:active {
   justify-content: center;
   align-items: center;
 }
-.page{
+.d-none {
+  display: none;
+}
+.page {
   min-height: 100vh;
 }
 /*==================================
@@ -176,15 +204,23 @@ input:-webkit-autofill:active {
     transform: translate(-14px, 15px) scale(1);
   }
 }
+.MuiCircularProgress-colorPrimary {
+  color: #fff !important;
+}
+.MuiAlert-message {
+  display: flex;
+  align-items: center;
+}
 /*==================================
 -- Buttons
 ====================================*/
-.btn-primary{
+.btn-primary {
   color: #fff;
   background-color: #1976d2;
   padding: 7px 10px;
   border-radius: 5px;
-  box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14), 0px 1px 5px 0px rgba(0,0,0,0.12);
+  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14),
+    0px 1px 5px 0px rgba(0, 0, 0, 0.12);
   min-width: 100px;
 
   &:hover {

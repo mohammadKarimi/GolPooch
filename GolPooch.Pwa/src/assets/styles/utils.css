@@ -53,9 +53,13 @@ ol {
   text-align: left;
 }
 
-.ltr-input input {
+.ltr-elm input {
   direction: ltr;
   text-align: left;
+}
+
+.va-middle {
+  vertical-align: middle;
 }
 
 /*-----------------------------------
@@ -99,8 +103,20 @@ input:-webkit-autofill:active {
   direction: rtl;
 }
 
+.ph-r input::-webkit-input-placeholder {
+  text-align: right;
+  font-family: "iransans";
+  direction: rtl;
+}
+
 .ph-r:-moz-placeholder {
   /* Firefox 18- */
+  text-align: right;
+  font-family: "iransans";
+  direction: rtl;
+}
+
+.ph-r input:-moz-placeholder {
   text-align: right;
   font-family: "iransans";
   direction: rtl;
@@ -113,14 +129,22 @@ input:-webkit-autofill:active {
   direction: rtl;
 }
 
+.ph-r input::-moz-placeholder {
+  text-align: right;
+  font-family: "iransans";
+  direction: rtl;
+}
+
 .ph-r:-ms-input-placeholder {
   text-align: right;
   font-family: "iransans";
   direction: rtl;
 }
 
-.toast:not(.show) {
-  display: none;
+.ph-r input:-ms-input-placeholder {
+  text-align: right;
+  font-family: "iransans";
+  direction: rtl;
 }
 
 .form-group {
@@ -156,6 +180,10 @@ input:-webkit-autofill:active {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.d-none {
+  display: none;
 }
 
 .page {
@@ -202,6 +230,19 @@ input:-webkit-autofill:active {
 .MuiTextField-root .MuiInputLabel-outlined {
   -webkit-transform: translate(-14px, 15px) scale(1);
           transform: translate(-14px, 15px) scale(1);
+}
+
+.MuiCircularProgress-colorPrimary {
+  color: #fff !important;
+}
+
+.MuiAlert-message {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 /*==================================

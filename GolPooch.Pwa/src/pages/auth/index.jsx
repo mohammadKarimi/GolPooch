@@ -6,11 +6,11 @@ import logoImage from './../../assets/images/logo.png';
 import Login from './comps/login';
 import Verify from './comps/verify';
 import { useRecoilValue } from 'recoil';
-import authActivePanel from './../../atom/state/authActivePanel';
+import authPageState from '../../atom/state/authPageState';
 
 const Authorization = () => {
 
-    const activeComp = useRecoilValue(authActivePanel);
+    const authState = useRecoilValue(authPageState);
 
     return (
         <div id='page-auth' className='page flex-center'>
@@ -23,7 +23,7 @@ const Authorization = () => {
 
                 <Grid item xs={12} sm={3} md={4}></Grid>
                 <Grid item xs={12} sm={6} md={4}>
-                    {activeComp === 'login' ? <Login /> : <Verify />}
+                    {authState.activePanel === 'login' ? <Login /> : <Verify />}
                 </Grid>
             </Grid>
         </div>
