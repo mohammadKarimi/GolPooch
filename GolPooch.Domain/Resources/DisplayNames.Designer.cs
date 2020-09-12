@@ -610,6 +610,15 @@ namespace GolPooch.Domain.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to زمان استفاده.
+        /// </summary>
+        internal static string UsedTime {
+            get {
+                return ResourceManager.GetString("UsedTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to نام کاربری.
         /// </summary>
         internal static string Username {

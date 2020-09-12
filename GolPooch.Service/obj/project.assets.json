@@ -159,11 +159,11 @@
           "lib/netstandard2.0/Microsoft.AspNetCore.Http.Abstractions.dll": {}
         }
       },
-      "Microsoft.AspNetCore.Http.Features/3.1.7": {
+      "Microsoft.AspNetCore.Http.Features/3.1.8": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.Primitives": "3.1.7",
-          "System.IO.Pipelines": "4.7.1"
+          "Microsoft.Extensions.Primitives": "3.1.8",
+          "System.IO.Pipelines": "4.7.2"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.dll": {}
@@ -563,7 +563,7 @@
           "lib/netstandard2.0/Microsoft.Extensions.Options.dll": {}
         }
       },
-      "Microsoft.Extensions.Primitives/3.1.7": {
+      "Microsoft.Extensions.Primitives/3.1.8": {
         "type": "package",
         "dependencies": {
           "System.Memory": "4.5.2",
@@ -1602,12 +1602,12 @@
           "lib/netstandard1.3/System.IO.FileSystem.Primitives.dll": {}
         }
       },
-      "System.IO.Pipelines/4.7.1": {
+      "System.IO.Pipelines/4.7.2": {
         "type": "package",
         "dependencies": {
-          "System.Buffers": "4.5.0",
-          "System.Memory": "4.5.3",
-          "System.Threading.Tasks.Extensions": "4.5.2"
+          "System.Buffers": "4.5.1",
+          "System.Memory": "4.5.4",
+          "System.Threading.Tasks.Extensions": "4.5.4"
         },
         "compile": {
           "lib/netstandard2.0/System.IO.Pipelines.dll": {}
@@ -2634,7 +2634,7 @@
         "dependencies": {
           "Elk.Core": "1.1.6",
           "Microsoft.AspNetCore.Http": "2.2.2",
-          "Microsoft.AspNetCore.Http.Features": "3.1.7"
+          "Microsoft.AspNetCore.Http.Features": "3.1.8"
         },
         "compile": {
           "bin/placeholder/GolPooch.CrossCutting.dll": {}
@@ -2837,10 +2837,10 @@
         "microsoft.aspnetcore.http.abstractions.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Http.Features/3.1.7": {
-      "sha512": "gOIh/ATcFrVvFxQK1CvfeIla4bOVHnXIhzImQrBvFVtemNIoMy7kD4d+/U/4833nhAU0t8JjNS3lG9DCywOnfQ==",
+    "Microsoft.AspNetCore.Http.Features/3.1.8": {
+      "sha512": "hPBe3ATzZxUqA6QaIKf9IVQa//Eake3jeqfwHyq95n0fe7j7v6hWc9QGGWQquA3psN7epz029jjTS4zvFLC32g==",
       "type": "package",
-      "path": "microsoft.aspnetcore.http.features/3.1.7",
+      "path": "microsoft.aspnetcore.http.features/3.1.8",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2850,7 +2850,7 @@
         "lib/netcoreapp3.1/Microsoft.AspNetCore.Http.Features.xml",
         "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.dll",
         "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.xml",
-        "microsoft.aspnetcore.http.features.3.1.7.nupkg.sha512",
+        "microsoft.aspnetcore.http.features.3.1.8.nupkg.sha512",
         "microsoft.aspnetcore.http.features.nuspec"
       ]
     },
@@ -3435,10 +3435,10 @@
         "microsoft.extensions.options.nuspec"
       ]
     },
-    "Microsoft.Extensions.Primitives/3.1.7": {
-      "sha512": "sa17s3vDAXTuIVGxuJcK713i0B0iaUoiwY4Sl2SLHhMqM8snznn0YVGiZAVkoKEUFWjvIg1Z/JNmAicBamI4mg==",
+    "Microsoft.Extensions.Primitives/3.1.8": {
+      "sha512": "XcIoXQhT0kwnEhOKv/LmpWR6yF6QWmBTy9Fcsz4aHuCOgTJ7Zd23ELtUA4BfwlYoFlSedavS+vURz9tNekd44g==",
       "type": "package",
-      "path": "microsoft.extensions.primitives/3.1.7",
+      "path": "microsoft.extensions.primitives/3.1.8",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3447,7 +3447,7 @@
         "lib/netcoreapp3.1/Microsoft.Extensions.Primitives.xml",
         "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll",
         "lib/netstandard2.0/Microsoft.Extensions.Primitives.xml",
-        "microsoft.extensions.primitives.3.1.7.nupkg.sha512",
+        "microsoft.extensions.primitives.3.1.8.nupkg.sha512",
         "microsoft.extensions.primitives.nuspec"
       ]
     },
@@ -5736,25 +5736,29 @@
         "system.io.filesystem.primitives.nuspec"
       ]
     },
-    "System.IO.Pipelines/4.7.1": {
-      "sha512": "TyMTasnXQt7U4k13RQ7tA3CrfWEkvWjR635SFfnKVwwMOgClLE5mdHSkG2D13BLIdNwbPTGVQnhQB8Rk7f53Rg==",
+    "System.IO.Pipelines/4.7.2": {
+      "sha512": "rGIIhoY3lUdn9rWeuGdgeZZ0P+SpJ1wZI5g8TnXqgvuhFgUP7iP9Nt5FZebYInQZQxqnwjPxdYYBE5l/8PJmqQ==",
       "type": "package",
-      "path": "system.io.pipelines/4.7.1",
+      "path": "system.io.pipelines/4.7.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.IO.Pipelines.dll",
+        "lib/net461/System.IO.Pipelines.xml",
         "lib/netcoreapp3.0/System.IO.Pipelines.dll",
         "lib/netcoreapp3.0/System.IO.Pipelines.xml",
         "lib/netstandard1.3/System.IO.Pipelines.dll",
         "lib/netstandard1.3/System.IO.Pipelines.xml",
         "lib/netstandard2.0/System.IO.Pipelines.dll",
         "lib/netstandard2.0/System.IO.Pipelines.xml",
+        "ref/net461/System.IO.Pipelines.dll",
+        "ref/net461/System.IO.Pipelines.xml",
         "ref/netcoreapp2.0/System.IO.Pipelines.dll",
         "ref/netcoreapp2.0/System.IO.Pipelines.xml",
-        "system.io.pipelines.4.7.1.nupkg.sha512",
+        "system.io.pipelines.4.7.2.nupkg.sha512",
         "system.io.pipelines.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -8727,29 +8731,24 @@
       "Elk.Http >= 1.1.3",
       "GolPooch.CrossCutting >= 1.0.0",
       "GolPooch.DataAccess.Ef >= 1.0.0",
-      "GolPooch.Domain >= 1.0.0",
       "GolPooch.SmsGateway >= 1.0.0",
       "Kavenegar >= 1.2.4"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\sh.bazrafshan\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Mehran\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\Kingofday\\GolYaPooch\\GolPooch.Service\\GolPooch.Service.csproj",
+      "projectUniqueName": "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.Service\\GolPooch.Service.csproj",
       "projectName": "GolPooch.Service",
-      "projectPath": "D:\\Projects\\Kingofday\\GolYaPooch\\GolPooch.Service\\GolPooch.Service.csproj",
-      "packagesPath": "C:\\Users\\sh.bazrafshan\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects\\Kingofday\\GolYaPooch\\GolPooch.Service\\obj\\",
+      "projectPath": "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.Service\\GolPooch.Service.csproj",
+      "packagesPath": "C:\\Users\\Mehran\\.nuget\\packages\\",
+      "outputPath": "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.Service\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\sh.bazrafshan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Mehran\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8762,17 +8761,14 @@
       "frameworks": {
         "netstandard2.1": {
           "projectReferences": {
-            "D:\\Projects\\Kingofday\\GolYaPooch\\GolPooch.CrossCutting\\GolPooch.CrossCutting.csproj": {
-              "projectPath": "D:\\Projects\\Kingofday\\GolYaPooch\\GolPooch.CrossCutting\\GolPooch.CrossCutting.csproj"
+            "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.CrossCutting\\GolPooch.CrossCutting.csproj": {
+              "projectPath": "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.CrossCutting\\GolPooch.CrossCutting.csproj"
             },
-            "D:\\Projects\\Kingofday\\GolYaPooch\\GolPooch.DataAccess.Ef\\GolPooch.DataAccess.Ef.csproj": {
-              "projectPath": "D:\\Projects\\Kingofday\\GolYaPooch\\GolPooch.DataAccess.Ef\\GolPooch.DataAccess.Ef.csproj"
+            "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.DataAccess.Ef\\GolPooch.DataAccess.Ef.csproj": {
+              "projectPath": "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.DataAccess.Ef\\GolPooch.DataAccess.Ef.csproj"
             },
-            "D:\\Projects\\Kingofday\\GolYaPooch\\GolPooch.Domain\\GolPooch.Domain.csproj": {
-              "projectPath": "D:\\Projects\\Kingofday\\GolYaPooch\\GolPooch.Domain\\GolPooch.Domain.csproj"
-            },
-            "D:\\Projects\\Kingofday\\GolYaPooch\\GolPooch.SmsGateway\\GolPooch.SmsGateway.csproj": {
-              "projectPath": "D:\\Projects\\Kingofday\\GolYaPooch\\GolPooch.SmsGateway\\GolPooch.SmsGateway.csproj"
+            "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.SmsGateway\\GolPooch.SmsGateway.csproj": {
+              "projectPath": "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.SmsGateway\\GolPooch.SmsGateway.csproj"
             }
           }
         }

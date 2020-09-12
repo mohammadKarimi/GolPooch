@@ -1,4 +1,7 @@
+using System;
+using Elk.Core;
 using System.Text;
+using Elk.AspNetCore;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -7,35 +10,53 @@ using GolPooch.DependencyResolver.Ioc;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.AspNetCore.Authentication.Cookies;
 
 namespace GolPooch.Api
 {
     public class Startup
     {
         private IConfiguration _config { get; }
-        private readonly string AllowedOrigins = "_Origins";
+        private JwtSettings _jwtSettings { set; get; }
+        private SwaggerSetting _swaggerSetting { set; get; }
 
         public Startup(IConfiguration configuration)
         {
             _config = configuration;
+
+            _jwtSettings = new JwtSettings
+            {
+                SecretKey = _config["JwtSetting:SecretKey"],
+                Encryptionkey = _config["JwtSetting:Encryptionkey"],
+                Issuer = _config["JwtSetting:Issuer"],
+                Audience = _config["JwtSetting:Audience"],
+                NotBeforeMinutes = int.Parse(_config["JwtSetting:NotBeforeMinutes"]),
+                ExpirationMinutes = int.Parse(_config["JwtSetting:ExpirationMinutes"]),
+            };
+
+            _swaggerSetting = new SwaggerSetting
+            {
+                Name = "GolPooch API - v1.0",
+                Title = "GolPooch",
+                Version = "v1.0",
+                Description = $"Copyright © {DateTime.Now.Year} Avanod Company. All rights reserved.",
+                TermsOfService = "https://Avanod.com/",
+                JsonUrl = "/swagger/v1/swagger.json",
+                Contact = new SwaggerContact
+                {
+                    Name = "Mohammad Karimi",
+                    Email = "M.Karimi@avanod.com",
+                    Url = "https://Avanod.com/"
+                },
+                License = new SwaggerLicense
+                {
+                    Name = "Avanod Service Licence",
+                    Url = "https://Avanod.com/applicense"
+                }
+            };
         }
 
         public void ConfigureServices(IServiceCollection services)
         {
-            //services.AddCors(options =>
-            //{
-            //    options.AddPolicy(AllowedOrigins, builder =>
-            //    {
-            //        builder
-            //            .WithOrigins(_config.GetSection("AllowOrigin").Value.Split(";"))
-            //            .SetIsOriginAllowedToAllowWildcardSubdomains()
-            //            .AllowAnyHeader()
-            //            .AllowAnyMethod()
-            //            .AllowCredentials();
-            //    });
-            //});
-
             services.AddMvc(option =>
             {
                 option.EnableEndpointRouting = false;
@@ -49,26 +70,30 @@ namespace GolPooch.Api
                 opts.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
             });
 
-            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-                .AddCookie(opt =>
-                    {
-                        opt.Cookie.SameSite = SameSiteMode.Lax;
-                    });
-            services.AddHttpContextAccessor();
+            services.AddElkAuthentication();
 
+            services.AddElkJwtConfiguration(_jwtSettings);
 
-            services.AddScoped<AuthorizeFilter>();
+            services.AddMemoryCache();
+
+            services.Configure<JwtSettings>(_config.GetSection("JwtSetting"));
+            services.AddSingleton<IJwtService, JwtService>();
+
+            services.AddTransient<AuthFilter>();
+            services.AddTransient<AuthorizeFilter>();
 
             services.AddTransient(_config);
             services.AddScoped(_config);
             services.AddSingleton(_config);
 
-            services.AddSwaggerGen();
+            services.AddElkSwagger(_swaggerSetting);
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            app.AddSwagger();
+            app.UseElkCrossOriginResource();
+
+            app.UseElkSwaggerConfiguration(_swaggerSetting);
 
             app.UseExceptionHandler(errorApp =>
             {
@@ -77,14 +102,16 @@ namespace GolPooch.Api
                     var errorhandler = context.Features.Get<IExceptionHandlerPathFeature>();
                     context.Response.StatusCode = 500;
                     context.Response.ContentType = "application/Json";
-                    var bytes = Encoding.ASCII.GetBytes(new { IsSuccessful = false, errorhandler.Error?.Message }.ToString());
+                    var bytes = Encoding.ASCII.GetBytes(new Response<object> { IsSuccessful = false, Message = errorhandler.Error?.Message, ResultCode = 500 }.SerializeToJson());
                     await context.Response.Body.WriteAsync(bytes, 0, bytes.Length);
                 });
             });
-            app.UseRouting();
 
-            app.UseAuthentication();
-            app.UseCors(AllowedOrigins);
+            app.UseMiddleware<JwtParserMiddleware>();
+
+            app.UseElkJwtConfiguration();
+
+            app.UseRouting();
 
             app.UseMvcWithDefaultRoute();
         }

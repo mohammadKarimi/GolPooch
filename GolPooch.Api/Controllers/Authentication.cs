@@ -8,9 +8,9 @@ namespace GolPooch.Api.Controllers
     [AuthFilter, Route("[controller]/[action]")]
     public class Authentication : Controller
     {
-        private IVerificationCodeService _verificationCodeService { get; }
+        private IAuthenticateService _verificationCodeService { get; }
 
-        public Authentication(IVerificationCodeService verificationCodeService)
+        public Authentication(IAuthenticateService verificationCodeService)
             => _verificationCodeService = verificationCodeService;
 
         [HttpGet]

@@ -300,6 +300,9 @@
   <data name="UsedChance" xml:space="preserve">
     <value>شانس های استفاده شده</value>
   </data>
+  <data name="UsedTime" xml:space="preserve">
+    <value>زمان استفاده</value>
+  </data>
   <data name="Username" xml:space="preserve">
     <value>نام کاربری</value>
   </data>

@@ -79,7 +79,7 @@ namespace GolPooch.Domain.Entity
 
 
         public ICollection<Ticket> Tickets { get; set; }
-        public ICollection<VerificationCode> VerificationCodes { get; set; }
+        public ICollection<Authenticate> VerificationCodes { get; set; }
         public ICollection<DrawChance> DrawChances { get; set; }
         public ICollection<Round> Rounds { get; set; }
         public ICollection<Purchase> Purchases { get; set; }
