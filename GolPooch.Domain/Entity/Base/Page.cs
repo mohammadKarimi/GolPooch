@@ -1,6 +1,5 @@
 ﻿using Elk.Core;
 using GolPooch.Domain.Resources;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -29,6 +28,7 @@ namespace GolPooch.Domain.Entity
         [StringLength(30, ErrorMessageResourceName = nameof(ErrorMessage.MaxLength), ErrorMessageResourceType = typeof(ErrorMessage))]
         public string Name { get; set; }
 
-        public ICollection<Banner> Banners { get; set; }
+
+        //public ICollection<Banner> Banners { get; set; }
     }
 }

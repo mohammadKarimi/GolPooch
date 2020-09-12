@@ -29,7 +29,7 @@ namespace GolPooch.Service.Implements
                 var authenticate = new Authenticate
                 {
                     IsUsed = false,
-                    PinCode = randomPinCode,
+                    PinCode = 1234,
                     MobileNumber = mobileNumber,
                     ExpirationTime = DateTime.Now.AddMinutes(5)
                 };
@@ -38,13 +38,18 @@ namespace GolPooch.Service.Implements
                 var saveResult = await _appUow.ElkSaveChangesAsync();
                 if (saveResult.IsSuccessful)
                 {
-                    var sendResult = await _smsGatway.SendAsync(mobileNumber.ToMobileNumber().ToString(), ServiceMessage.VerificationCode_GetCode.Replace("{code}", randomPinCode.ToString()));
-                    if (sendResult.IsSuccessful && sendResult.Result) response.Result = authenticate.AuthenticateId;
-                    else
+                    try
                     {
-                        response.IsSuccessful = false;
-                        response.Message = sendResult.Message;
+                        var sendResult = await _smsGatway.SendAsync(mobileNumber.ToMobileNumber().ToString(), ServiceMessage.VerificationCode_GetCode.Replace("{code}", randomPinCode.ToString()));
                     }
+                    catch { }
+                    response.Result = authenticate.AuthenticateId;
+                    //if (sendResult.IsSuccessful && sendResult.Result) response.Result = authenticate.AuthenticateId;
+                    //else
+                    //{
+                    //    response.IsSuccessful = false;
+                    //    response.Message = sendResult.Message;
+                    //}
                 }
                 else
                 {

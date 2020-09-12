@@ -7,8 +7,6 @@ using System.Threading.Tasks;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Options;
-using Microsoft.IdentityModel.Tokens;
-using System.IdentityModel.Tokens.Jwt;
 
 namespace GolPooch.Api
 {
@@ -33,8 +31,8 @@ namespace GolPooch.Api
             {
                 if (token != null)
                 {
-                    //var userClaims = _jwtService.GetClaimsPrincipal(token, _jwtSettings);
-                    var userClaims = GetClaimsPrincipal(token, _jwtSettings);
+                    var userClaims = _jwtService.GetClaimsPrincipal(token, _jwtSettings);
+                    //var userClaims = GetClaimsPrincipal(token, _jwtSettings);
                     if (userClaims != null)
                         context.Request.Headers.Add("UserId", userClaims.FindFirstValue("UserId"));
                 }
@@ -59,7 +57,7 @@ namespace GolPooch.Api
                 if (e.Message.Contains("Lifetime validation failed"))
                 {
                     #region Expired Token
-                    var validationTime = GetTokenExpireTime(token, _jwtSettings);
+                    var validationTime = _jwtService.GetTokenExpireTime(token, _jwtSettings);
                     bytes = Encoding.ASCII.GetBytes(new Response<object>
                     {
                         ResultCode = 401,
@@ -82,62 +80,6 @@ namespace GolPooch.Api
 
                 await context.Response.Body.WriteAsync(bytes, 0, bytes.Length);
             }
-        }
-
-        public ClaimsPrincipal GetClaimsPrincipal(string token, JwtSettings jwtSettings)
-        {
-            var secretKey = Encoding.UTF8.GetBytes(!string.IsNullOrWhiteSpace(jwtSettings.SecretKey) ? jwtSettings.SecretKey : "<-- Mehran@Norouzi|123456789987654321|Mehran@Norouzi -->"); // Longer than 16 character
-            var issuerSigningKey = new SymmetricSecurityKey(secretKey);
-
-            var encryptionkey = Encoding.UTF8.GetBytes(!string.IsNullOrWhiteSpace(jwtSettings.Encryptionkey) ? jwtSettings.Encryptionkey : "<Mehran@Norouzi>"); //Must be 16 character
-            var tokenDecryptionKey = new SymmetricSecurityKey(encryptionkey);
-
-            var tokenValidationParameters = new TokenValidationParameters
-            {
-                ValidateIssuer = !string.IsNullOrEmpty(jwtSettings.Issuer),
-                ValidIssuer = jwtSettings.Issuer,
-                ValidateAudience = !string.IsNullOrEmpty(jwtSettings.Audience),
-                ValidAudience = jwtSettings.Audience,
-                ValidateLifetime = true,
-                RequireExpirationTime = true,
-                RequireSignedTokens = true,
-                ClockSkew = TimeSpan.Zero,
-                ValidateIssuerSigningKey = true,
-                TokenDecryptionKey = tokenDecryptionKey,
-                IssuerSigningKey = issuerSigningKey
-            };
-
-            var principal = new JwtSecurityTokenHandler().ValidateToken(token, tokenValidationParameters, out SecurityToken securityToken);
-            var jwtSecurityToken = securityToken as JwtSecurityToken;
-            if (jwtSecurityToken == null || !jwtSecurityToken.Header.Alg.Equals(SecurityAlgorithms.Aes128KW, StringComparison.InvariantCultureIgnoreCase)) return null;
-
-            return principal;
-        }
-
-        public dynamic GetTokenExpireTime(string token, JwtSettings jwtSettings)
-        {
-            var secretKey = Encoding.UTF8.GetBytes(!string.IsNullOrWhiteSpace(jwtSettings.SecretKey) ? jwtSettings.SecretKey : "<-- Mehran@Norouzi|123456789987654321|Mehran@Norouzi -->"); // Longer than 16 character
-            var issuerSigningKey = new SymmetricSecurityKey(secretKey);
-
-            var encryptionkey = Encoding.UTF8.GetBytes(!string.IsNullOrWhiteSpace(jwtSettings.Encryptionkey) ? jwtSettings.Encryptionkey : "<Mehran@Norouzi>"); //Must be 16 character
-            var tokenDecryptionKey = new SymmetricSecurityKey(encryptionkey);
-
-            var tokenValidationParameters = new TokenValidationParameters
-            {
-                ValidateIssuer = !string.IsNullOrEmpty(jwtSettings.Issuer),
-                ValidIssuer = jwtSettings.Issuer,
-                ValidateAudience = !string.IsNullOrEmpty(jwtSettings.Audience),
-                ValidAudience = jwtSettings.Audience,
-                ValidateLifetime = false,
-                ClockSkew = TimeSpan.Zero,
-                TokenDecryptionKey = tokenDecryptionKey,
-                IssuerSigningKey = issuerSigningKey
-            };
-
-            new JwtSecurityTokenHandler().ValidateToken(token, tokenValidationParameters, out SecurityToken securityToken);
-            var jwtSecurityToken = securityToken as JwtSecurityToken;
-
-            return new { jwtSecurityToken.ValidFrom, jwtSecurityToken.ValidTo };
         }
     }
 }

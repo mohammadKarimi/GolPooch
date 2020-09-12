@@ -1,3 +1,5 @@
+using System;
+using Elk.Core;
 using System.Text;
 using Elk.AspNetCore;
 using Microsoft.AspNetCore.Http;
@@ -8,7 +10,6 @@ using GolPooch.DependencyResolver.Ioc;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Elk.Core;
 
 namespace GolPooch.Api
 {
@@ -16,7 +17,7 @@ namespace GolPooch.Api
     {
         private IConfiguration _config { get; }
         private JwtSettings _jwtSettings { set; get; }
-        private readonly string AllowedOrigins = "_Origins";
+        private SwaggerSetting _swaggerSetting { set; get; }
 
         public Startup(IConfiguration configuration)
         {
@@ -31,23 +32,31 @@ namespace GolPooch.Api
                 NotBeforeMinutes = int.Parse(_config["JwtSetting:NotBeforeMinutes"]),
                 ExpirationMinutes = int.Parse(_config["JwtSetting:ExpirationMinutes"]),
             };
+
+            _swaggerSetting = new SwaggerSetting
+            {
+                Name = "GolPooch API - v1.0",
+                Title = "GolPooch",
+                Version = "v1.0",
+                Description = $"Copyright © {DateTime.Now.Year} Avanod Company. All rights reserved.",
+                TermsOfService = "https://Avanod.com/",
+                JsonUrl = "/swagger/v1/swagger.json",
+                Contact = new SwaggerContact
+                {
+                    Name = "Mohammad Karimi",
+                    Email = "M.Karimi@avanod.com",
+                    Url = "https://Avanod.com/"
+                },
+                License = new SwaggerLicense
+                {
+                    Name = "Avanod Service Licence",
+                    Url = "https://Avanod.com/applicense"
+                }
+            };
         }
 
         public void ConfigureServices(IServiceCollection services)
         {
-            //services.AddCors(options =>
-            //{
-            //    options.AddPolicy(AllowedOrigins, builder =>
-            //    {
-            //        builder
-            //            .WithOrigins(_config.GetSection("AllowOrigin").Value.Split(";"))
-            //            .SetIsOriginAllowedToAllowWildcardSubdomains()
-            //            .AllowAnyHeader()
-            //            .AllowAnyMethod()
-            //            .AllowCredentials();
-            //    });
-            //});
-
             services.AddMvc(option =>
             {
                 option.EnableEndpointRouting = false;
@@ -77,12 +86,14 @@ namespace GolPooch.Api
             services.AddScoped(_config);
             services.AddSingleton(_config);
 
-            services.AddSwaggerGen();
+            services.AddElkSwagger(_swaggerSetting);
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            app.AddSwagger();
+            app.UseElkCrossOriginResource();
+
+            app.UseElkSwaggerConfiguration(_swaggerSetting);
 
             app.UseExceptionHandler(errorApp =>
             {
@@ -101,9 +112,6 @@ namespace GolPooch.Api
             app.UseElkJwtConfiguration();
 
             app.UseRouting();
-
-            //app.UseAuthentication();
-            //app.UseCors(AllowedOrigins);
 
             app.UseMvcWithDefaultRoute();
         }
