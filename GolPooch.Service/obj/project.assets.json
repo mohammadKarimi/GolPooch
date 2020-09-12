@@ -2648,7 +2648,8 @@
         "framework": ".NETStandard,Version=v2.1",
         "dependencies": {
           "Elk.EntityFrameworkCore.Tools": "2.0.1",
-          "GolPooch.Domain": "1.0.0"
+          "GolPooch.Domain": "1.0.0",
+          "elk.core": "1.1.6"
         },
         "compile": {
           "bin/placeholder/GolPooch.DataAccess.Ef.dll": {}
@@ -8726,25 +8727,29 @@
       "Elk.Http >= 1.1.3",
       "GolPooch.CrossCutting >= 1.0.0",
       "GolPooch.DataAccess.Ef >= 1.0.0",
+      "GolPooch.Domain >= 1.0.0",
       "GolPooch.SmsGateway >= 1.0.0",
-      "Kavenegar >= 1.2.4",
-      "elk.core >= 1.1.6"
+      "Kavenegar >= 1.2.4"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\m.karimi\\.nuget\\packages\\": {}
+    "C:\\Users\\sh.bazrafshan\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\m.karimi\\source\\OwnRepos\\GolPooch\\GolPooch.Service\\GolPooch.Service.csproj",
+      "projectUniqueName": "D:\\Projects\\Kingofday\\GolYaPooch\\GolPooch.Service\\GolPooch.Service.csproj",
       "projectName": "GolPooch.Service",
-      "projectPath": "C:\\Users\\m.karimi\\source\\OwnRepos\\GolPooch\\GolPooch.Service\\GolPooch.Service.csproj",
-      "packagesPath": "C:\\Users\\m.karimi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\m.karimi\\source\\OwnRepos\\GolPooch\\GolPooch.Service\\obj\\",
+      "projectPath": "D:\\Projects\\Kingofday\\GolYaPooch\\GolPooch.Service\\GolPooch.Service.csproj",
+      "packagesPath": "C:\\Users\\sh.bazrafshan\\.nuget\\packages\\",
+      "outputPath": "D:\\Projects\\Kingofday\\GolYaPooch\\GolPooch.Service\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\m.karimi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\sh.bazrafshan\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8757,14 +8762,17 @@
       "frameworks": {
         "netstandard2.1": {
           "projectReferences": {
-            "C:\\Users\\m.karimi\\source\\OwnRepos\\GolPooch\\GolPooch.CrossCutting\\GolPooch.CrossCutting.csproj": {
-              "projectPath": "C:\\Users\\m.karimi\\source\\OwnRepos\\GolPooch\\GolPooch.CrossCutting\\GolPooch.CrossCutting.csproj"
+            "D:\\Projects\\Kingofday\\GolYaPooch\\GolPooch.CrossCutting\\GolPooch.CrossCutting.csproj": {
+              "projectPath": "D:\\Projects\\Kingofday\\GolYaPooch\\GolPooch.CrossCutting\\GolPooch.CrossCutting.csproj"
             },
-            "C:\\Users\\m.karimi\\source\\OwnRepos\\GolPooch\\GolPooch.DataAccess.Ef\\GolPooch.DataAccess.Ef.csproj": {
-              "projectPath": "C:\\Users\\m.karimi\\source\\OwnRepos\\GolPooch\\GolPooch.DataAccess.Ef\\GolPooch.DataAccess.Ef.csproj"
+            "D:\\Projects\\Kingofday\\GolYaPooch\\GolPooch.DataAccess.Ef\\GolPooch.DataAccess.Ef.csproj": {
+              "projectPath": "D:\\Projects\\Kingofday\\GolYaPooch\\GolPooch.DataAccess.Ef\\GolPooch.DataAccess.Ef.csproj"
             },
-            "C:\\Users\\m.karimi\\source\\OwnRepos\\GolPooch\\GolPooch.SmsGateway\\GolPooch.SmsGateway.csproj": {
-              "projectPath": "C:\\Users\\m.karimi\\source\\OwnRepos\\GolPooch\\GolPooch.SmsGateway\\GolPooch.SmsGateway.csproj"
+            "D:\\Projects\\Kingofday\\GolYaPooch\\GolPooch.Domain\\GolPooch.Domain.csproj": {
+              "projectPath": "D:\\Projects\\Kingofday\\GolYaPooch\\GolPooch.Domain\\GolPooch.Domain.csproj"
+            },
+            "D:\\Projects\\Kingofday\\GolYaPooch\\GolPooch.SmsGateway\\GolPooch.SmsGateway.csproj": {
+              "projectPath": "D:\\Projects\\Kingofday\\GolYaPooch\\GolPooch.SmsGateway\\GolPooch.SmsGateway.csproj"
             }
           }
         }
@@ -8789,10 +8797,6 @@
           "Kavenegar": {
             "target": "Package",
             "version": "[1.2.4, )"
-          },
-          "elk.core": {
-            "target": "Package",
-            "version": "[1.1.6, )"
           }
         },
         "imports": [
@@ -8810,7 +8814,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

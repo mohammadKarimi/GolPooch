@@ -6,12 +6,16 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace GolPooch.Domain.Entity
 {
-    [Table(nameof(Authenticate), Schema = "Base")]
-    public class Authenticate : IEntity, IInsertDateProperties
+    [Table(nameof(VerificationCode), Schema = "Base")]
+    public class VerificationCode : IEntity, IInsertDateProperties
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int AuthenticateId { get; set; }
+        public int VerificationCodeId { get; set; }
+
+        [ForeignKey(nameof(UserId))]
+        public User User { get; set; }
+        public int UserId { get; set; }
 
         [Display(Name = nameof(DisplayNames.PinCode), ResourceType = typeof(DisplayNames))]
         public long MobileNumber { get; set; }
@@ -32,8 +36,5 @@ namespace GolPooch.Domain.Entity
 
         [Display(Name = nameof(DisplayNames.ExpirationTime), ResourceType = typeof(DisplayNames))]
         public DateTime ExpirationTime { get; set; }
-
-        [Display(Name = nameof(DisplayNames.UsedTime), ResourceType = typeof(DisplayNames))]
-        public DateTime? UsedTime { get; set; }
     }
 }

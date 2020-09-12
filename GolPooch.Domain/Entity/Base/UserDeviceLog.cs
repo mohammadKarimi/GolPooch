@@ -6,8 +6,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace GolPooch.Domain.Entity
 {
-    [Table("UserDeviceLog", Schema = "Base")]
-    public class UserDevice : IEntity, IInsertDateProperties
+    [Table(nameof(UserDeviceLog), Schema = "Base")]
+    public class UserDeviceLog : IEntity, IInsertDateProperties
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

@@ -19,40 +19,6 @@ namespace GolPooch.DataAccess.Ef.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("GolPooch.Domain.Entity.Authenticate", b =>
-                {
-                    b.Property<int>("AuthenticateId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<DateTime>("ExpirationTime")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("InsertDateMi")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("InsertDateSh")
-                        .HasColumnType("char(10)")
-                        .HasMaxLength(10);
-
-                    b.Property<bool>("IsUsed")
-                        .HasColumnType("bit");
-
-                    b.Property<long>("MobileNumber")
-                        .HasColumnType("bigint");
-
-                    b.Property<int>("PinCode")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime?>("UsedTime")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("AuthenticateId");
-
-                    b.ToTable("Authenticate","Base");
-                });
-
             modelBuilder.Entity("GolPooch.Domain.Entity.Banner", b =>
                 {
                     b.Property<int>("BannerId")
@@ -763,6 +729,9 @@ namespace GolPooch.DataAccess.Ef.Migrations
                     b.Property<long>("MobileNumber")
                         .HasColumnType("bigint");
 
+                    b.Property<int>("OsType")
+                        .HasColumnType("int");
+
                     b.Property<string>("ProfileImgUrl")
                         .HasColumnType("varchar(250)")
                         .HasMaxLength(250);
@@ -782,7 +751,7 @@ namespace GolPooch.DataAccess.Ef.Migrations
                     b.ToTable("User","Base");
                 });
 
-            modelBuilder.Entity("GolPooch.Domain.Entity.UserDevice", b =>
+            modelBuilder.Entity("GolPooch.Domain.Entity.UserDeviceLog", b =>
                 {
                     b.Property<int>("UserDeviceLogId")
                         .ValueGeneratedOnAdd()
@@ -821,6 +790,42 @@ namespace GolPooch.DataAccess.Ef.Migrations
                     b.HasKey("UserDeviceLogId");
 
                     b.ToTable("UserDeviceLog","Base");
+                });
+
+            modelBuilder.Entity("GolPooch.Domain.Entity.VerificationCode", b =>
+                {
+                    b.Property<int>("VerificationCodeId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("ExpirationTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("InsertDateMi")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("InsertDateSh")
+                        .HasColumnType("char(10)")
+                        .HasMaxLength(10);
+
+                    b.Property<bool>("IsUsed")
+                        .HasColumnType("bit");
+
+                    b.Property<long>("MobileNumber")
+                        .HasColumnType("bigint");
+
+                    b.Property<int>("PinCode")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("VerificationCodeId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("VerificationCode","Base");
                 });
 
             modelBuilder.Entity("GolPooch.Domain.Entity.Banner", b =>
@@ -945,6 +950,15 @@ namespace GolPooch.DataAccess.Ef.Migrations
                 {
                     b.HasOne("GolPooch.Domain.Entity.User", "User")
                         .WithMany("Tickets")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("GolPooch.Domain.Entity.VerificationCode", b =>
+                {
+                    b.HasOne("GolPooch.Domain.Entity.User", "User")
+                        .WithMany("VerificationCodes")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();

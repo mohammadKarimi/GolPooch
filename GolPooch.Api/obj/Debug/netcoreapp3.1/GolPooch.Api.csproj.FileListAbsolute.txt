@@ -17,7 +17,6 @@ D:\Mehran\Git\GolYaPooch\GolPooch.Api\bin\Debug\netcoreapp3.1\Elk.Http.dll
 D:\Mehran\Git\GolYaPooch\GolPooch.Api\bin\Debug\netcoreapp3.1\FastMember.dll
 D:\Mehran\Git\GolYaPooch\GolPooch.Api\bin\Debug\netcoreapp3.1\Kavenegar.dll
 D:\Mehran\Git\GolYaPooch\GolPooch.Api\bin\Debug\netcoreapp3.1\Kavenegar.Core.dll
-D:\Mehran\Git\GolYaPooch\GolPooch.Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\Mehran\Git\GolYaPooch\GolPooch.Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Http.Features.dll
 D:\Mehran\Git\GolYaPooch\GolPooch.Api\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
 D:\Mehran\Git\GolYaPooch\GolPooch.Api\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
@@ -102,10 +101,10 @@ D:\Mehran\Git\GolYaPooch\GolPooch.Api\bin\Debug\netcoreapp3.1\GolPooch.Domain.dl
 D:\Mehran\Git\GolYaPooch\GolPooch.Api\bin\Debug\netcoreapp3.1\GolPooch.Service.dll
 D:\Mehran\Git\GolYaPooch\GolPooch.Api\bin\Debug\netcoreapp3.1\GolPooch.SmsGateway.dll
 D:\Mehran\Git\GolYaPooch\GolPooch.Api\bin\Debug\netcoreapp3.1\GolPooch.DependencyResolver.pdb
-D:\Mehran\Git\GolYaPooch\GolPooch.Api\bin\Debug\netcoreapp3.1\GolPooch.Service.pdb
 D:\Mehran\Git\GolYaPooch\GolPooch.Api\bin\Debug\netcoreapp3.1\GolPooch.CrossCutting.pdb
 D:\Mehran\Git\GolYaPooch\GolPooch.Api\bin\Debug\netcoreapp3.1\GolPooch.DataAccess.Ef.pdb
 D:\Mehran\Git\GolYaPooch\GolPooch.Api\bin\Debug\netcoreapp3.1\GolPooch.Domain.pdb
+D:\Mehran\Git\GolYaPooch\GolPooch.Api\bin\Debug\netcoreapp3.1\GolPooch.Service.pdb
 D:\Mehran\Git\GolYaPooch\GolPooch.Api\bin\Debug\netcoreapp3.1\GolPooch.SmsGateway.pdb
 D:\Mehran\Git\GolYaPooch\GolPooch.Api\obj\Debug\netcoreapp3.1\GolPooch.Api.csprojAssemblyReference.cache
 D:\Mehran\Git\GolYaPooch\GolPooch.Api\obj\Debug\netcoreapp3.1\GolPooch.Api.AssemblyInfoInputs.cache
@@ -124,13 +123,10 @@ C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.Api\obj\Debug\netcoreapp3.1\
 C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.Api\obj\Debug\netcoreapp3.1\GolPooch.Api.AssemblyInfoInputs.cache
 C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.Api\obj\Debug\netcoreapp3.1\GolPooch.Api.AssemblyInfo.cs
 C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.Api\obj\Debug\netcoreapp3.1\GolPooch.Api.csproj.CoreCompileInputs.cache
-C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.Api\obj\Debug\netcoreapp3.1\GolPooch.Api.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.Api\obj\Debug\netcoreapp3.1\GolPooch.Api.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.Api\obj\Debug\netcoreapp3.1\GolPooch.Api.dll
-C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.Api\obj\Debug\netcoreapp3.1\GolPooch.Api.pdb
 C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.Api\bin\Debug\netcoreapp3.1\appsettings.Development.json
-C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.Api\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.Api\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.Api\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.Api\bin\Debug\netcoreapp3.1\GolPooch.Api.exe
 C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.Api\bin\Debug\netcoreapp3.1\GolPooch.Api.deps.json
 C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.Api\bin\Debug\netcoreapp3.1\GolPooch.Api.runtimeconfig.json
@@ -147,7 +143,6 @@ C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.Api\bin\Debug\netcoreapp3.1\
 C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.Api\bin\Debug\netcoreapp3.1\FastMember.dll
 C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.Api\bin\Debug\netcoreapp3.1\Kavenegar.dll
 C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.Api\bin\Debug\netcoreapp3.1\Kavenegar.Core.dll
-C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Http.Features.dll
 C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.Api\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.Api\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
@@ -237,8 +232,11 @@ C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.Api\bin\Debug\netcoreapp3.1\
 C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.Api\bin\Debug\netcoreapp3.1\GolPooch.DataAccess.Ef.pdb
 C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.Api\bin\Debug\netcoreapp3.1\GolPooch.Domain.pdb
 C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.Api\bin\Debug\netcoreapp3.1\GolPooch.SmsGateway.pdb
+C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.Api\obj\Debug\netcoreapp3.1\GolPooch.Api.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.Api\obj\Debug\netcoreapp3.1\GolPooch.Api.RazorTargetAssemblyInfo.cache
 C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.Api\obj\Debug\netcoreapp3.1\GolPooch.Api.csproj.CopyComplete
 C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.Api\obj\Debug\netcoreapp3.1\staticwebassets\GolPooch.Api.StaticWebAssets.Manifest.cache
 C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.Api\obj\Debug\netcoreapp3.1\staticwebassets\GolPooch.Api.StaticWebAssets.xml
+C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.Api\obj\Debug\netcoreapp3.1\GolPooch.Api.dll
+C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.Api\obj\Debug\netcoreapp3.1\GolPooch.Api.pdb
 C:\Users\m.karimi\source\OwnRepos\GolPooch\GolPooch.Api\obj\Debug\netcoreapp3.1\GolPooch.Api.genruntimeconfig.cache

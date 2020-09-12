@@ -9,37 +9,38 @@ using GolPooch.Service.Interfaces;
 
 namespace GolPooch.Service.Implements
 {
-    public class AuthenticateService : IAuthenticateService
+    public class VerificationCodeService : IVerificationCodeService
     {
         private ISmsGatway _smsGatway { get; set; }
         private AppUnitOfWork _appUow { get; set; }
 
-        public AuthenticateService(AppUnitOfWork appUnitOfWork, ISmsGatway smsGatway)
+        public VerificationCodeService(AppUnitOfWork appUnitOfWork, ISmsGatway smsGatway)
         {
             _smsGatway = smsGatway;
             _appUow = appUnitOfWork;
         }
 
-        public async Task<IResponse<int>> GetCodeAsync(long mobileNumber)
+        public async Task<IResponse<int>> GetCodeAsync(long mobileNumber, OsType osType)
         {
             var response = new Response<int> { IsSuccessful = true, Message = ServiceMessage.Success };
             try
             {
-                var randomPinCode = Randomizer.GetRandomInteger(4);
-                var authenticate = new Authenticate
+                var randomPinCode = Randomizer.GetRandomInteger(5);
+
+                var verificationCode = new VerificationCode
                 {
                     IsUsed = false,
                     PinCode = randomPinCode,
                     MobileNumber = mobileNumber,
                     ExpirationTime = DateTime.Now.AddMinutes(5)
                 };
-                await _appUow.AuthenticateRepo.AddAsync(authenticate);
+                await _appUow.VerificationCodeRepo.AddAsync(verificationCode);
 
                 var saveResult = await _appUow.ElkSaveChangesAsync();
                 if (saveResult.IsSuccessful)
                 {
-                    var sendResult = await _smsGatway.SendAsync(mobileNumber.ToMobileNumber().ToString(), ServiceMessage.VerificationCode_GetCode.Replace("{code}", randomPinCode.ToString()));
-                    if (sendResult.IsSuccessful && sendResult.Result) response.Result = authenticate.AuthenticateId;
+                    var sendResult = await _smsGatway.SendAsync(mobileNumber.ToNormalNumber(), ServiceMessage.VerificationCode_GetCode.Replace("{code}", randomPinCode.ToString()));
+                    if (sendResult.IsSuccessful && sendResult.Result) response.Result = verificationCode.VerificationCodeId;
                     else
                     {
                         response.IsSuccessful = false;
@@ -62,39 +63,30 @@ namespace GolPooch.Service.Implements
             }
         }
 
-        public async Task<IResponse<User>> VerifyCodeAsync(int transactionId, int pinCode)
+        public async Task<IResponse<User>> VerifyCodeAsync(int verificationCodeId, int pinCode)
         {
             var response = new Response<User>();
             try
             {
                 var expiredTime = DateTime.Now;
-                var existedPinCode = await _appUow.AuthenticateRepo.FirstOrDefaultAsync(new QueryFilter<Authenticate> { Conditions = x => x.AuthenticateId == transactionId, AsNoTracking = false });
+                var existedPinCode = await _appUow.VerificationCodeRepo.FirstOrDefaultAsync(new QueryFilter<VerificationCode> { Conditions = x => x.VerificationCodeId == verificationCodeId, AsNoTracking = false }); ;
                 if (existedPinCode.IsNull()) return new Response<User> { Message = ServiceMessage.InvalidId };
                 if (existedPinCode.IsUsed) return new Response<User> { Message = ServiceMessage.UsedPinCode };
                 if (existedPinCode.ExpirationTime < expiredTime) return new Response<User> { Message = ServiceMessage.ExpiredPinCode };
                 if (existedPinCode.PinCode != pinCode) return new Response<User> { Message = ServiceMessage.InvalidPinCode };
 
-                var existedUser = await _appUow.UserRepo.FirstOrDefaultAsync(new QueryFilter<User> { Conditions = x => x.MobileNumber == existedPinCode.MobileNumber });
-                if (existedUser.IsNull())
+                var newUser = new User
                 {
-                    var newUser = new User
-                    {
-                        MobileNumber = existedPinCode.MobileNumber
-                    };
-                    await _appUow.UserRepo.AddAsync(newUser);
-
-                    response.Result = newUser;
-                }
-                else
-                {
-                    response.Result = existedUser;
-                }
+                    MobileNumber = existedPinCode.MobileNumber
+                };
+                await _appUow.UserRepo.AddAsync(newUser);
 
                 existedPinCode.IsUsed = true;
-                existedPinCode.UsedTime = DateTime.Now;
-                _appUow.AuthenticateRepo.Update(existedPinCode);
+                existedPinCode.UserId = newUser.UserId;
+                _appUow.VerificationCodeRepo.Update(existedPinCode);
 
                 var saveResult = await _appUow.ElkSaveChangesAsync();
+                response.Result = saveResult.IsSuccessful ? newUser : null;
                 response.IsSuccessful = saveResult.IsSuccessful;
                 response.Message = saveResult.Message;
                 return response;

@@ -1,23 +1,31 @@
-﻿import React from 'react';
-import TextField from '@material-ui/core/TextField';
-import { Button } from '@material-ui/core';
+﻿import React, { useState } from 'react';
+
+import Grid from '@material-ui/core/Grid';
+import strings from './../../core/strings';
+import logoImage from './../../assets/images/logo.png';
+import Login from './comps/login';
+import Verify from './comps/verify';
+import { useRecoilValue } from 'recoil';
+import authActivePanel from './../../atom/state/authActivePanel';
 
 const Authorization = () => {
-    return (
-        <div>
-            <TextField
-                id="outlined-number"
-                label="Number"
-                type="text"
-                InputLabelProps={{
-                    shrink: true,
-                }}
-                variant="outlined"
-            />
 
-            <Button variant="contained" color="primary">
-                Disable elevation
-            </Button>
+    const activeComp = useRecoilValue(authActivePanel);
+
+    return (
+        <div id='page-auth' className='page flex-center'>
+            <Grid container spacing={0}>
+                <Grid item xs={12}>
+                    <div className='flex-center'>
+                        <img src={logoImage} alt='logo image' />
+                    </div>
+                </Grid>
+
+                <Grid item xs={12} sm={3} md={4}></Grid>
+                <Grid item xs={12} sm={6} md={4}>
+                    {activeComp === 'login' ? <Login /> : <Verify />}
+                </Grid>
+            </Grid>
         </div>
     );
 }
