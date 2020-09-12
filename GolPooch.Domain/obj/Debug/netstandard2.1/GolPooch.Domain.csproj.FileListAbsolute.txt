@@ -21,4 +21,3 @@ D:\Mehran\Git\GolYaPooch\GolPooch.Domain\obj\Debug\netstandard2.1\GolPooch.Domai
 D:\Mehran\Git\GolYaPooch\GolPooch.Domain\obj\Debug\netstandard2.1\GolPooch.Domain.csproj.CoreCompileInputs.cache
 D:\Mehran\Git\GolYaPooch\GolPooch.Domain\obj\Debug\netstandard2.1\GolPooch.Domain.dll
 D:\Mehran\Git\GolYaPooch\GolPooch.Domain\obj\Debug\netstandard2.1\GolPooch.Domain.pdb
-D:\Mehran\Git\GolYaPooch\GolPooch.Domain\obj\Debug\netstandard2.1\GolPooch.Domain.csprojAssemblyReference.cache

@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\Kingofday\\GolYaPooch\\GolPooch.Domain\\GolPooch.Domain.csproj": {}
+    "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.Domain\\GolPooch.Domain.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\Kingofday\\GolYaPooch\\GolPooch.Domain\\GolPooch.Domain.csproj": {
+    "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.Domain\\GolPooch.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\Kingofday\\GolYaPooch\\GolPooch.Domain\\GolPooch.Domain.csproj",
+        "projectUniqueName": "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.Domain\\GolPooch.Domain.csproj",
         "projectName": "GolPooch.Domain",
-        "projectPath": "D:\\Projects\\Kingofday\\GolYaPooch\\GolPooch.Domain\\GolPooch.Domain.csproj",
-        "packagesPath": "C:\\Users\\sh.bazrafshan\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\Kingofday\\GolYaPooch\\GolPooch.Domain\\obj\\",
+        "projectPath": "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.Domain\\GolPooch.Domain.csproj",
+        "packagesPath": "C:\\Users\\Mehran\\.nuget\\packages\\",
+        "outputPath": "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.Domain\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\sh.bazrafshan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Mehran\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
