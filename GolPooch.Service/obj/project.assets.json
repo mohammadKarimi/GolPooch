@@ -8737,23 +8737,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\sh.bazrafshan\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Mehran\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\Kingofday\\GolYaPooch\\GolPooch.Service\\GolPooch.Service.csproj",
+      "projectUniqueName": "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.Service\\GolPooch.Service.csproj",
       "projectName": "GolPooch.Service",
-      "projectPath": "D:\\Projects\\Kingofday\\GolYaPooch\\GolPooch.Service\\GolPooch.Service.csproj",
-      "packagesPath": "C:\\Users\\sh.bazrafshan\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects\\Kingofday\\GolYaPooch\\GolPooch.Service\\obj\\",
+      "projectPath": "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.Service\\GolPooch.Service.csproj",
+      "packagesPath": "C:\\Users\\Mehran\\.nuget\\packages\\",
+      "outputPath": "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.Service\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\sh.bazrafshan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Mehran\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8766,17 +8762,17 @@
       "frameworks": {
         "netstandard2.1": {
           "projectReferences": {
-            "D:\\Projects\\Kingofday\\GolYaPooch\\GolPooch.CrossCutting\\GolPooch.CrossCutting.csproj": {
-              "projectPath": "D:\\Projects\\Kingofday\\GolYaPooch\\GolPooch.CrossCutting\\GolPooch.CrossCutting.csproj"
+            "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.CrossCutting\\GolPooch.CrossCutting.csproj": {
+              "projectPath": "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.CrossCutting\\GolPooch.CrossCutting.csproj"
             },
-            "D:\\Projects\\Kingofday\\GolYaPooch\\GolPooch.DataAccess.Ef\\GolPooch.DataAccess.Ef.csproj": {
-              "projectPath": "D:\\Projects\\Kingofday\\GolYaPooch\\GolPooch.DataAccess.Ef\\GolPooch.DataAccess.Ef.csproj"
+            "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.DataAccess.Ef\\GolPooch.DataAccess.Ef.csproj": {
+              "projectPath": "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.DataAccess.Ef\\GolPooch.DataAccess.Ef.csproj"
             },
-            "D:\\Projects\\Kingofday\\GolYaPooch\\GolPooch.Domain\\GolPooch.Domain.csproj": {
-              "projectPath": "D:\\Projects\\Kingofday\\GolYaPooch\\GolPooch.Domain\\GolPooch.Domain.csproj"
+            "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.Domain\\GolPooch.Domain.csproj": {
+              "projectPath": "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.Domain\\GolPooch.Domain.csproj"
             },
-            "D:\\Projects\\Kingofday\\GolYaPooch\\GolPooch.SmsGateway\\GolPooch.SmsGateway.csproj": {
-              "projectPath": "D:\\Projects\\Kingofday\\GolYaPooch\\GolPooch.SmsGateway\\GolPooch.SmsGateway.csproj"
+            "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.SmsGateway\\GolPooch.SmsGateway.csproj": {
+              "projectPath": "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.SmsGateway\\GolPooch.SmsGateway.csproj"
             }
           }
         }

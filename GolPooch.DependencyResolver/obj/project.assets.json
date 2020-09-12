@@ -8755,23 +8755,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\sh.bazrafshan\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Mehran\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\Kingofday\\GolYaPooch\\GolPooch.DependencyResolver\\GolPooch.DependencyResolver.csproj",
+      "projectUniqueName": "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.DependencyResolver\\GolPooch.DependencyResolver.csproj",
       "projectName": "GolPooch.DependencyResolver",
-      "projectPath": "D:\\Projects\\Kingofday\\GolYaPooch\\GolPooch.DependencyResolver\\GolPooch.DependencyResolver.csproj",
-      "packagesPath": "C:\\Users\\sh.bazrafshan\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects\\Kingofday\\GolYaPooch\\GolPooch.DependencyResolver\\obj\\",
+      "projectPath": "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.DependencyResolver\\GolPooch.DependencyResolver.csproj",
+      "packagesPath": "C:\\Users\\Mehran\\.nuget\\packages\\",
+      "outputPath": "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.DependencyResolver\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\sh.bazrafshan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Mehran\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8784,8 +8780,8 @@
       "frameworks": {
         "netstandard2.1": {
           "projectReferences": {
-            "D:\\Projects\\Kingofday\\GolYaPooch\\GolPooch.Service\\GolPooch.Service.csproj": {
-              "projectPath": "D:\\Projects\\Kingofday\\GolYaPooch\\GolPooch.Service\\GolPooch.Service.csproj"
+            "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.Service\\GolPooch.Service.csproj": {
+              "projectPath": "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.Service\\GolPooch.Service.csproj"
             }
           }
         }
