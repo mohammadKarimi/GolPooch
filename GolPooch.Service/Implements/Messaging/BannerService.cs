@@ -30,7 +30,7 @@ namespace GolPooch.Service.Implements
             try
             {
                 var banners = (List<Banner>)_cacheProvider.Get(_bannerCacheKey);
-                if (banners.IsNull() || banners.Count == 0)
+                if (banners == null)
                 {
                     var now = DateTime.Now;
                     banners = _appUow.BannerRepo.Get(

@@ -1,0 +1,12 @@
+html {
+    min-height: 100%;
+    font-size: 12px;
+}
+body {
+    min-height: 100vh;
+    background-color: #f3f4f8;
+}
+
+@import "./utils.scss";
+@import "./rtl.scss";
+@import "./../../pages/auth/styles/index.scss";

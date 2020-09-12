@@ -27,7 +27,7 @@
 
   <ItemGroup>
     <EmbeddedResource Update="Resources\DisplayNames.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
+      <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>DisplayNames.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Update="Resources\ErrorMessage.resx">

@@ -2,14 +2,14 @@
 using Elk.Core;
 using Elk.Cache;
 using GolPooch.Api.Models;
-using GolPooch.Domain.Enum;
 using GolPooch.CrossCutting;
+using GolPooch.Domain.Entity;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 
 namespace GolPooch.Api.Controllers
 {
-    [AuthorizeFilter, Route("[controller]/[action]")]
+    [Route("[controller]/[action]")]
     public class BaseController : Controller
     {
         private readonly IMemoryCacheProvider _cacheProvider;
@@ -54,7 +54,7 @@ namespace GolPooch.Api.Controllers
         /// </summary>
         /// <returns>List of Key,Value Object</returns>
         [HttpGet]
-        public IActionResult Regions()
+        public IActionResult Regions() 
             => Ok(GetRegions());
 
     }
