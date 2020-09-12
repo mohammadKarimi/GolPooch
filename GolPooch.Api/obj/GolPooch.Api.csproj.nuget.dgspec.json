@@ -29,9 +29,6 @@
             "projectReferences": {
               "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.DependencyResolver\\GolPooch.DependencyResolver.csproj": {
                 "projectPath": "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.DependencyResolver\\GolPooch.DependencyResolver.csproj"
-              },
-              "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.Service\\GolPooch.Service.csproj": {
-                "projectPath": "D:\\Mehran\\Git\\GolYaPooch\\GolPooch.Service\\GolPooch.Service.csproj"
               }
             }
           }
@@ -179,10 +176,6 @@
             "Elk.EntityFrameworkCore.Tools": {
               "target": "Package",
               "version": "[2.0.1, )"
-            },
-            "elk.core": {
-              "target": "Package",
-              "version": "[1.1.6, )"
             }
           },
           "imports": [

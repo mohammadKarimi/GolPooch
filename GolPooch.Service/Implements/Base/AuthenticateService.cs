@@ -1,11 +1,13 @@
 ﻿using System;
 using Elk.Core;
+using Elk.Http;
 using GolPooch.SmsGateway;
 using GolPooch.DataAccess.Ef;
 using System.Threading.Tasks;
 using GolPooch.Domain.Entity;
 using GolPooch.Service.Resourses;
 using GolPooch.Service.Interfaces;
+using Microsoft.AspNetCore.Http;
 
 namespace GolPooch.Service.Implements
 {
@@ -18,6 +20,26 @@ namespace GolPooch.Service.Implements
         {
             _smsGatway = smsGatway;
             _appUow = appUnitOfWork;
+        }
+
+        private UserDeviceLog GetDeviceLog(long mobilenumber, HttpContext httpContext)
+        {
+            var requestDetails = ClientInfo.GetRequestDetails(httpContext);
+            var ip = ClientInfo.GetIP(httpContext);
+            var isMobile = requestDetails == null ? false : requestDetails.IsMobile;
+            var os = $"{requestDetails?.OsName} {requestDetails?.OsVersion}";
+            var device = $"{requestDetails?.Manufacture} {requestDetails?.Model}";
+            var application = $"{requestDetails?.BrowserName} {requestDetails?.BrowserVersion}";
+
+            return new UserDeviceLog
+            {
+                MobileNumber = mobilenumber,
+                IsMobile = isMobile,
+                IP = ip,
+                Os = os.Length > 20 ? os.Substring(0, 20) : os,
+                Device = device.Length > 50 ? device.Substring(0, 50) : device,
+                Application = application.Length > 50 ? application.Substring(0, 50) : application
+            };
         }
 
         public async Task<IResponse<int>> GetCodeAsync(long mobileNumber)
@@ -67,7 +89,7 @@ namespace GolPooch.Service.Implements
             }
         }
 
-        public async Task<IResponse<User>> VerifyCodeAsync(int transactionId, int pinCode)
+        public async Task<IResponse<User>> VerifyCodeAsync(int transactionId, int pinCode, HttpContext httpContext)
         {
             var response = new Response<User>();
             try
@@ -98,6 +120,8 @@ namespace GolPooch.Service.Implements
                 existedPinCode.IsUsed = true;
                 existedPinCode.UsedTime = DateTime.Now;
                 _appUow.AuthenticateRepo.Update(existedPinCode);
+
+                await _appUow.UserDeviceRepo.AddAsync(GetDeviceLog(existedPinCode.MobileNumber, httpContext));
 
                 var saveResult = await _appUow.ElkSaveChangesAsync();
                 response.IsSuccessful = saveResult.IsSuccessful;

@@ -3,7 +3,7 @@ using GolPooch.Service.Interfaces;
 
 namespace GolPooch.Api.Controllers
 {
-    [Route("[controller]/[action]")]
+    [AuthorizeFilter, Route("[controller]/[action]")]
     public class BannerController : Controller
     {
         private IBannerService _bannerService { get; set; }

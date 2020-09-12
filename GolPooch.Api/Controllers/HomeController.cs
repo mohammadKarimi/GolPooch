@@ -1,9 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 
 namespace GolPooch.Api.Controllers
 {
+    [AuthFilter, Route("[controller]/[action]")]
     public class HomeController : Controller
     {
-        public IActionResult Index() => Ok("Hi EveryBody!");
+        [AllowAnonymous]
+        public IActionResult Index() => Ok("Welcome to GolYaPooch Api ...");
     }
 }

@@ -32,7 +32,6 @@ namespace GolPooch.Api
                 if (token != null)
                 {
                     var userClaims = _jwtService.GetClaimsPrincipal(token, _jwtSettings);
-                    //var userClaims = GetClaimsPrincipal(token, _jwtSettings);
                     if (userClaims != null)
                         context.Request.Headers.Add("UserId", userClaims.FindFirstValue("UserId"));
                 }

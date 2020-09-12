@@ -21,9 +21,6 @@ namespace GolPooch.Domain.Entity
         [Display(Name = nameof(DisplayNames.Gender), ResourceType = typeof(DisplayNames))]
         public Gender Gender { get; set; }
 
-        [Display(Name = nameof(DisplayNames.OsType), ResourceType = typeof(DisplayNames))]
-        public OsType OsType { get; set; }
-
         [Display(Name = nameof(DisplayNames.Region), ResourceType = typeof(DisplayNames))]
         public RegionNames Region { get; set; }
 
@@ -79,7 +76,6 @@ namespace GolPooch.Domain.Entity
 
 
         public ICollection<Ticket> Tickets { get; set; }
-        public ICollection<Authenticate> VerificationCodes { get; set; }
         public ICollection<DrawChance> DrawChances { get; set; }
         public ICollection<Round> Rounds { get; set; }
         public ICollection<Purchase> Purchases { get; set; }

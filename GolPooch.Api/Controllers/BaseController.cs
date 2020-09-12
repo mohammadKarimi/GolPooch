@@ -9,16 +9,16 @@ using System.Collections.Generic;
 
 namespace GolPooch.Api.Controllers
 {
-    [Route("[controller]/[action]")]
+    [AuthorizeFilter, Route("[controller]/[action]")]
     public class BaseController : Controller
     {
         private readonly IMemoryCacheProvider _cacheProvider;
+        private readonly string _regionCacheKey = GlobalVariables.CacheSettings.RegionCacheKey();
 
         public BaseController(IMemoryCacheProvider cacheProvider)
         {
             _cacheProvider = cacheProvider;
         }
-        private readonly string _regionCacheKey = GlobalVariables.CacheSettings.RegionCacheKey();
 
         private List<Region> GetRegions()
         {

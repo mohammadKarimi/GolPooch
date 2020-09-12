@@ -5,7 +5,7 @@ using GolPooch.Service.Interfaces;
 
 namespace GolPooch.Api.Controllers
 {
-    [Route("[controller]/[action]")]
+    [AuthorizeFilter, Route("[controller]/[action]")]
     public class UserController : Controller
     {
         private IUserService _userService { get; set; }

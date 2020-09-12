@@ -2648,8 +2648,7 @@
         "framework": ".NETStandard,Version=v2.1",
         "dependencies": {
           "Elk.EntityFrameworkCore.Tools": "2.0.1",
-          "GolPooch.Domain": "1.0.0",
-          "elk.core": "1.1.6"
+          "GolPooch.Domain": "1.0.0"
         },
         "compile": {
           "bin/placeholder/GolPooch.DataAccess.Ef.dll": {}
