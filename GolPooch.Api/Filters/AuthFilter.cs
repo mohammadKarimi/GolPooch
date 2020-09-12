@@ -4,6 +4,7 @@ using Elk.Http;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.Extensions.Configuration;
 using Microsoft.AspNetCore.Authorization;
@@ -29,33 +30,37 @@ namespace GolPooch.Api
                         #region Existing Token
                         if (Guid.TryParse(filterContext.HttpContext.Request.Headers["Token"][0], out Guid token))
                         {
-                            if (token != Guid.Parse(_configuration.GetSection("CustomSettings")["AuthenticateToken"]))
+                            if (token != Guid.Parse(_configuration["CustomSettings:AuthenticateToken"]))
                             {
                                 FileLoger.Info($"Invalid Token To Access Api  !" + Environment.NewLine +
-                                    $"IP:{ip}" + Environment.NewLine +
-                                    $"Token:{filterContext.HttpContext.Request.Headers["Token"][0]}");
+                                    $"IP: {ip}" + Environment.NewLine +
+                                    $"Token:{filterContext.HttpContext.Request.Headers["Token"][0]}" + Environment.NewLine +
+                                    $"URL:{filterContext.HttpContext.Request.Path.Value}" + Environment.NewLine +
+                                    $"UrlReferer:{filterContext.HttpContext.Request.GetTypedHeaders().Referer}");
 
-                                filterContext.HttpContext.Response.StatusCode = 200;
-                                filterContext.Result = new JsonResult(new
+                                filterContext.HttpContext.Response.StatusCode = 401;
+                                filterContext.Result = new JsonResult(new Response<object>
                                 {
-                                    Message = "UnAuthorized Access. Invalid Token To Access Api.",
-                                    Result = 200,
-                                    IsSuccessful = false
+                                    Result = 401,
+                                    IsSuccessful = false,
+                                    Message = "UnAuthorized Access. Invalid Token To Access Api."
                                 });
                             }
                         }
                         else
                         {
                             FileLoger.Info($"Invalid Token Type To Access Api  !" + Environment.NewLine +
-                                    $"IP:{ip}" + Environment.NewLine +
-                                    $"Token:{filterContext.HttpContext.Request.Headers["Token"][0]}");
+                                    $"IP: {ip}" + Environment.NewLine +
+                                    $"Token:{filterContext.HttpContext.Request.Headers["Token"][0]}" + Environment.NewLine +
+                                    $"URL:{filterContext.HttpContext.Request.Path.Value}" + Environment.NewLine +
+                                    $"UrlReferer:{filterContext.HttpContext.Request.GetTypedHeaders().Referer}");
 
-                            filterContext.HttpContext.Response.StatusCode = 200;
-                            filterContext.Result = new JsonResult(new
+                            filterContext.HttpContext.Response.StatusCode = 401;
+                            filterContext.Result = new JsonResult(new Response<object>
                             {
-                                Message = "UnAuthorized Access. Invalid Token Type To Access Api  !",
-                                Result = 200,
-                                IsSuccessful = false
+                                ResultCode = 401,
+                                IsSuccessful = false,
+                                Message = "UnAuthorized Access. Invalid Token Type To Access Api  !"
                             });
                         }
                         #endregion
@@ -63,14 +68,17 @@ namespace GolPooch.Api
                     else
                     {
                         #region Not Existing Token
-                        FileLoger.Info($"UnAuthorized Access To Api ! IP:{ip}");
+                        FileLoger.Info($"UnAuthorized Access To Api. Token Not Sent." + Environment.NewLine +
+                            $"IP: {ip}" + Environment.NewLine +
+                            $"URL:{filterContext.HttpContext.Request.Path.Value}" + Environment.NewLine +
+                            $"UrlReferer:{filterContext.HttpContext.Request.GetTypedHeaders().Referer}");
 
                         filterContext.HttpContext.Response.StatusCode = 403;
-                        filterContext.Result = new JsonResult(new
+                        filterContext.Result = new JsonResult(new Response<object>
                         {
-                            Message = "UnAuthorized Access. Token Not Sent.",
-                            Result = 403,
-                            IsSuccessful = false
+                            ResultCode = 403,
+                            IsSuccessful = false,
+                            Message = "UnAuthorized Access. Token Not Sent."
                         });
                         #endregion
                     }
@@ -82,9 +90,9 @@ namespace GolPooch.Api
             {
                 FileLoger.Error(e);
                 filterContext.HttpContext.Response.StatusCode = 500;
-                filterContext.Result = new JsonResult(new
+                filterContext.Result = new JsonResult(new Response<object>
                 {
-                    Result = 500,
+                    ResultCode = 500,
                     IsSuccessful = false,
                     Message = "Internall Error."
                 });
@@ -92,78 +100,5 @@ namespace GolPooch.Api
                 await base.OnActionExecutionAsync(filterContext, next);
             }
         }
-
-        //public override void OnActionExecuting(ActionExecutingContext filterContext)
-        //{
-        //    try
-        //    {
-        //        var ip = ClientInfo.GetIP(filterContext.HttpContext);
-        //        if (filterContext.HttpContext.Request.Headers["Token"].Count > 0)
-        //        {
-        //            #region Existing Token
-        //            if (Guid.TryParse(filterContext.HttpContext.Request.Headers["Token"][0], out Guid token))
-        //            {
-        //                if (token == Guid.Parse(_configuration.GetSection("CustomSetting")["AuthenticateToken"]))
-        //                {
-        //                    base.OnActionExecuting(filterContext);
-        //                }
-        //                else
-        //                {
-        //                    FileLoger.Info($"Invalid Token To Access Api  !" + Environment.NewLine +
-        //                        $"IP:{ip}" + Environment.NewLine +
-        //                        $"Token:{filterContext.HttpContext.Request.Headers["Token"][0]}");
-
-        //                    filterContext.HttpContext.Response.StatusCode = 200;
-        //                    filterContext.Result = new JsonResult(new
-        //                    {
-        //                        Message = "UnAuthorized Access. Invalid Token To Access Api.",
-        //                        Result = 200,
-        //                        IsSuccessful = false
-        //                    });
-        //                }
-        //            }
-        //            else
-        //            {
-        //                FileLoger.Info($"Invalid Token Type To Access Api  !" + Environment.NewLine +
-        //                        $"IP:{ip}" + Environment.NewLine +
-        //                        $"Token:{filterContext.HttpContext.Request.Headers["Token"][0]}");
-
-        //                filterContext.HttpContext.Response.StatusCode = 200;
-        //                filterContext.Result = new JsonResult(new
-        //                {
-        //                    Message = "UnAuthorized Access. Invalid Token Type To Access Api  !",
-        //                    Result = 200,
-        //                    IsSuccessful = false
-        //                });
-        //            }
-        //            #endregion
-        //        }
-        //        else
-        //        {
-        //            #region Not Existing Token
-        //            FileLoger.Info($"UnAuthorized Access To Api ! IP:{ip}");
-
-        //            filterContext.HttpContext.Response.StatusCode = 403;
-        //            filterContext.Result = new JsonResult(new
-        //            {
-        //                Message = "UnAuthorized Access. Token Not Sent.",
-        //                Result = 403,
-        //                IsSuccessful = false
-        //            });
-        //            #endregion
-        //        }
-        //    }
-        //    catch (Exception e)
-        //    {
-        //        FileLoger.Error(e);
-        //        filterContext.HttpContext.Response.StatusCode = 500;
-        //        filterContext.Result = new JsonResult(new
-        //        {
-        //            Result = 500,
-        //            IsSuccessful = false,
-        //            Message = "Internall Error."
-        //        });
-        //    }
-        //}
     }
 }
