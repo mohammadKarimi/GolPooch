@@ -1,5 +1,5 @@
 ﻿using Elk.Core;
-using GolPooch.Domain.Entity;
+using GolPooch.Domain.Dto;
 using System.Threading.Tasks;
 
 namespace GolPooch.Service.Interfaces
@@ -12,9 +12,10 @@ namespace GolPooch.Service.Interfaces
         /// if these two fields are ok, then update profile
         /// otherwise signout and return status code 401
         /// </summary>
-        /// <param name="user">user information ( userid + mobilenumber are sent by jwt )</param>
+        /// <param name="userId">userid ( are sent by jwt )</param>
+        /// <param name="userDto">user information </param>
         /// <returns>user id</returns>
-        Task<IResponse<int>> UpdateProfileAsync(User user);
+        Task<IResponse<int>> UpdateProfileAsync(int userId, UserDto userDto);
 
         /// <summary>
         /// Upload awatar and save in host, and update user with awatar address

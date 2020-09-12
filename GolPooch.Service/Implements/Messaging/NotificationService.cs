@@ -82,6 +82,7 @@ namespace GolPooch.Service.Implements
                         AsNoTracking = false,
                         Conditions = x => x.NotificationId == notificationId
                     });
+                if (notification == null) return new Response<bool> { Message = ServiceMessage.InvalidNotificationId };
 
                 notification.IsRead = true;
                 _appUow.NotificationRepo.Update(notification);

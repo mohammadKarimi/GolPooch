@@ -6,15 +6,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20200912140617_EditTicket.cs" />
+    <Compile Remove="Migrations\20200912140617_EditTicket.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Elk.EntityFrameworkCore.Tools" Version="2.0.1" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\GolPooch.Domain\GolPooch.Domain.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Migrations\" />
   </ItemGroup>
 
 </Project>

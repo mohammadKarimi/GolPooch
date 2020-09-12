@@ -49,7 +49,6 @@ namespace GolPooch.Domain.Entity
         public string Text { get; set; }
 
         [Display(Name = nameof(DisplayNames.Answer), ResourceType = typeof(DisplayNames))]
-        [Required(ErrorMessageResourceName = nameof(ErrorMessage.Required), ErrorMessageResourceType = typeof(ErrorMessage))]
         [MaxLength(1000, ErrorMessageResourceName = nameof(ErrorMessage.MaxLength), ErrorMessageResourceType = typeof(ErrorMessage))]
         [StringLength(1000, ErrorMessageResourceName = nameof(ErrorMessage.MaxLength), ErrorMessageResourceType = typeof(ErrorMessage))]
         public string Answer { get; set; }

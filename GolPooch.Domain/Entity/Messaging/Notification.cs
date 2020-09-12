@@ -36,6 +36,8 @@ namespace GolPooch.Domain.Entity
 
         [Display(Name = nameof(DisplayNames.IsSuccess), ResourceType = typeof(DisplayNames))]
         public bool? IsSuccess { get; set; }
+
+        [Display(Name = nameof(DisplayNames.IsRead), ResourceType = typeof(DisplayNames))]
         public bool IsRead { get; set; }
 
         [Display(Name = nameof(DisplayNames.InsertDate), ResourceType = typeof(DisplayNames))]
@@ -85,6 +87,6 @@ namespace GolPooch.Domain.Entity
         public string Text { get; set; }
 
 
-        public ICollection<NotificationDelivery> NotificationDeliveries { get; set; }
+        //public ICollection<NotificationDelivery> NotificationDeliveries { get; set; }
     }
 }

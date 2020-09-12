@@ -2,8 +2,8 @@
 using Elk.Core;
 using Elk.Cache;
 using GolPooch.Api.Models;
+using GolPooch.Domain.Enum;
 using GolPooch.CrossCutting;
-using GolPooch.Domain.Entity;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 
@@ -20,19 +20,19 @@ namespace GolPooch.Api.Controllers
             _cacheProvider = cacheProvider;
         }
 
-        private List<Region> GetRegions()
+        private List<KeyValue> GetRegions()
         {
-            var response = new List<Region>();
+            var response = new List<KeyValue>();
             try
             {
-                response = (List<Region>)_cacheProvider.Get(_regionCacheKey);
+                response = (List<KeyValue>)_cacheProvider.Get(_regionCacheKey);
                 if (response == null)
                 {
-                    response = new List<Region>();
+                    response = new List<KeyValue>();
                     EnumExtension.GetEnumElements<RegionNames>()
                         .ForEach(element =>
                         {
-                            response.Add(new Region { Name = element.Description, Value = int.Parse(element.Value.ToString()) });
+                            response.Add(new KeyValue { Title = element.Description, Name = element.Name, Value = int.Parse(element.Value.ToString()) });
                         });
 
                     _cacheProvider.Add(_regionCacheKey, response, DateTime.Now.AddHours(GlobalVariables.CacheSettings.RegionCacheTimeout()));
@@ -54,7 +54,7 @@ namespace GolPooch.Api.Controllers
         /// </summary>
         /// <returns>List of Key,Value Object</returns>
         [HttpGet]
-        public IActionResult Regions() 
+        public IActionResult Regions()
             => Ok(GetRegions());
 
     }

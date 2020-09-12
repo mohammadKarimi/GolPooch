@@ -1,5 +1,6 @@
 ﻿using System;
 using Elk.Core;
+using GolPooch.Domain.Dto;
 using GolPooch.Domain.Enum;
 using GolPooch.CrossCutting;
 using GolPooch.DataAccess.Ef;
@@ -21,14 +22,20 @@ namespace GolPooch.Service.Implements
             _appUow = appUnitOfWork;
         }
 
-        public async Task<IResponse<int>> UpdateProfileAsync(User user)
+        public async Task<IResponse<int>> UpdateProfileAsync(int userId, UserDto userDto)
         {
             var response = new Response<int>();
             try
             {
                 #region Update User Profile
-                if (user.UserId == 0 || user.MobileNumber == 0) return new Response<int> { IsSuccessful = false, Message = ServiceMessage.InvalidParameter };
-                _appUow.UserRepo.Update(user);
+                var existedUser = await _appUow.UserRepo.FirstOrDefaultAsync(
+                    new QueryFilter<User>
+                    {
+                        AsNoTracking = false,
+                        Conditions = x => x.UserId == userId
+                    });
+                existedUser.UpdateWith(userDto);
+                _appUow.UserRepo.Update(existedUser);
                 #endregion
 
                 #region Purchase Complete Profile Product
@@ -47,7 +54,7 @@ namespace GolPooch.Service.Implements
 
                 var transaction = new PaymentTransaction
                 {
-                    UserId = user.UserId,
+                    UserId = existedUser.UserId,
                     IsSuccess = true,
                     TrackingId = "0",
                     Status = ServiceMessage.Success,
@@ -60,7 +67,7 @@ namespace GolPooch.Service.Implements
 
                 var purchase = new Purchase
                 {
-                    UserId = user.UserId,
+                    UserId = existedUser.UserId,
                     UsedChance = 0,
                     IsFinished = false,
                     IsReFoundable = false,
@@ -74,7 +81,7 @@ namespace GolPooch.Service.Implements
                 var saveResult = await _appUow.ElkSaveChangesAsync();
                 response.Message = saveResult.Message;
                 response.IsSuccessful = saveResult.IsSuccessful;
-                response.Result = saveResult.IsSuccessful ? user.UserId : 0;
+                response.Result = saveResult.IsSuccessful ? existedUser.UserId : 0;
                 return response;
             }
             catch (Exception e)

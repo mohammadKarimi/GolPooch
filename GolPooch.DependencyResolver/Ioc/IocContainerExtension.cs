@@ -77,6 +77,7 @@ namespace GolPooch.DependencyResolver.Ioc
                                 sqlServerOption.CommandTimeout(null);
                                 sqlServerOption.UseRelationalNulls(false);
                             });
+                            //.AddInterceptors(new DbContextInterceptors());
             });
 
             return serviceCollection;

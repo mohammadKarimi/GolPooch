@@ -135,6 +135,9 @@
   <data name="InvalidId" xml:space="preserve">
     <value>کد ارسالی معتبر نمی باشد.</value>
   </data>
+  <data name="InvalidNotificationId" xml:space="preserve">
+    <value>نوتیفیکیشن مورد نظر وجود ندارد ویا کد ارسالی معتبر نمی باشد.</value>
+  </data>
   <data name="InvalidParameter" xml:space="preserve">
     <value>پارامترهای ارسالی اشتباه می باشد، لطفا مجدد تلاش کنید.</value>
   </data>
@@ -143,6 +146,9 @@
   </data>
   <data name="InvalidProductOfferId" xml:space="preserve">
     <value>بسته مورد نظر وجود ندارد ویا فعال نمی باشد، لطفا مجدد تلاش کنید.</value>
+  </data>
+  <data name="InvalidTicketId" xml:space="preserve">
+    <value>تیکت مورد نظر وجود ندارد ویا کد ارسالی معتبر نمی باشد.</value>
   </data>
   <data name="InvalidTransactionId" xml:space="preserve">
     <value>شماره تراکنش معتبر نمی باشد</value>

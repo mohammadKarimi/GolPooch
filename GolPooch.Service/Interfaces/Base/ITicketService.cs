@@ -10,8 +10,9 @@ namespace GolPooch.Service.Interfaces
         /// Add ticket for user
         /// </summary>
         /// <param name="model">model that is filled by user in clientside</param>
+        /// <param name="userId">id of current user</param>
         /// <returns>return ticket primary key</returns>
-        Task<IResponse<int>> AddAsync(Ticket model);
+        Task<IResponse<int>> AddAsync(int userId, Ticket model);
 
         /// <summary>
         /// Get Top 10 tickets of user

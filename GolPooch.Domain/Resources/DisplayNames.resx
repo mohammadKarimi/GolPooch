@@ -201,6 +201,9 @@
   <data name="IsMobile" xml:space="preserve">
     <value>موبایل است؟</value>
   </data>
+  <data name="IsRead" xml:space="preserve">
+    <value>خوانده شده؟</value>
+  </data>
   <data name="IsReFoundable" xml:space="preserve">
     <value>قابل بازگشت است؟</value>
   </data>

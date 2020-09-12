@@ -18,11 +18,12 @@ namespace GolPooch.Service.Implements
             _appUow = appUnitOfWork;
         }
 
-        public async Task<IResponse<int>> AddAsync(Ticket model)
+        public async Task<IResponse<int>> AddAsync(int userId, Ticket model)
         {
             var response = new Response<int>();
             try
             {
+                model.UserId = userId;
                 await _appUow.TicketRepo.AddAsync(model);
                 var saveResult = await _appUow.ElkSaveChangesAsync();
                 response.Message = saveResult.Message;
@@ -93,15 +94,17 @@ namespace GolPooch.Service.Implements
             var response = new Response<bool>();
             try
             {
-                var tickets = await _appUow.TicketRepo.FirstOrDefaultAsync(
+                var ticket = await _appUow.TicketRepo.FirstOrDefaultAsync(
                     new QueryFilter<Ticket>
                     {
                         AsNoTracking = false,
                         Conditions = x => x.TicketId == ticketId
                     });
+                if (ticket == null) return new Response<bool> { Message = ServiceMessage.InvalidTicketId };
 
-                tickets.IsRead = true;
-                _appUow.TicketRepo.Update(tickets);
+
+                ticket.IsRead = true;
+                _appUow.TicketRepo.Update(ticket);
                 var saveResult = await _appUow.ElkSaveChangesAsync();
 
                 response.IsSuccessful = saveResult.IsSuccessful;

@@ -66,6 +66,7 @@ namespace GolPooch.Api
             .AddXmlSerializerFormatters()
             .AddJsonOptions(opts =>
             {
+                //opts.JsonSerializerOptions.MaxDepth = 2;
                 opts.JsonSerializerOptions.PropertyNamingPolicy = null;
                 opts.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
             });
@@ -77,7 +78,7 @@ namespace GolPooch.Api
             services.AddMemoryCache();
 
             services.Configure<JwtSettings>(_config.GetSection("JwtSetting"));
-            services.AddScoped<IJwtService, JwtService>();
+            services.AddTransient<IJwtService, JwtService>();
 
             services.AddTransient<AuthFilter>();
             services.AddTransient<AuthorizeFilter>();

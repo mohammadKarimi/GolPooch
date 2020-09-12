@@ -115,6 +115,15 @@ namespace GolPooch.Service.Resourses {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to نوتیفیکیشن مورد نظر وجود ندارد ویا کد ارسالی معتبر نمی باشد..
+        /// </summary>
+        public static string InvalidNotificationId {
+            get {
+                return ResourceManager.GetString("InvalidNotificationId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to پارامترهای ارسالی اشتباه می باشد، لطفا مجدد تلاش کنید..
         /// </summary>
         public static string InvalidParameter {
@@ -138,6 +147,15 @@ namespace GolPooch.Service.Resourses {
         public static string InvalidProductOfferId {
             get {
                 return ResourceManager.GetString("InvalidProductOfferId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to تیکت مورد نظر وجود ندارد ویا کد ارسالی معتبر نمی باشد..
+        /// </summary>
+        public static string InvalidTicketId {
+            get {
+                return ResourceManager.GetString("InvalidTicketId", resourceCulture);
             }
         }
         

@@ -22,7 +22,7 @@ namespace GolPooch.Domain.Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class DisplayNames {
+    public class DisplayNames {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace GolPooch.Domain.Resources {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("GolPooch.Domain.Resources.DisplayNames", typeof(DisplayNames).Assembly);
@@ -51,7 +51,7 @@ namespace GolPooch.Domain.Resources {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace GolPooch.Domain.Resources {
         /// <summary>
         ///   Looks up a localized string similar to اکشن.
         /// </summary>
-        internal static string Action {
+        public static string Action {
             get {
                 return ResourceManager.GetString("Action", resourceCulture);
             }
@@ -72,7 +72,7 @@ namespace GolPooch.Domain.Resources {
         /// <summary>
         ///   Looks up a localized string similar to متن اکشن.
         /// </summary>
-        internal static string ActionText {
+        public static string ActionText {
             get {
                 return ResourceManager.GetString("ActionText", resourceCulture);
             }
@@ -81,7 +81,7 @@ namespace GolPooch.Domain.Resources {
         /// <summary>
         ///   Looks up a localized string similar to نوع اکشن.
         /// </summary>
-        internal static string ActionType {
+        public static string ActionType {
             get {
                 return ResourceManager.GetString("ActionType", resourceCulture);
             }
@@ -90,7 +90,7 @@ namespace GolPooch.Domain.Resources {
         /// <summary>
         ///   Looks up a localized string similar to آدرس اکشن.
         /// </summary>
-        internal static string ActionUrl {
+        public static string ActionUrl {
             get {
                 return ResourceManager.GetString("ActionUrl", resourceCulture);
             }
@@ -99,7 +99,7 @@ namespace GolPooch.Domain.Resources {
         /// <summary>
         ///   Looks up a localized string similar to آدرس.
         /// </summary>
-        internal static string Address {
+        public static string Address {
             get {
                 return ResourceManager.GetString("Address", resourceCulture);
             }
@@ -108,7 +108,7 @@ namespace GolPooch.Domain.Resources {
         /// <summary>
         ///   Looks up a localized string similar to پاسخ.
         /// </summary>
-        internal static string Answer {
+        public static string Answer {
             get {
                 return ResourceManager.GetString("Answer", resourceCulture);
             }
@@ -117,7 +117,7 @@ namespace GolPooch.Domain.Resources {
         /// <summary>
         ///   Looks up a localized string similar to تاریخ پاسخ.
         /// </summary>
-        internal static string AnswerDate {
+        public static string AnswerDate {
             get {
                 return ResourceManager.GetString("AnswerDate", resourceCulture);
             }
@@ -126,7 +126,7 @@ namespace GolPooch.Domain.Resources {
         /// <summary>
         ///   Looks up a localized string similar to نام بانک.
         /// </summary>
-        internal static string BankName {
+        public static string BankName {
             get {
                 return ResourceManager.GetString("BankName", resourceCulture);
             }
@@ -135,7 +135,7 @@ namespace GolPooch.Domain.Resources {
         /// <summary>
         ///   Looks up a localized string similar to تاریخ تولد.
         /// </summary>
-        internal static string Birthdate {
+        public static string Birthdate {
             get {
                 return ResourceManager.GetString("Birthdate", resourceCulture);
             }
@@ -144,7 +144,7 @@ namespace GolPooch.Domain.Resources {
         /// <summary>
         ///   Looks up a localized string similar to شانس.
         /// </summary>
-        internal static string Chance {
+        public static string Chance {
             get {
                 return ResourceManager.GetString("Chance", resourceCulture);
             }
@@ -153,7 +153,7 @@ namespace GolPooch.Domain.Resources {
         /// <summary>
         ///   Looks up a localized string similar to تغییرات.
         /// </summary>
-        internal static string Changes {
+        public static string Changes {
             get {
                 return ResourceManager.GetString("Changes", resourceCulture);
             }
@@ -162,7 +162,7 @@ namespace GolPooch.Domain.Resources {
         /// <summary>
         ///   Looks up a localized string similar to کد.
         /// </summary>
-        internal static string Code {
+        public static string Code {
             get {
                 return ResourceManager.GetString("Code", resourceCulture);
             }
@@ -171,7 +171,7 @@ namespace GolPooch.Domain.Resources {
         /// <summary>
         ///   Looks up a localized string similar to شمارنده.
         /// </summary>
-        internal static string Counter {
+        public static string Counter {
             get {
                 return ResourceManager.GetString("Counter", resourceCulture);
             }
@@ -180,7 +180,7 @@ namespace GolPooch.Domain.Resources {
         /// <summary>
         ///   Looks up a localized string similar to توضیحات.
         /// </summary>
-        internal static string Description {
+        public static string Description {
             get {
                 return ResourceManager.GetString("Description", resourceCulture);
             }
@@ -189,7 +189,7 @@ namespace GolPooch.Domain.Resources {
         /// <summary>
         ///   Looks up a localized string similar to تخفیف.
         /// </summary>
-        internal static string Discount {
+        public static string Discount {
             get {
                 return ResourceManager.GetString("Discount", resourceCulture);
             }
@@ -198,7 +198,7 @@ namespace GolPooch.Domain.Resources {
         /// <summary>
         ///   Looks up a localized string similar to نوع نمایش.
         /// </summary>
-        internal static string DisplayType {
+        public static string DisplayType {
             get {
                 return ResourceManager.GetString("DisplayType", resourceCulture);
             }
@@ -207,7 +207,7 @@ namespace GolPooch.Domain.Resources {
         /// <summary>
         ///   Looks up a localized string similar to ایمیل.
         /// </summary>
-        internal static string Email {
+        public static string Email {
             get {
                 return ResourceManager.GetString("Email", resourceCulture);
             }
@@ -216,7 +216,7 @@ namespace GolPooch.Domain.Resources {
         /// <summary>
         ///   Looks up a localized string similar to تاریخ پایان.
         /// </summary>
-        internal static string EndDate {
+        public static string EndDate {
             get {
                 return ResourceManager.GetString("EndDate", resourceCulture);
             }
@@ -225,7 +225,7 @@ namespace GolPooch.Domain.Resources {
         /// <summary>
         ///   Looks up a localized string similar to تاریخ انقضاء.
         /// </summary>
-        internal static string ExpirationDate {
+        public static string ExpirationDate {
             get {
                 return ResourceManager.GetString("ExpirationDate", resourceCulture);
             }
@@ -234,7 +234,7 @@ namespace GolPooch.Domain.Resources {
         /// <summary>
         ///   Looks up a localized string similar to زمان انقضاء.
         /// </summary>
-        internal static string ExpirationTime {
+        public static string ExpirationTime {
             get {
                 return ResourceManager.GetString("ExpirationTime", resourceCulture);
             }
@@ -243,7 +243,7 @@ namespace GolPooch.Domain.Resources {
         /// <summary>
         ///   Looks up a localized string similar to نام.
         /// </summary>
-        internal static string FirstName {
+        public static string FirstName {
             get {
                 return ResourceManager.GetString("FirstName", resourceCulture);
             }
@@ -252,7 +252,7 @@ namespace GolPooch.Domain.Resources {
         /// <summary>
         ///   Looks up a localized string similar to جنسیت.
         /// </summary>
-        internal static string Gender {
+        public static string Gender {
             get {
                 return ResourceManager.GetString("Gender", resourceCulture);
             }
@@ -261,7 +261,7 @@ namespace GolPooch.Domain.Resources {
         /// <summary>
         ///   Looks up a localized string similar to آدرس تصویر.
         /// </summary>
-        internal static string ImageUrl {
+        public static string ImageUrl {
             get {
                 return ResourceManager.GetString("ImageUrl", resourceCulture);
             }
@@ -270,7 +270,7 @@ namespace GolPooch.Domain.Resources {
         /// <summary>
         ///   Looks up a localized string similar to تاریخ ثبت.
         /// </summary>
-        internal static string InsertDate {
+        public static string InsertDate {
             get {
                 return ResourceManager.GetString("InsertDate", resourceCulture);
             }
@@ -279,7 +279,7 @@ namespace GolPooch.Domain.Resources {
         /// <summary>
         ///   Looks up a localized string similar to IP.
         /// </summary>
-        internal static string IP {
+        public static string IP {
             get {
                 return ResourceManager.GetString("IP", resourceCulture);
             }
@@ -288,7 +288,7 @@ namespace GolPooch.Domain.Resources {
         /// <summary>
         ///   Looks up a localized string similar to فعال است؟.
         /// </summary>
-        internal static string IsActive {
+        public static string IsActive {
             get {
                 return ResourceManager.GetString("IsActive", resourceCulture);
             }
@@ -297,7 +297,7 @@ namespace GolPooch.Domain.Resources {
         /// <summary>
         ///   Looks up a localized string similar to پایان یافته است؟.
         /// </summary>
-        internal static string IsFinished {
+        public static string IsFinished {
             get {
                 return ResourceManager.GetString("IsFinished", resourceCulture);
             }
@@ -306,16 +306,25 @@ namespace GolPooch.Domain.Resources {
         /// <summary>
         ///   Looks up a localized string similar to موبایل است؟.
         /// </summary>
-        internal static string IsMobile {
+        public static string IsMobile {
             get {
                 return ResourceManager.GetString("IsMobile", resourceCulture);
             }
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to خوانده شده؟.
+        /// </summary>
+        public static string IsRead {
+            get {
+                return ResourceManager.GetString("IsRead", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to قابل بازگشت است؟.
         /// </summary>
-        internal static string IsReFoundable {
+        public static string IsReFoundable {
             get {
                 return ResourceManager.GetString("IsReFoundable", resourceCulture);
             }
@@ -324,7 +333,7 @@ namespace GolPooch.Domain.Resources {
         /// <summary>
         ///   Looks up a localized string similar to ارسال شده؟.
         /// </summary>
-        internal static string IsSent {
+        public static string IsSent {
             get {
                 return ResourceManager.GetString("IsSent", resourceCulture);
             }
@@ -333,7 +342,7 @@ namespace GolPooch.Domain.Resources {
         /// <summary>
         ///   Looks up a localized string similar to قابل نمایش؟.
         /// </summary>
-        internal static string IsShow {
+        public static string IsShow {
             get {
                 return ResourceManager.GetString("IsShow", resourceCulture);
             }
@@ -342,7 +351,7 @@ namespace GolPooch.Domain.Resources {
         /// <summary>
         ///   Looks up a localized string similar to موفق شده؟.
         /// </summary>
-        internal static string IsSuccess {
+        public static string IsSuccess {
             get {
                 return ResourceManager.GetString("IsSuccess", resourceCulture);
             }
@@ -351,7 +360,7 @@ namespace GolPooch.Domain.Resources {
         /// <summary>
         ///   Looks up a localized string similar to استفاده شده؟.
         /// </summary>
-        internal static string IsUsed {
+        public static string IsUsed {
             get {
                 return ResourceManager.GetString("IsUsed", resourceCulture);
             }
@@ -360,7 +369,7 @@ namespace GolPooch.Domain.Resources {
         /// <summary>
         ///   Looks up a localized string similar to نام خانوادگی.
         /// </summary>
-        internal static string LastName {
+        public static string LastName {
             get {
                 return ResourceManager.GetString("LastName", resourceCulture);
             }
@@ -369,7 +378,7 @@ namespace GolPooch.Domain.Resources {
         /// <summary>
         ///   Looks up a localized string similar to نوع مکان.
         /// </summary>
-        internal static string LocationType {
+        public static string LocationType {
             get {
                 return ResourceManager.GetString("LocationType", resourceCulture);
             }
@@ -378,7 +387,7 @@ namespace GolPooch.Domain.Resources {
         /// <summary>
         ///   Looks up a localized string similar to کد فروشگاه.
         /// </summary>
-        internal static string MerchantId {
+        public static string MerchantId {
             get {
                 return ResourceManager.GetString("MerchantId", resourceCulture);
             }
@@ -387,7 +396,7 @@ namespace GolPooch.Domain.Resources {
         /// <summary>
         ///   Looks up a localized string similar to موبایل.
         /// </summary>
-        internal static string MobileNumber {
+        public static string MobileNumber {
             get {
                 return ResourceManager.GetString("MobileNumber", resourceCulture);
             }
@@ -396,7 +405,7 @@ namespace GolPooch.Domain.Resources {
         /// <summary>
         ///   Looks up a localized string similar to تاریخ ویرایش.
         /// </summary>
-        internal static string ModifyDate {
+        public static string ModifyDate {
             get {
                 return ResourceManager.GetString("ModifyDate", resourceCulture);
             }
@@ -405,7 +414,7 @@ namespace GolPooch.Domain.Resources {
         /// <summary>
         ///   Looks up a localized string similar to نام.
         /// </summary>
-        internal static string Name {
+        public static string Name {
             get {
                 return ResourceManager.GetString("Name", resourceCulture);
             }
@@ -414,7 +423,7 @@ namespace GolPooch.Domain.Resources {
         /// <summary>
         ///   Looks up a localized string similar to نوع سیستم عامل.
         /// </summary>
-        internal static string OsType {
+        public static string OsType {
             get {
                 return ResourceManager.GetString("OsType", resourceCulture);
             }
@@ -423,7 +432,7 @@ namespace GolPooch.Domain.Resources {
         /// <summary>
         ///   Looks up a localized string similar to تعداد شرکت کننده.
         /// </summary>
-        internal static string ParticipantCount {
+        public static string ParticipantCount {
             get {
                 return ResourceManager.GetString("ParticipantCount", resourceCulture);
             }
@@ -432,7 +441,7 @@ namespace GolPooch.Domain.Resources {
         /// <summary>
         ///   Looks up a localized string similar to کلمه عبور.
         /// </summary>
-        internal static string Password {
+        public static string Password {
             get {
                 return ResourceManager.GetString("Password", resourceCulture);
             }
@@ -441,7 +450,7 @@ namespace GolPooch.Domain.Resources {
         /// <summary>
         ///   Looks up a localized string similar to کد یکبار مصرف.
         /// </summary>
-        internal static string PinCode {
+        public static string PinCode {
             get {
                 return ResourceManager.GetString("PinCode", resourceCulture);
             }
@@ -450,7 +459,7 @@ namespace GolPooch.Domain.Resources {
         /// <summary>
         ///   Looks up a localized string similar to مبلغ.
         /// </summary>
-        internal static string Price {
+        public static string Price {
             get {
                 return ResourceManager.GetString("Price", resourceCulture);
             }
@@ -459,7 +468,7 @@ namespace GolPooch.Domain.Resources {
         /// <summary>
         ///   Looks up a localized string similar to آدرس تصویر پروفایل.
         /// </summary>
-        internal static string ProfileImgUrl {
+        public static string ProfileImgUrl {
             get {
                 return ResourceManager.GetString("ProfileImgUrl", resourceCulture);
             }
@@ -468,7 +477,7 @@ namespace GolPooch.Domain.Resources {
         /// <summary>
         ///   Looks up a localized string similar to سود.
         /// </summary>
-        internal static string Profit {
+        public static string Profit {
             get {
                 return ResourceManager.GetString("Profit", resourceCulture);
             }
@@ -477,7 +486,7 @@ namespace GolPooch.Domain.Resources {
         /// <summary>
         ///   Looks up a localized string similar to کد پوش.
         /// </summary>
-        internal static string PushId {
+        public static string PushId {
             get {
                 return ResourceManager.GetString("PushId", resourceCulture);
             }
@@ -486,7 +495,7 @@ namespace GolPooch.Domain.Resources {
         /// <summary>
         ///   Looks up a localized string similar to استان.
         /// </summary>
-        internal static string Region {
+        public static string Region {
             get {
                 return ResourceManager.GetString("Region", resourceCulture);
             }
@@ -495,7 +504,7 @@ namespace GolPooch.Domain.Resources {
         /// <summary>
         ///   Looks up a localized string similar to تعداد دور.
         /// </summary>
-        internal static string RoundCount {
+        public static string RoundCount {
             get {
                 return ResourceManager.GetString("RoundCount", resourceCulture);
             }
@@ -504,7 +513,7 @@ namespace GolPooch.Domain.Resources {
         /// <summary>
         ///   Looks up a localized string similar to تاریخ ارسال.
         /// </summary>
-        internal static string SentDate {
+        public static string SentDate {
             get {
                 return ResourceManager.GetString("SentDate", resourceCulture);
             }
@@ -513,7 +522,7 @@ namespace GolPooch.Domain.Resources {
         /// <summary>
         ///   Looks up a localized string similar to تاریخ شروع.
         /// </summary>
-        internal static string StartDate {
+        public static string StartDate {
             get {
                 return ResourceManager.GetString("StartDate", resourceCulture);
             }
@@ -522,7 +531,7 @@ namespace GolPooch.Domain.Resources {
         /// <summary>
         ///   Looks up a localized string similar to حالت.
         /// </summary>
-        internal static string State {
+        public static string State {
             get {
                 return ResourceManager.GetString("State", resourceCulture);
             }
@@ -531,7 +540,7 @@ namespace GolPooch.Domain.Resources {
         /// <summary>
         ///   Looks up a localized string similar to وضعیت.
         /// </summary>
-        internal static string Status {
+        public static string Status {
             get {
                 return ResourceManager.GetString("Status", resourceCulture);
             }
@@ -540,7 +549,7 @@ namespace GolPooch.Domain.Resources {
         /// <summary>
         ///   Looks up a localized string similar to عنوان.
         /// </summary>
-        internal static string Subject {
+        public static string Subject {
             get {
                 return ResourceManager.GetString("Subject", resourceCulture);
             }
@@ -549,7 +558,7 @@ namespace GolPooch.Domain.Resources {
         /// <summary>
         ///   Looks up a localized string similar to متن.
         /// </summary>
-        internal static string Text {
+        public static string Text {
             get {
                 return ResourceManager.GetString("Text", resourceCulture);
             }
@@ -558,7 +567,7 @@ namespace GolPooch.Domain.Resources {
         /// <summary>
         ///   Looks up a localized string similar to عنوان.
         /// </summary>
-        internal static string Title {
+        public static string Title {
             get {
                 return ResourceManager.GetString("Title", resourceCulture);
             }
@@ -567,7 +576,7 @@ namespace GolPooch.Domain.Resources {
         /// <summary>
         ///   Looks up a localized string similar to مبلغ کل.
         /// </summary>
-        internal static string TotalPrice {
+        public static string TotalPrice {
             get {
                 return ResourceManager.GetString("TotalPrice", resourceCulture);
             }
@@ -576,7 +585,7 @@ namespace GolPooch.Domain.Resources {
         /// <summary>
         ///   Looks up a localized string similar to کد پیگیری.
         /// </summary>
-        internal static string TrackingId {
+        public static string TrackingId {
             get {
                 return ResourceManager.GetString("TrackingId", resourceCulture);
             }
@@ -585,7 +594,7 @@ namespace GolPooch.Domain.Resources {
         /// <summary>
         ///   Looks up a localized string similar to نوع.
         /// </summary>
-        internal static string Type {
+        public static string Type {
             get {
                 return ResourceManager.GetString("Type", resourceCulture);
             }
@@ -594,7 +603,7 @@ namespace GolPooch.Domain.Resources {
         /// <summary>
         ///   Looks up a localized string similar to روزهای استفاده نشده.
         /// </summary>
-        internal static string UnUseDay {
+        public static string UnUseDay {
             get {
                 return ResourceManager.GetString("UnUseDay", resourceCulture);
             }
@@ -603,7 +612,7 @@ namespace GolPooch.Domain.Resources {
         /// <summary>
         ///   Looks up a localized string similar to شانس های استفاده شده.
         /// </summary>
-        internal static string UsedChance {
+        public static string UsedChance {
             get {
                 return ResourceManager.GetString("UsedChance", resourceCulture);
             }
@@ -612,7 +621,7 @@ namespace GolPooch.Domain.Resources {
         /// <summary>
         ///   Looks up a localized string similar to زمان استفاده.
         /// </summary>
-        internal static string UsedTime {
+        public static string UsedTime {
             get {
                 return ResourceManager.GetString("UsedTime", resourceCulture);
             }
@@ -621,7 +630,7 @@ namespace GolPooch.Domain.Resources {
         /// <summary>
         ///   Looks up a localized string similar to نام کاربری.
         /// </summary>
-        internal static string Username {
+        public static string Username {
             get {
                 return ResourceManager.GetString("Username", resourceCulture);
             }
@@ -630,7 +639,7 @@ namespace GolPooch.Domain.Resources {
         /// <summary>
         ///   Looks up a localized string similar to شماره شبا.
         /// </summary>
-        internal static string UserSheba {
+        public static string UserSheba {
             get {
                 return ResourceManager.GetString("UserSheba", resourceCulture);
             }
@@ -639,7 +648,7 @@ namespace GolPooch.Domain.Resources {
         /// <summary>
         ///   Looks up a localized string similar to نسخه.
         /// </summary>
-        internal static string Version {
+        public static string Version {
             get {
                 return ResourceManager.GetString("Version", resourceCulture);
             }
@@ -648,7 +657,7 @@ namespace GolPooch.Domain.Resources {
         /// <summary>
         ///   Looks up a localized string similar to تعداد برنده.
         /// </summary>
-        internal static string WinnerCount {
+        public static string WinnerCount {
             get {
                 return ResourceManager.GetString("WinnerCount", resourceCulture);
             }

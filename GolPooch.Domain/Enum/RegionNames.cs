@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace GolPooch.Domain.Entity
+namespace GolPooch.Domain.Enum
 {
     public enum RegionNames
     {
