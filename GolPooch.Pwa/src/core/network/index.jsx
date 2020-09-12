@@ -1,6 +1,6 @@
 ﻿import Axios from 'axios';
 import config from '../../config';
-
+import strings from './../strings';
 function parseBody(response) {
     if (response.status === 200)
         return response;
@@ -31,8 +31,9 @@ instance.interceptors.response.use((response) => {
 
     if (error.response.status == 401)
         window.location.href = config.LOGIN_PAGE;
-
+    if (error.response.status == 500)
+        return { IsSuccessful: false, Message: strings.unknownError };
     return Promise.reject(error);
 });
 
-export default Http = instance
+export default instance

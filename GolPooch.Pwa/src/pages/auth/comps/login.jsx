@@ -1,7 +1,13 @@
 import React, { useState } from 'react';
-import { TextField, FormControlLabel, Checkbox } from '@material-ui/core';
-import strings from './../../../core/strings';
+import { TextField, FormControlLabel, Checkbox, Link } from '@material-ui/core';
+import { useRecoilState } from 'recoil';
+import strings, { validationStrings } from './../../../core/strings';
 import Button from './../../../core/comps/Button';
+import authSrv from '../../../services/authSrv';
+import { validate } from './../../../core/utils';
+import toastState from '../../../atom/state/toastState';
+import bottomUpModalState from '../../../atom/state/bottomUpModalState';
+import authState from '../../../atom/state/authPageState';
 
 export default function () {
     const [inProgress, setInProgress] = useState(false);
@@ -11,13 +17,34 @@ export default function () {
         errorMessage: ''
     });
     const [ruleAgreement, setRuleAgreement] = useState(false);
+    const [toast, setToastState] = useRecoilState(toastState);
+    const [bottomUpModal, setBottomUpModalState] = useRecoilState(bottomUpModalState);
+    const _submit = async () => {
+        if (!mobileNumber.value) {
+            setMobileNumber({ ...mobileNumber, error: true, errorMessage: validationStrings.required });
+            return;
+        }
+        if (validate.mobileNumber()) {
+            setMobileNumber({ ...mobileNumber, error: true, errorMessage: validationStrings.invalidMobileNumber });
+            return;
+        }
+        if (!ruleAgreement) {
+            setToastState({ ...toast, open: true, severity: 'warning', message: strings.ruleAgreementRequired });
+            return;
+        }
 
-    const _submit = () => {
-        
+        setInProgress(true);
+        await authSrv.login(mobileNumber.value);
+        setInProgress(false);
+    }
+
+    const showRules = () => {
+        setBottomUpModalState({ ...bottomUpModal, open: true, title: strings.rules, children: function () { return <p className='rules'>{strings.ruelsText}</p> } })
     }
     return (<div id='comp-login'>
         <div className="form-group">
             <TextField
+                className='ltr-elm'
                 error={mobileNumber.error}
                 id="mobileNumber"
                 name="mobileNumber"
@@ -33,7 +60,7 @@ export default function () {
         <div className="form-group">
             <FormControlLabel
                 control={<Checkbox color="primary" checked={ruleAgreement} onChange={() => setRuleAgreement(!ruleAgreement)} name="ruleAgreement" />}
-                label={strings.aggreedWithRules} />
+                label={strings.aggreedWithRules} />  <Link href="#" onClick={showRules}><small>({strings.show})</small></Link>
         </div>
         <div className="form-group">
             <Button onClick={() => _submit()} loading={inProgress} disabled={inProgress} className='btn-primary'>{strings.signInToSystem}</Button>

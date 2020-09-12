@@ -63,9 +63,13 @@ ol {
   text-align: left;
 }
 
-.ltr-input input {
+.ltr-elm input {
   direction: ltr;
   text-align: left;
+}
+
+.va-middle {
+  vertical-align: middle;
 }
 
 /*-----------------------------------
@@ -109,8 +113,20 @@ input:-webkit-autofill:active {
   direction: rtl;
 }
 
+.ph-r input::-webkit-input-placeholder {
+  text-align: right;
+  font-family: "iransans";
+  direction: rtl;
+}
+
 .ph-r:-moz-placeholder {
   /* Firefox 18- */
+  text-align: right;
+  font-family: "iransans";
+  direction: rtl;
+}
+
+.ph-r input:-moz-placeholder {
   text-align: right;
   font-family: "iransans";
   direction: rtl;
@@ -123,14 +139,22 @@ input:-webkit-autofill:active {
   direction: rtl;
 }
 
+.ph-r input::-moz-placeholder {
+  text-align: right;
+  font-family: "iransans";
+  direction: rtl;
+}
+
 .ph-r:-ms-input-placeholder {
   text-align: right;
   font-family: "iransans";
   direction: rtl;
 }
 
-.toast:not(.show) {
-  display: none;
+.ph-r input:-ms-input-placeholder {
+  text-align: right;
+  font-family: "iransans";
+  direction: rtl;
 }
 
 .form-group {
@@ -166,6 +190,10 @@ input:-webkit-autofill:active {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.d-none {
+  display: none;
 }
 
 .page {
@@ -212,6 +240,19 @@ input:-webkit-autofill:active {
 .MuiTextField-root .MuiInputLabel-outlined {
   -webkit-transform: translate(-14px, 15px) scale(1);
           transform: translate(-14px, 15px) scale(1);
+}
+
+.MuiCircularProgress-colorPrimary {
+  color: #fff !important;
+}
+
+.MuiAlert-message {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 /*==================================
@@ -276,5 +317,49 @@ body[dir="rtl"] .modal-header .close {
 .toast .toast-header .close {
   margin-left: 0 !important;
   margin-right: 0.5rem !important;
+}
+
+.rules {
+  text-align: justify;
+}
+
+#comp-bottom-up-modal {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+#comp-bottom-up-modal .content {
+  background-color: #fff;
+  position: absolute;
+  right: 15px;
+  left: 15px;
+  bottom: 0;
+  margin-top: 20%;
+  padding: 0 15px 15px 15px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+#comp-bottom-up-modal .content .header {
+  position: relative;
+}
+
+#comp-bottom-up-modal .content .header .hx {
+  padding: 15px 0;
+  margin: 0;
+}
+
+#comp-bottom-up-modal .content .header .btn-close {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 0;
+  color: #666;
 }
 /*# sourceMappingURL=index.css.map */
