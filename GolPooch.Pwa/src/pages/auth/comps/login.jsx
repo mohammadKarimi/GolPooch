@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { TextField, FormControlLabel, Checkbox, Link } from '@material-ui/core';
+import { TextField, FormControlLabel, Checkbox, Link, Box } from '@material-ui/core';
 import { useRecoilState } from 'recoil';
 import strings, { validationStrings } from './../../../core/strings';
 import Button from './../../../core/comps/Button';
@@ -7,7 +7,6 @@ import authSrv from '../../../services/authSrv';
 import { validate } from './../../../core/utils';
 import toastState from '../../../atom/state/toastState';
 import bottomUpModalState from '../../../atom/state/bottomUpModalState';
-import authState from '../../../atom/state/authPageState';
 
 export default function () {
     const [inProgress, setInProgress] = useState(false);
@@ -42,9 +41,15 @@ export default function () {
         setBottomUpModalState({ ...bottomUpModal, open: true, title: strings.rules, children: function () { return <p className='rules'>{strings.ruelsText}</p> } })
     }
     return (<div id='comp-login'>
+
+        <Box mb={4} lineHeight={2}>
+            {strings.loginHelp}
+        </Box>
         <div className="form-group">
             <TextField
+
                 className='ltr-elm'
+
                 error={mobileNumber.error}
                 id="mobileNumber"
                 name="mobileNumber"
@@ -54,16 +59,19 @@ export default function () {
                 onChange={(e) => setMobileNumber({ value: e.target.value, error: false, errorMessage: '' })}
                 helperText={mobileNumber.errorMessage}
                 style={{ fontFamily: 'iransans' }}
-                variant="outlined"
             />
         </div>
-        <div className="form-group">
+
+        <div className='form-group'>
             <FormControlLabel
                 control={<Checkbox color="primary" checked={ruleAgreement} onChange={() => setRuleAgreement(!ruleAgreement)} name="ruleAgreement" />}
-                label={strings.aggreedWithRules} />  <Link href="#" onClick={showRules}><small>({strings.show})</small></Link>
+                label={strings.aggreedWithRules} />
+            <Link href="#" onClick={showRules}>
+                <small>({strings.show})</small>
+            </Link>
         </div>
-        <div className="form-group">
+        <Box textAlign="right" className="form-group">
             <Button onClick={() => _submit()} loading={inProgress} disabled={inProgress} className='btn-primary'>{strings.signInToSystem}</Button>
-        </div>
+        </Box>
     </div>);
 }

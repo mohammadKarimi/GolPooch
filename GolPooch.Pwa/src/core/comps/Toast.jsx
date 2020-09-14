@@ -1,11 +1,12 @@
 import React from 'react';
 import { Snackbar } from '@material-ui/core';
-import MuiAlert from '@material-ui/lab/Alert';
 import { useRecoilState } from 'recoil';
 import toastState from '../../atom/state/toastState';
+import Alert from '@material-ui/lab/Alert';
+ 
 
-function Alert(props) {
-    return <MuiAlert elevation={6} variant="filled" {...props} />;
+function MuiAlert(props) {
+    return <Alert elevation={6} variant="filled" {...props} />;
   }
 
 export default function () {
@@ -17,8 +18,8 @@ export default function () {
     }
 
     return (<Snackbar open={rState.open} autoHideDuration={rState.autoHideDuration} onClose={handleClose}>
-        <Alert onClose={handleClose} severity={rState.severity} >
+        <MuiAlert onClose={handleClose} severity={rState.severity} >
             {rState.message}
-        </Alert>
+        </MuiAlert>
     </Snackbar>);
 }

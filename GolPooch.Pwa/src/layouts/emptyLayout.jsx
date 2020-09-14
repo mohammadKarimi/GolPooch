@@ -4,9 +4,11 @@ import Authorization from '../pages/auth';
 
 const EmptyLayout = () => {
     return (
-        <Switch>
-            <Route path="/" component={Authorization} />
-        </Switch>
+        <div className="container">
+            <Switch>
+                <Route path="/" component={Authorization} />
+            </Switch>
+        </div>
     );
 }
 export default EmptyLayout;

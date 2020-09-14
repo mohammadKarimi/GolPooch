@@ -2,9 +2,39 @@ html {
     min-height: 100%;
     font-size: 12px;
 }
+
 body {
     min-height: 100vh;
-    background-color: #f3f4f8;
+    background-color: #fff;
+    padding: 0;
+    margin: 0;
+
+    button {
+        font-size: 12px;
+        text-align: center;
+
+        .MuiCircularProgress-root {
+            margin: 0 15px 0 0px;
+        }
+    }
+
+    button.btn-primary {
+        min-height: 40px;
+        min-width: 160px;
+    }
+
+    .MuiFormLabel-root {
+        color: rgba(0, 0, 0, 1);
+        line-height: 0px;
+    }
+
+    .MuiInputBase-root {
+        color: rgba(0, 0, 0, 1);
+    }
+}
+
+.container {
+    padding: 0 40px;
 }
 
 @import "./utils.scss";

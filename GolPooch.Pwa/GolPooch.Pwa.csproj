@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
@@ -21,12 +21,20 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Remove="compilerconfig.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="compilerconfig.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="compilerconfig.json" />
     <None Include="package.json" />
     <None Include="public\manifest.json" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="src\assets\" />
     <Folder Include="src\atom\comp\" />
     <Folder Include="src\core\utils\" />
     <Folder Include="src\services\" />
